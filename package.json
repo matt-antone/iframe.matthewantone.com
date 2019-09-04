@@ -1,0 +1,26 @@
+{
+  "name": "bugo-site",
+  "version": "1.0.0",
+  "description": "Base Bugo site.",
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo server -w -D -d public -e development",
+    "test-production": "hugo server -w -D -d public -e production --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugoio/bugo-site.git"
+  },
+  "keywords": [
+    "Bugo",
+    "Hugo",
+    "Blog",
+    "Hero"
+  ],
+  "author": "Matthew Antone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bugoio/bugo-site/issues"
+  },
+  "homepage": "https://github.com/bugoio/bugo-site#readme"
+}

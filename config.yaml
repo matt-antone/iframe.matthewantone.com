@@ -1,0 +1,139 @@
+---
+theme:
+- bugo-theme-origin
+- bugo-sass-utilities
+- bugo-mod-search
+module:
+  imports:
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-theme-origin
+  - path: bugo-theme-origin
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-sass-utilities
+  - path: bugo-sass-utilities
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-mod-search
+  - path: bugo-mod-search
+params:
+  title: Bugo Site
+  description: Simple Blog template starter for hugo. Makes use of modular scale.
+  images: []
+  videos: []
+  google_cloud_api:
+  breakpoints:
+    xs:
+      bp: 0px
+      mw: calc( 100% - 36px )
+      base: 12px
+      ratio: 1.3
+    sm:
+      bp: 576px
+      mw: 540px
+      base: 13px
+      ratio: 1.3
+    md:
+      bp: 768px
+      mw: 720px
+      base: 14px
+      ratio: 1.3
+    lg:
+      bp: 992px
+      mw: 960px
+      base: 15px
+      ratio: 1.3
+    xl:
+      bp: 1200px
+      mw: 1164px
+      base: 16px
+      ratio: 1.3
+    xxl:
+      bp: 1400px
+      mw: 1360px
+      base: 17px
+      ratio: 1.3
+    xxxl:
+      bp: 2200px
+      mw: 2100px
+      base: 28px
+      ratio: 1.3
+  theme_colors:
+    primary: "#2AAC14"
+    secondary: "#536F48"
+    accent_1: "#E2CEE7"
+    accent_2: "#5F336A"
+    light: "#FFFCEF"
+    dark: "#534D48"
+    white: "#FFFCF6"
+    black: "#252524"
+    info: "#205F70"
+    success: "#2F5404"
+    warning: "#CC881A"
+    danger: "#820211"
+  fonts:
+    base_font: Roboto
+    heading_font: Roboto
+  google_fonts:
+    import_fonts:
+    - Anton
+    - Oxygen:400,700
+    base_font: Manjari
+    heading_font: Anton
+  sidebar_widgets:
+    widgets:
+    - template: widget-categories
+      widget_options:
+        text_size: ''
+        text_alignment: ''
+        remove_padding: false
+        remove_horizontal_padding: false
+        block_height: ''
+        full_width: false
+        content_full_width: false
+        show_title: false
+        remove_margin: false
+        color_scheme: ''
+      title: Categories
+      show_quantity: ''
+    - template: widget-related-posts
+      widget_options:
+        text_size: ''
+        text_alignment: ''
+        remove_padding: false
+        remove_horizontal_padding: false
+        block_height: ''
+        full_width: false
+        content_full_width: false
+        show_title: false
+        remove_margin: false
+        color_scheme: ''
+      title: Related Posts
+      show_quantity: '3'
+    - template: widget-latest-posts
+      widget_options:
+        text_size: Normal
+        text_alignment: Left
+        block_height: Auto
+        full_width: true
+        color_scheme: ''
+        remove_padding: false
+        content_full_width: false
+        show_title: true
+        remove_margin: true
+        remove_horizontal_padding: false
+      title: Latest Posts
+      show_quantity: '3'
+title: Bugo Site
+baseURL: "/"
+languageCode: en
+summaryLength: 25
+googleAnalytics: ''
+paginate: 10
+menu:
+  main: []
+  secondary: []
+  footer: []
+  privacy: []
+sectionPagesMenu: main

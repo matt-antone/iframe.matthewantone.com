@@ -19,7 +19,7 @@ module:
   - path: bugo-mod-search
 params:
   title: Bugo Site
-  description: Simple Blog template starter for hugo. Makes use of modular scale.
+  description:
   images: []
   videos: []
   google_cloud_api:
@@ -72,9 +72,6 @@ params:
     success: "#2F5404"
     warning: "#CC881A"
     danger: "#820211"
-  fonts:
-    base_font: Roboto
-    heading_font: Roboto
   google_fonts:
     import_fonts:
     - Anton

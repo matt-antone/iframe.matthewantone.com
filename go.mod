@@ -1,4 +1,4 @@
-module github.com/bugoio/bugo-site
+module github.com/bugoio/bugo-site-dev
 
 go 1.12
 

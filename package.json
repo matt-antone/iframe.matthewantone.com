@@ -1,11 +1,12 @@
 {
   "name": "bugo-site",
-  "version": "1.0.0",
-  "description": "Base Bugo site.",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "This is a basic website to be used as a base for more complex websites.",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "hugo server -w -D -d public -e development",
-    "test-production": "hugo server -w -D -d public -e production --minify"
+    "lighthouse": "gulp checkLighthouse",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,27 @@
   "bugs": {
     "url": "https://github.com/bugoio/bugo-site/issues"
   },
-  "homepage": "https://github.com/bugoio/bugo-site#readme"
+  "homepage": "https://github.com/bugoio/bugo-site#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "child_process": "^1.0.2",
+    "css-loader": "^3.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.2.0",
+    "lory.js": "^2.5.3",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0",
+    "read-yaml": "^1.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-stream": "^5.2.1",
+    "yamljs": "^0.3.0"
+  }
 }

@@ -31,9 +31,9 @@ sections:
   path: data/config.yaml
   label: Widgets
 upload_dir: ''
-public_path: https://res.cloudinary.com/lasershootingtrainer/image/upload
+public_path: https://res.cloudinary.com/bugo/image/upload
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   preview_env:

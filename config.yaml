@@ -65,7 +65,7 @@ params:
     accent_1: "#C030E7"
     accent_2: "#2EEB3B"
     light: "#FFFCEF"
-    dark: "#211B1B"
+    dark: "#0A0C0B"
     white: "#FFFFFF"
     black: "#252524"
     info: "#205F70"

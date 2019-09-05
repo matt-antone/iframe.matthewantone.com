@@ -1,45 +1,6 @@
 ---
-organization_name: Bugo Site Starter
-organization_description: Bugo is a full-featured static site framework. Build low-maintenance,
-  secure, high performance websites.
-logos:
-  header_logo:
-    title: ''
-    image: ''
-    caption: ''
-    svg_code: ''
-  footer_logo:
-    title: ''
-    image: ''
-    caption: ''
-    svg_code: ''
-  seo_logo: ''
-  favicon: ''
-contact_information:
-  show_email_labels: false
-  show_phone_labels: false
-  contact_info:
-    email_addresses: []
-    phones: []
-  social_accounts:
-    facebook: ''
-    twitter: ''
-    linkedin: ''
-    youtube: ''
-    vimeo: ''
-    instagram: ''
-    pinterest: ''
-    github: ''
-  locations: []
-  email_addresses:
-  - email_address: ''
-    label: ''
-  phones:
-  - phone: ''
-    label: ''
-google_api_key: ''
-footer_dislaimer: ''
-google_verification_meta_field: ''
-header_logo: https://res.cloudinary.com/bugo/image/upload/v1558745602/bugo-logo-200.svg
-footer_logo: https://res.cloudinary.com/bugo/image/upload/v1558745602/bugo-logo-200.svg
-seo_logo: https://res.cloudinary.com/bugo/image/upload/v1558568683/nzj3yce08amdlsiu0xw4.png
+organization_name:
+organization_description:
+header_logo:
+footer_logo:
+seo_logo:

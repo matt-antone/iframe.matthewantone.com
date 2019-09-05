@@ -22,7 +22,7 @@ params:
   description: Simple Blog template starter for hugo. Makes use of modular scale.
   images: []
   videos: []
-  google_cloud_api:
+  google_cloud_api: ''
   breakpoints:
     xs:
       bp: 0px
@@ -66,7 +66,7 @@ params:
     accent_2: "#5F336A"
     light: "#FFFCEF"
     dark: "#534D48"
-    white: "#FFFCF6"
+    white: "#FFFFFF"
     black: "#252524"
     info: "#205F70"
     success: "#2F5404"
@@ -125,6 +125,7 @@ params:
         remove_horizontal_padding: false
       title: Latest Posts
       show_quantity: '3'
+  show_bugo: true
 title: Bugo Site
 baseURL: "/"
 languageCode: en

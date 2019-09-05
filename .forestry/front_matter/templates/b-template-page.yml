@@ -119,6 +119,3 @@ fields:
   label: Show Sidebar
   description: Show the sidebar and widgets on the this page.
   default: true
-pages:
-- content/contact-us.md
-- content/about-lance-shelton.md

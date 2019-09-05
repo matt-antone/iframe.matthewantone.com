@@ -62,8 +62,8 @@ params:
   theme_colors:
     primary: "#5F336A"
     secondary: "#536F48"
-    accent_1: "#E2CEE7"
-    accent_2: "#CEE7D0"
+    accent_1: "#C030E7"
+    accent_2: "#2EEB3B"
     light: "#FFFCEF"
     dark: "#211B1B"
     white: "#FFFFFF"

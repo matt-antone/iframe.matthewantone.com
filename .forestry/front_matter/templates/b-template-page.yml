@@ -119,4 +119,3 @@ fields:
   label: Show Sidebar
   description: Show the sidebar and widgets on the this page.
   default: true
-pages:

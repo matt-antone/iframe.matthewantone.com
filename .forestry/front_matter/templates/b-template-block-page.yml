@@ -1,5 +1,5 @@
 ---
-label: Template (Page)
+label: Template (Page with blocks)
 hide_body: false
 fields:
 - type: text
@@ -8,7 +8,7 @@ fields:
   hidden: true
   config:
     required: true
-  default: page
+  default: blocks
 - name: date
   type: datetime
   label: Date
@@ -119,6 +119,19 @@ fields:
   label: Show Sidebar
   description: Show the sidebar and widgets on the this page.
   default: true
+- name: blocks
+  type: blocks
+  label: Content Blocks
+  template_types:
+  - block-columns
+  - block-google-map
+  - block-latest-posts
+  - block-logos
+  - block-slideshow
+  config:
+    min: 
+    max: 
+  description: Add content blocks to your landing page.
 pages:
-- content/contact-us.md
-- content/about-lance-shelton.md
+- content/lst-accuracy-coaching.md
+- content/_index.md

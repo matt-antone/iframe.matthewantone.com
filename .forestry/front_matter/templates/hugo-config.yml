@@ -15,6 +15,11 @@ fields:
 - type: field_group
   name: params
   fields:
+  - name: show_bugo
+    type: boolean
+    label: Show Bugo some love.
+    description: Put the word out about Bugo.
+    default: true
   - type: text
     name: title
     description: Give your website a title for social media.
@@ -34,42 +39,78 @@ fields:
   - type: field_group
     name: theme_colors
     fields:
-    - type: text
-      name: primary
+    - name: primary
+      type: color
       label: Primary
-    - type: text
-      name: secondary
+      config:
+        required: false
+        color_format: Hex
+    - name: secondary
+      type: color
       label: Secondary
-    - type: text
-      name: accent_1
+      config:
+        required: false
+        color_format: Hex
+    - name: accent_1
+      type: color
       label: Accent 1
-    - type: text
-      name: accent_2
+      config:
+        required: false
+        color_format: Hex
+    - name: accent_2
+      type: color
       label: Accent 2
-    - type: text
-      name: light
+      config:
+        required: false
+        color_format: Hex
+    - name: light
+      type: color
       label: Light
-    - type: text
-      name: dark
+      config:
+        required: false
+        color_format: Hex
+    - name: dark
+      type: color
       label: Dark
-    - type: text
-      name: white
+      config:
+        required: false
+        color_format: Hex
+    - name: white
+      type: color
       label: White
-    - type: text
-      name: black
+      config:
+        required: false
+        color_format: Hex
+    - name: black
+      type: color
       label: Black
-    - type: text
-      name: info
+      config:
+        required: false
+        color_format: Hex
+    - name: info
+      type: color
       label: Info
-    - type: text
-      name: success
+      config:
+        required: false
+        color_format: Hex
+    - name: success
+      type: color
       label: Success
-    - type: text
-      name: warning
+      config:
+        required: false
+        color_format: Hex
+    - name: warning
+      type: color
       label: Warning
-    - type: text
-      name: danger
+      config:
+        required: false
+        color_format: Hex
+    - name: danger
+      type: color
       label: Danger
+      config:
+        required: false
+        color_format: Hex
     label: Theme Colors
     description: Add colors for use with your website
   - type: field_group
@@ -271,8 +312,8 @@ fields:
       - widget-markdown
       - widget-categories
       - widget-menu
-      - widget-related-pages
       - widget-latest-posts
+      - widget-related-posts
   - name: google_fonts
     type: field_group
     config: {}

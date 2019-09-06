@@ -28,4 +28,10 @@ Small set of useful functions using modular scale and formatting helpers.
 
 ## Installation
 
-There are a few ways to install Bugo Site. 
+There are a few ways to install Bugo Site. Read through the types below before you choose a method of installation.
+
+### Forestry method
+
+This method allows you to setup some of your site configuration in the forestry CMS. This is the easiest way to get started.
+
+*Get Started*

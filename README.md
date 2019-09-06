@@ -34,4 +34,4 @@ There are a few ways to install Bugo Site. Read through the types below before y
 
 This method allows you to setup some of your site configuration in the forestry CMS. This is the easiest way to get started.
 
-**(#)[Get Started]**
+**[Get Started](# "Bugo Forestry Install)**

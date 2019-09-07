@@ -1,7 +1,5 @@
 # Blogging with Hugo Site
 
-This starter site makes use of Bugo modules.  
-
 ## Features
 
 * Responsive layouts based on modular scale
@@ -17,17 +15,28 @@ This starter site makes use of Bugo modules.
 
 ## Modules
 
-### Bugo Origin Theme
+### Origin Theme
 Origins uses modular scale for most of it's measurements, which produces a site that scales beautifaully to a range of different, screens and devices.
 
-### Bugo Search
+### Search
 FuseJS searches are blazing fast and relavant.
 
-### Bugo Sass Utilities
+### Sass Utilities
 Small set of useful functions using modular scale and formatting helpers.
 
 ## Installation
 
 This is the easiest way to get started. Just click the link below and follow the instructed steps at forestry to get started.
 
-**[Get Started]( https://app.forestry.io/quick-start?repo=bugoio/bugo-site&engine=hugo "Get Started")**
+1. **Clone repository and setup site at forestry.io.** Click the "Get Started" to clone this repository and add it to forestry.io in one shot.  **[Get Started]( https://app.forestry.io/quick-start?repo=bugoio/bugo-site&engine=hugo "Get Started")**
+
+1. **Local Installation** Now just clone the repository that was added to your git account.
+
+1. **Install Dependencies** ```npm install```
+1. **Test Installation** ```npm start``` You should now have a running website at http://localhost:1313
+
+That's it.
+
+
+
+

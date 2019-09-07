@@ -1,4 +1,6 @@
-# Blogging with Hugo Site
+# Bugo Site
+
+Blogging with Hugo is a set of Hugo modules for building websites. Bugo Site is the starter for all Bugo websites.
 
 ## Features
 
@@ -9,9 +11,18 @@
 * CSS Grids for layouts and blocks
 * Configurable Sidebar Widgets
 * Cloudinary support
+* WCAG best practices
 * Page/Post level galleries
   * Images
   * Videos
+
+## What is Modular Scale?
+
+Instead of CSS units, Bugo Sites use modular scale. This allows all your font-size,margin & padding to scale based on the base font size of a given breakpoint. You set the base font size and ratio of the scale then specifiy a factor for the given CSS selctor.
+
+Let's say we've setup a breakpoint with a font-size of 18px and a ratio of 1.3. To set the body you'd likely give the body text a factor of 0 which equates to 18px. You might also set your H1 elements to a factor of 3, which equates to 39.546px.
+
+What's the advantage? Using modular scale makes sure that when you scale the elements on your website, you scale in a consistent manner. This in turn gives a visual "rythm" and allows the rendered page to scale based on 100vw or the width of the viewport. Web pages will look and feel like the same website no matter what the size of the viewport is.
 
 ## Modules
 
@@ -35,7 +46,8 @@ This is the easiest way to get started. Just click the link below and follow the
 1. **Install Dependencies** ```npm install```
 1. **Test Installation** ```npm start``` You should now have a running website at http://localhost:1313
 
-That's it.
+That's it. You've now got a running installation of Bugo Site.
+
 
 
 

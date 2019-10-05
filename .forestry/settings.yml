@@ -27,7 +27,7 @@ sections:
 - type: document
   path: config.yaml
   label: Configuration
-upload_dir: '/static/uploads/'
+upload_dir: static/uploads
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
@@ -40,5 +40,6 @@ build:
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -e preview -d public
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -e preview -d public
 version: 0.57.2

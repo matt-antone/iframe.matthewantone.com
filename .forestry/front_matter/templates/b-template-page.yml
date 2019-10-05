@@ -15,8 +15,8 @@ fields:
   description: ''
   config:
     required: false
-    date_format:
-    time_format:
+    date_format: 
+    time_format: 
     display_utc: false
 - name: title
   type: text
@@ -51,8 +51,8 @@ fields:
   type: list
   config:
     use_select: true
-    min:
-    max:
+    min: 
+    max: 
     source:
       type: documents
       section: categories
@@ -83,8 +83,8 @@ fields:
   type: list
   config:
     use_select: false
-    min:
-    max:
+    min: 
+    max: 
   label: Image Captions
   description: "(optional) Add captions to the images here."
 - name: show_slideshow
@@ -95,8 +95,8 @@ fields:
   type: list
   config:
     use_select: false
-    min:
-    max:
+    min: 
+    max: 
   label: Page Videos
   description: Add Video to this page. These videos are used for social media purposes.
     Some themes will display these videos.
@@ -108,8 +108,8 @@ fields:
   type: list
   config:
     use_select: false
-    min:
-    max:
+    min: 
+    max: 
     source:
       type: simple
   label: Redirects

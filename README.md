@@ -9,8 +9,9 @@ Blogging with Hugo is a set of Hugo modules for building websites. Bugo Site is 
 * Heros & video heros
 * Beautiful typography and grid based on a modular scale
 * CSS grids for layouts and blocks
-* Configurable sidebar sidgets
-* Cloudinary support
+* Configurable sidebar widgets
+* Dark Mode Enabled
+* Cloudinary CDN support
 * WCAG best practices
 * Page/post level galleries
   * Images

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\n * app.js\n *\n * * You can use ES6 Javscript here\n * * All ES6 is transpiles based on .browserlistrc\n * * Transpiled file is copied to /assets/js/app.js for bundling in Hugo\n *\n **/\n\n//# sourceURL=webpack:///./src/es6/app.js?");
+eval("/**\n * app.js\n * version: 1.0\n * * You can use ES6 Javscript here\n * * All ES6 is transpiles based on .browserlistrc\n * * Transpiled file is copied to /assets/js/app.js for bundling in Hugo\n *\n **/\n//test\n\n//# sourceURL=webpack:///./src/es6/app.js?");
 
 /***/ }),
 

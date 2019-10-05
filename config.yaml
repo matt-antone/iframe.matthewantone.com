@@ -1,25 +1,24 @@
 ---
-theme:
-- bugo-theme-origin
-- bugo-sass-utilities
-- bugo-mod-search
 module:
   imports:
   - disable: false
     ignoreConfig: false
-    path: github.com/bugoio/bugo-theme-origin
-  - path: bugo-theme-origin
+    path: github.com/bugoio/bugo-utility-partials
   - disable: false
     ignoreConfig: false
     path: github.com/bugoio/bugo-sass-utilities
-  - path: bugo-sass-utilities
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-theme-origin
   - disable: false
     ignoreConfig: false
     path: github.com/bugoio/bugo-mod-search
-  - path: bugo-mod-search
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-mod-landing-page
 params:
-  title: Bugo Site
-  description:
+  # title: Bugo Site
+  # description:
   images: []
   videos: []
   google_cloud_api: ''

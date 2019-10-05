@@ -26,10 +26,7 @@ sections:
   label: Organization
 - type: document
   path: config.yaml
-  label: Site Config
-- type: document
-  path: config.yaml
-  label: Widgets
+  label: Configuration
 upload_dir: '/static/uploads/'
 public_path: ''
 front_matter_path: ''

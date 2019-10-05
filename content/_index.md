@@ -4,7 +4,7 @@ date: 2019-09-02T05:12:08.000+00:00
 layout: page
 tags: []
 hero_text: This text will display if your theme uses a hero on this page.
-show_sidebar: true
+show_sidebar: false
 slug: ''
 meta_title: ''
 description: This is a sample page

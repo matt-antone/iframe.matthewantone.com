@@ -9,7 +9,7 @@ sections:
   label: Content
   create: all
   match: "**/*"
-  exclude: "[posts/**/*,authors/**/*]"
+  exclude: "[content/posts/**/*,content/authors/**/*]"
 - type: directory
   path: content/posts
   label: Posts

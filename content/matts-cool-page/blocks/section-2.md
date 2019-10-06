@@ -12,9 +12,3 @@ text_alignment: left
 draft: true
 ---
 Add Content Here
-
-{{<icon pause text-primary>}}
-
-{{<icon pause text-primary small>}}
-
-{{<icon pause text-primary large>}}

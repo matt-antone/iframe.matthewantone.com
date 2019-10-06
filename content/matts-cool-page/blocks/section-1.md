@@ -1,6 +1,6 @@
 ---
-title: Section 2
-weight: 2
+title: Section 1
+weight: 1
 background_image:
 background_video_url:
 color_scheme:
@@ -8,13 +8,7 @@ no-container: true
 no_padding: false
 section_template: section_default
 show_block_title: false
-text_alignment: left
+text_alignment: center
 draft: true
 ---
 Add Content Here
-
-{{<icon pause text-primary>}}
-
-{{<icon pause text-primary small>}}
-
-{{<icon pause text-primary large>}}

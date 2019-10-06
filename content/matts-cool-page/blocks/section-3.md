@@ -1,6 +1,6 @@
 ---
-title: Section 2
-weight: 2
+title: Section 3
+weight: 3
 background_image:
 background_video_url:
 color_scheme:
@@ -12,9 +12,3 @@ text_alignment: left
 draft: true
 ---
 Add Content Here
-
-{{<icon pause text-primary>}}
-
-{{<icon pause text-primary small>}}
-
-{{<icon pause text-primary large>}}

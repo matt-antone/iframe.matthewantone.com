@@ -15,6 +15,6 @@ Add Content Here
 
 {{<icon pause text-primary>}}
 
-{{<icon pause text-primary small>}}
+{{<icon pause text-primary icon-small>}}
 
-{{<icon pause text-primary large>}}
+{{<icon pause text-primary icon-large>}}

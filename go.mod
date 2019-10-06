@@ -3,10 +3,10 @@ module github.com/bugoio/bugo-site-dev
 go 1.12
 
 require (
-	github.com/bugoio/bugo-font-awesome v0.0.2 // indirect
-	github.com/bugoio/bugo-mod-landing-page v0.0.2 // indirect
+	github.com/bugoio/bugo-font-awesome v0.1.4 // indirect
+	github.com/bugoio/bugo-mod-landing-page v0.0.3 // indirect
 	github.com/bugoio/bugo-mod-search v0.0.3 // indirect
-	github.com/bugoio/bugo-mod-youtube v0.0.9 // indirect
+	github.com/bugoio/bugo-mod-youtube v0.0.10 // indirect
 	github.com/bugoio/bugo-theme-origin v0.2.16 // indirect
 	github.com/bugoio/bugo-utility-partials v0.0.3 // indirect
 )

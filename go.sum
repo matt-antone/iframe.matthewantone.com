@@ -1,3 +1,5 @@
+github.com/bugoio/bugo-font-awesome v0.0.0-20191006000625-50e5974af398 h1:3Iz/z5aWpnUCYeAwjmET0JW3iWpjxho9V6+qKIbbqdo=
+github.com/bugoio/bugo-font-awesome v0.0.0-20191006000625-50e5974af398/go.mod h1:0N780934DHY+9OmQFLCu91ce7NRWmLG3yjrnBihqqDc=
 github.com/bugoio/bugo-mod-landing-page v0.0.0-20191005172833-c269e828f178 h1:g2KsZd12DnMIaq1AyfS9Ao3lF5zYz87Mb1+L5TBDp4Q=
 github.com/bugoio/bugo-mod-landing-page v0.0.0-20191005172833-c269e828f178/go.mod h1:n8g7jMvGPz6ca7lVjZD8d7WfjueI4OqaQLcd9gD+8cE=
 github.com/bugoio/bugo-mod-search v0.0.3/go.mod h1:yV+m2OdPR3f4n78R6r9GjAwbQiWCiTuDeNhyVXbHxjw=

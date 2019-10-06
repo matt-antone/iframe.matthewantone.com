@@ -16,6 +16,9 @@ module:
   - disable: false
     ignoreConfig: false
     path: github.com/bugoio/bugo-mod-landing-page
+  - disable: false
+    ignoreConfig: false
+    path: github.com/bugoio/bugo-font-awesome
 params:
   # title: Bugo Site
   # description:

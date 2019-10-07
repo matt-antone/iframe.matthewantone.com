@@ -1,0 +1,13 @@
+{{ $files := slice ( resources.Get "sass/_bugo-global-variables.scss" ) }}
+<!-- Get all partial scss files ending with variables -->
+{{ $components := resources.Match "/**/*-vars.scss" }}
+<!-- Add all components to the files array -->
+{{ range $components }}
+  {{ $files = $files | append . }}
+{{ end }}
+{{ $files }}
+
+<!-- concatenate all the files togther -->
+{{ $scssConcat := $files | resources.Concat "site-variables-example.scss" }}
+
+<!-- Sass Variables can be found here {{ $scssConcat.RelPermalink }} -->

@@ -1,5 +1,5 @@
-module github.com/bugoio/bugo-site-dev
+module github.com/bugoio/bugo-site
 
 go 1.12
 
-require github.com/bugoio/bugo-theme-origin v0.2.19 // indirect
+require github.com/bugoio/bugo-theme-origin v0.2.26 // indirect

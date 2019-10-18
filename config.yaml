@@ -4,7 +4,6 @@ module:
   - disable: false
     ignoreConfig: false
     path: github.com/bugoio/bugo-theme-origin
-
 params:
   # title: Bugo Site
   # description:

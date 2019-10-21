@@ -1,15 +1,29 @@
 ---
+title: Bugo Site
+baseURL: "/"
+languageCode: en
+summaryLength: 25
+googleAnalytics: ''
+paginate: 10
+menu:
+  main: []
+  secondary: []
+  footer: []
+  privacy: []
+sectionPagesMenu: main
 module:
   imports:
   - disable: false
     ignoreConfig: false
     path: github.com/bugoio/bugo-theme-origin
 params:
-  # title: Bugo Site
-  # description:
-  images: []
-  videos: []
-  google_cloud_api: ''
+  # Alternate site title
+  altTitle:
+  # Front End Breakpoints
+  # * bp    - breakpoint
+  # * mw    - max-width
+  # * base  - base font size
+  # * ratio - modular scale
   breakpoints:
     xs:
       bp: 0px
@@ -18,7 +32,7 @@ params:
       ratio: 1.3
     sm:
       bp: 576px
-      mw: 540px
+      mw: calc( 100% - 36px )
       base: 13px
       ratio: 1.3
     md:
@@ -46,11 +60,29 @@ params:
       mw: 2100px
       base: 28px
       ratio: 1.3
-  theme_colors:
+  # Global email address
+  email:
+  # Google Cloud API Key. Used by other modules.
+  googleCloudApi: ''
+  # Google fonts to use on the front end
+  googleFonts:
+    importFonts:
+    - Anton
+    - Oxygen:400,700
+    baseFont: Manjari
+    headingFont: Anton
+  # Header Logo URL
+  headerLogo:
+  # Footer logo URL
+  footerLogo:
+  # Global social account URLs
+  social: []
+  # Global Theme Colors
+  themeColors:
     primary: "#5F336A"
     secondary: "#536F48"
-    accent_1: "#C030E7"
-    accent_2: "#2EEB3B"
+    accent1: "#C030E7"
+    accent2: "#2EEB3B"
     light: "#FFFCEF"
     dark: "#0A0C0B"
     white: "#FFFFFF"
@@ -59,66 +91,5 @@ params:
     success: "#2F5404"
     warning: "#CC881A"
     danger: "#820211"
-  google_fonts:
-    import_fonts:
-    - Anton
-    - Oxygen:400,700
-    base_font: Manjari
-    heading_font: Anton
-  sidebar_widgets:
-    widgets:
-    - template: widget-categories
-      widget_options:
-        text_size: ''
-        text_alignment: ''
-        remove_padding: false
-        remove_horizontal_padding: false
-        block_height: ''
-        full_width: false
-        content_full_width: false
-        show_title: false
-        remove_margin: false
-        color_scheme: ''
-      title: Categories
-      show_quantity: ''
-    - template: widget-related-posts
-      widget_options:
-        text_size: ''
-        text_alignment: ''
-        remove_padding: false
-        remove_horizontal_padding: false
-        block_height: ''
-        full_width: false
-        content_full_width: false
-        show_title: false
-        remove_margin: false
-        color_scheme: ''
-      title: Related Posts
-      show_quantity: '3'
-    - template: widget-latest-posts
-      widget_options:
-        text_size: Normal
-        text_alignment: Left
-        block_height: Auto
-        full_width: true
-        color_scheme: ''
-        remove_padding: false
-        content_full_width: false
-        show_title: true
-        remove_margin: true
-        remove_horizontal_padding: false
-      title: Latest Posts
-      show_quantity: '3'
-  show_bugo: true
-title: Bugo Site
-baseURL: "/"
-languageCode: en
-summaryLength: 25
-googleAnalytics: ''
-paginate: 10
-menu:
-  main: []
-  secondary: []
-  footer: []
-  privacy: []
-sectionPagesMenu: main
+  # Show Bugo some love
+  showBugo: true

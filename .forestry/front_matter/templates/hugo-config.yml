@@ -15,7 +15,7 @@ fields:
 - type: field_group
   name: params
   fields:
-  - name: show_bugo
+  - name: showBugo
     type: boolean
     label: Show Bugo some love.
     description: Put the word out about Bugo.
@@ -33,11 +33,11 @@ fields:
     label: Open Graph Images
     description: Default images for social media
   - type: text
-    name: google_cloud_api
+    name: googleCloudApi
     label: Google Cloud API
     description: If you plan to use any Google Cloud Products in your templates.
   - type: field_group
-    name: theme_colors
+    name: themeColors
     fields:
     - name: primary
       type: color
@@ -51,13 +51,13 @@ fields:
       config:
         required: false
         color_format: Hex
-    - name: accent_1
+    - name: accent1
       type: color
       label: Accent 1
       config:
         required: false
         color_format: Hex
-    - name: accent_2
+    - name: accent2
       type: color
       label: Accent 2
       config:
@@ -314,26 +314,26 @@ fields:
       - widget-menu
       - widget-latest-posts
       - widget-related-posts
-  - name: google_fonts
+  - name: googleFonts
     type: field_group
     config: {}
     fields:
-    - name: import_fonts
+    - name: importFonts
       type: list
       config:
         use_select: false
-        min: 
-        max: 
+        min:
+        max:
       label: Import Fonts
       description: Add the names of the fonts with weights you want to import
-    - name: base_font
+    - name: baseFont
       type: text
       config:
         required: false
       label: Base Font
       description: Add a base font from Google Fonts or Adobe TypeKit
       default: Roboto
-    - name: heading_font
+    - name: headingFont
       type: text
       config:
         required: false
@@ -356,9 +356,9 @@ fields:
     - privacy
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Section Menu
   description: Site sections will get automatically added to this menu.
 - name: summaryLength
@@ -368,7 +368,7 @@ fields:
   config:
     min: '25'
     max: '200'
-    step: 
+    step:
   description: How many words to show in a page/post summary.
 - name: paginate
   type: number
@@ -377,9 +377,9 @@ fields:
     a list.
   default: '10'
   config:
-    min: 
-    max: 
-    step: 
+    min:
+    max:
+    step:
 - type: text
   name: googleAnalytics
   label: Google Analytics ID

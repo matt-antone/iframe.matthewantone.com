@@ -1,0 +1,7 @@
+title: Bugo Site
+baseURL: "/"
+languageCode: en
+summaryLength: 25
+googleAnalytics: ''
+paginate: 10
+sectionPagesMenu: main

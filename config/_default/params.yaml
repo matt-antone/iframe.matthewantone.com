@@ -1,0 +1,75 @@
+# Alternate site title
+altTitle:
+# Front End Breakpoints
+# * bp    - breakpoint
+# * mw    - max-width
+# * base  - base font size
+# * ratio - modular scale
+breakpoints:
+  xs:
+    bp: 0px
+    mw: calc( 100% - 36px )
+    base: 12px
+    ratio: 1.3
+  sm:
+    bp: 576px
+    mw: calc( 100% - 36px )
+    base: 13px
+    ratio: 1.3
+  md:
+    bp: 768px
+    mw: 720px
+    base: 14px
+    ratio: 1.3
+  lg:
+    bp: 992px
+    mw: 960px
+    base: 15px
+    ratio: 1.3
+  xl:
+    bp: 1200px
+    mw: 1164px
+    base: 16px
+    ratio: 1.3
+  xxl:
+    bp: 1400px
+    mw: 1360px
+    base: 17px
+    ratio: 1.3
+  xxxl:
+    bp: 2200px
+    mw: 2100px
+    base: 28px
+    ratio: 1.3
+# Global email address
+email:
+# Google Cloud API Key. Used by other modules.
+googleCloudApi: ''
+# Google fonts to use on the front end
+googleFonts:
+  importFonts:
+  - Source Sans Pro:400,700
+  baseFont: Source Sans Pro
+  headingFont: Source Sans Pro
+# Header Logo URL
+headerLogo:
+# Footer logo URL
+footerLogo:
+# Global social account URLs
+social: []
+# Global Theme Colors
+themeColors:
+  primary: "#5F336A"
+  secondary: "#536F48"
+  accent1: "#C030E7"
+  accent2: "#2EEB3B"
+  light: "#FFFCEF"
+  dark: "#0A0C0B"
+  white: "#FFFFFF"
+  black: "#252524"
+  info: "#205F70"
+  success: "#2F5404"
+  warning: "#CC881A"
+  danger: "#820211"
+# Show Bugo some love
+showBugo: true

@@ -1,0 +1,119 @@
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$articles-header-area:            head;
+$articles-thumbnail-area:         thum;
+$articles-date-area:              date;
+$articles-categories-area:        cats;
+$articles-tags-area:              tags;
+$articles-summary-area:           summ;
+
+$articles-xs-flex:                100%;
+$articles-xs-margin-bottom:       0; // false | int
+$articles-xs-header-font-size:    1; // int
+$articles-xs-header-font-weight:  700;
+$articles-xs-header-line-clamp:   3; // false | int
+$articles-xs-grid-gap:            2; // false | int
+$articles-xs-areas:               "thum thum head head head head";
+$articles-xs-hide-thumb:          false;
+$articles-xs-hide-header:         false;
+$articles-xs-hide-date:           true;
+$articles-xs-hide-summary:        true;
+$articles-xs-hide-categories:     true;
+$articles-xs-hide-tags:           true;
+
+$articles-sm-flex:                100%; 
+$articles-sm-margin-bottom:       1; // false | int
+$articles-sm-header-font-size:    1;
+$articles-sm-header-font-weight:  700;
+$articles-sm-header-line-clamp:   false; // false | int
+$articles-sm-grid-gap:            0; // false | int
+$articles-sm-areas:               "thum thum date date date date"
+                                  "thum thum head head head head";
+$articles-sm-hide-thumb:          false;
+$articles-sm-hide-header:         false;
+$articles-sm-hide-date:           false;
+$articles-sm-hide-summary:        true;
+$articles-sm-hide-categories:     true;
+$articles-sm-hide-tags:           true;
+
+$articles-md-flex:                100%;
+$articles-md-margin-bottom:       1; // false | int
+$articles-md-header-font-size:    1;
+$articles-md-header-font-weight:  700;
+$articles-md-header-line-clamp:   false; // false | int
+$articles-md-grid-gap:            0; // false | int
+$articles-md-areas:               "thum thum head head head head"
+                                  "thum thum summ summ summ summ";
+$articles-md-hide-thumb:          false;
+$articles-md-hide-header:         false;
+$articles-md-hide-date:           true;
+$articles-md-hide-summary:        false;
+$articles-md-hide-categories:     true;
+$articles-md-hide-tags:           true;
+
+$articles-lg-flex:                100%; 
+$articles-lg-margin-bottom:       $global-margin; // false | int
+$articles-lg-header-font-size:    1;
+$articles-lg-header-font-weight:  700;
+$articles-lg-header-line-clamp:   false; // false | int
+$articles-lg-grid-gap:            0; // false | int
+$articles-lg-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-lg-hide-thumb:          false;
+$articles-lg-hide-header:         false;
+$articles-lg-hide-date:           false;
+$articles-lg-hide-summary:        false;
+$articles-lg-hide-categories:     true;
+$articles-lg-hide-tags:           true;
+
+$articles-xl-flex:                100%; 
+$articles-xl-margin-bottom:       $global-margin; // false | int
+$articles-xl-header-font-size:    2;
+$articles-xl-header-font-weight:  700;
+$articles-xl-header-line-clamp:   false; // false | int
+$articles-xl-grid-gap:            0; // false | int
+$articles-xl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xl-hide-thumb:          false;
+$articles-xl-hide-header:         false;
+$articles-xl-hide-date:           false;
+$articles-xl-hide-summary:        false;
+$articles-xl-hide-categories:     true;
+$articles-xl-hide-tags:           true;
+
+$articles-xxl-flex:               100%; 
+$articles-xxl-margin-bottom:      $global-margin; // false | int
+$articles-xxl-header-font-size:   2;
+$articles-xxl-header-font-weight: 700;
+$articles-xxl-header-line-clamp:  false; // false | int
+$articles-xxl-grid-gap:           0; // false | int
+$articles-xxl-areas:              "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xxl-hide-thumb:         false;
+$articles-xxl-hide-header:        false;
+$articles-xxl-hide-date:          false;
+$articles-xxl-hide-summary:       false;
+$articles-xxl-hide-categories:    true;
+$articles-xxl-hide-tags:          true;
+
+$articles-xxxl-flex:                100%; 
+$articles-xxxl-margin-bottom:       $global-margin; // false | int
+$articles-xxxl-header-font-size:    2;
+$articles-xxxl-header-font-weight:  700;
+$articles-xxxl-header-line-clamp:   false; // false | int
+$articles-xxxl-grid-gap:            0; // false | int
+$articles-xxxl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xxxl-hide-thumb:          false;
+$articles-xxxl-hide-header:         false;
+$articles-xxxl-hide-date:           false;
+$articles-xxxl-hide-summary:        false;
+$articles-xxxl-hide-categories:     true;
+$articles-xxxl-hide-tags:           true;

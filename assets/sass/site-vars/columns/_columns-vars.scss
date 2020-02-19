@@ -1,0 +1,38 @@
+/**
+  * BUGO COLUMNS SHORT CODE
+  * * use these variables to control spacing and responsive
+  * * use classes in the shortcode to change other styles
+  **/
+
+$columns-flex-wrap: (
+  xs: wrap,
+  md: nowrap
+);
+
+
+/**
+  * SPACING
+  * * use a value of: false | modular scale
+  * * false value parses to 0
+  **/
+
+$columns-margin-top: false; //
+$columns-margin-right: false; // false | modular scale
+$columns-margin-bottom: flase; // false | modular scale
+$columns-margin-left: false; // false | modular scale
+
+$columns-padding-top: false; // false | modular scale
+$columns-padding-right: false; // false | modular scale
+$columns-padding-bottom: false; // false | modular scale
+$columns-padding-left: false; // false | modular scale
+
+$column-margin-top: false; // false | modular scale
+$column-margin-right: false; // false | modular scale
+$column-margin-bottom: false; // false | modular scale
+$column-margin-left: false; // false | modular scale
+
+$column-padding-top: false; // false | modular scale
+$column-padding-right: $global-padding; // false | modular scale
+$column-padding-bottom: false; // false | modular scale
+$column-padding-left: $global-padding; // false | modular scale
+

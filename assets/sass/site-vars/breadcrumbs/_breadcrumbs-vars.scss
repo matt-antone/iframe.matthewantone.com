@@ -1,0 +1,37 @@
+/**
+ * Breadcrumbs
+ **/
+
+// * Fonts
+$breadcrumbs-font-size         : 0.5; // modular scale
+$breadcrumbs-font-weight       : normal;
+$breadcrumbs-active-font-weight: bold;
+
+// * Breadcrumb Separator
+$breadcrumbs-char              : "/\00a0";
+
+// * Breadcrumb Truncation
+$breadcrumbs-max-chars         : (
+  xs                           : 35ch,
+  sm                           : 40ch,
+  md                           : 45ch,
+  lg                           : 50ch,
+  xl                           : 60ch,
+  xxl                          : 70ch,
+  xxxl                         : 80ch
+);
+
+// * Margin
+// false | modular scale ratio
+$breadcrumbs-margin-top        : 0;
+$breadcrumbs-margin-right      : false;
+$breadcrumbs-margin-bottom     : 0;
+$breadcrumbs-margin-left       : false;
+
+// * Padding
+// false | modular scale ratio
+$breadcrumbs-padding-top       : false;
+$breadcrumbs-padding-bottom    : false;
+$breadcrumbs-padding-right     : false;
+$breadcrumbs-padding-left      : false;
+

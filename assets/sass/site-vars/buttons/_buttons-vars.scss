@@ -1,0 +1,24 @@
+/**
+ * BUGO BUTTON VARIABLES
+ *
+ * * note
+ * TODO: something
+ * ! Deprecate
+ * ? Question
+ * @param myParam
+ **/
+
+
+// * Button Defaults
+
+$button-radius:               $global-radius;
+$button-default-bg:           $primary;
+$button-default-color:        $white;
+$button-default-bg-dark:      $secondary;
+$button-default-color-dark:   $light;
+
+
+// * Button Icon
+
+$button-icon-fill:            $secondary;
+$button-icon-fill-dark:       $secondary;

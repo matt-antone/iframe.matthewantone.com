@@ -1,0 +1,1163 @@
+/**
+ * GLOBAL VARIABLES
+ **/
+ 
+// Spacing
+$global-margin:   4; // false | modular scale ratio
+$global-padding:  2; // false | modular scale ratio
+
+// Fonts
+$global-font-color:         $black;
+$global-font-color-dark:    $global-font-color;
+$global-font:               var(--font-family-global); // grab the font family from the forestry output
+$global-font-size:          0; // modular scale
+$global-line-height:        1.75;
+
+// Small element
+$global-small:              $global-font-size - 1;
+$global-small-line-height:  1.2;
+
+
+// Links
+$global-link-weight:      normal;
+$global-link-color:       $primary;
+$global-link-color-dark:  $global-link-color;
+$global-link-focus:       lighten($global-link-color, 20%);
+$global-link-color-dark:  $global-link-color;
+$global-link-focus-dark:  $global-link-focus;
+
+// Design Features
+$global-dark-mode:  false; // enables dark mode variables
+$global-radius:     false; // false | modular scale ratio
+$global-shadow:     1px 1px 2px transparentize($dark, 0.2);
+
+// Icons
+$global-icon-size: 2;
+$global-icon-size-sm: 1;
+$global-icon-size-lg: 4;
+
+
+// Backgrounds
+$global-bg-color:               $white;
+$global-bg-color-dark:          $black;
+// Todo: deprecate
+$global-background-color:       $global-bg-color;
+$global-background-color-dark:  $global-bg-color-dark;
+
+
+// Todo: need to deprecate. Do not use this group of variables.
+$global-menu-bg: $light;
+$global-menu-bg-dark: $global-menu-bg;
+ /**
+ * Breadcrumbs
+ **/
+
+// * Fonts
+$breadcrumbs-font-size         : 0.5; // modular scale
+$breadcrumbs-font-weight       : normal;
+$breadcrumbs-active-font-weight: bold;
+
+// * Breadcrumb Separator
+$breadcrumbs-char              : "/\00a0";
+
+// * Breadcrumb Truncation
+$breadcrumbs-max-chars         : (
+  xs                           : 35ch,
+  sm                           : 40ch,
+  md                           : 45ch,
+  lg                           : 50ch,
+  xl                           : 60ch,
+  xxl                          : 70ch,
+  xxxl                         : 80ch
+);
+
+// * Margin
+// false | modular scale ratio
+$breadcrumbs-margin-top        : 0;
+$breadcrumbs-margin-right      : false;
+$breadcrumbs-margin-bottom     : 0;
+$breadcrumbs-margin-left       : false;
+
+// * Padding
+// false | modular scale ratio
+$breadcrumbs-padding-top       : false;
+$breadcrumbs-padding-bottom    : false;
+$breadcrumbs-padding-right     : false;
+$breadcrumbs-padding-left      : false;
+
+/**
+ * BUGO BUTTON VARIABLES
+ *
+ * * note
+ * TODO: something
+ * ! Deprecate
+ * ? Question
+ * @param myParam
+ **/
+
+
+// * Button Defaults
+
+$button-radius              : $global-radius;
+$button-default-bg          : $primary;
+$button-default-color       : $white;
+
+$button-default-bg-dark     : $secondary;
+$button-default-color-dark  : $light;
+
+
+// * Button Icon
+
+$button-icon-fill     : $secondary;
+$button-icon-fill-dark: $secondary;/**
+  * BUGO FONT AWESOME VARIABLES
+  **/
+
+
+  $bugo-icon-size: $global-icon-size;
+  $bugo-icon-size-sm: $global-icon-size-sm;
+  $bugo-icon-size-lg: $global-icon-size-lg;
+/**
+ * BUGO FOOTER VARIABLES
+ **/
+
+// * Margin
+// * false | modular scale ratio
+
+$footer-margin-top:        false; // false | modular scale ratio
+$footer-margin-right:      false; // false | modular scale ratio
+$footer-margin-bottom:     $global-margin; // false | modular scale ratio
+$footer-margin-left:       false; // false | modular scale ratio
+
+
+// * Padding
+// * false | modular scale ratio
+
+$footer-padding-top:       false; // false | modular scale ratio
+$footer-padding-bottom:    false; // false | modular scale ratio
+$footer-padding-right:     false; // false | modular scale ratio
+$footer-padding-left:      false; // false | modular scale ratio
+
+/**
+ *
+ * BACKUP Footer VARS
+ *
+ **/
+$footer-margin-x:   false; // false | modular scale ratio
+$footer-margin-y:   false; // false | modular scale ratio
+$footer-padding-x:  false; // false | modular scale ratio
+$footer-padding-y:  2; // false | modular scale ratio
+
+$footer-column-gap: 0;
+$footer-row-gap: 0;
+
+$footer-xs-template-areas: "header" "wrap" "footer"; // TODO: need to define
+$footer-sm-template-areas: $footer-xs-template-areas;
+$footer-md-template-areas: $footer-xs-template-areas;
+$footer-lg-template-areas: $footer-xs-template-areas;
+$footer-xl-template-areas: $footer-xs-template-areas;
+$footer-xxl-template-areas: $footer-xs-template-areas;
+$footer-xxxl-template-areas: $footer-xs-template-areas;
+
+$footer-xs-template-columns: repeat( 1, 1fr );
+$footer-sm-template-columns: $footer-xs-template-columns;
+$footer-md-template-columns: $footer-xs-template-columns;
+$footer-lg-template-columns: $footer-xs-template-columns;
+$footer-xl-template-columns: $footer-xs-template-columns;
+$footer-xxl-template-columns: $footer-xs-template-columns;
+$footer-xxxl-template-columns: $footer-xs-template-columns;
+
+
+/**
+ * BUGO LOCATIONS LAYOUT
+ **/
+
+$footer-loc-bg:             $primary;
+$footer-loc-color:          $white;
+
+
+$footer-template-areas: (
+  xs: $footer-xs-template-areas,
+  sm: $footer-sm-template-areas,
+  md: $footer-md-template-areas,
+  lg: $footer-lg-template-areas,
+  xl: $footer-xl-template-areas,
+  xxl: $footer-xxl-template-areas,
+  xxxl: $footer-xxxl-template-areas
+);
+
+$footer-template-columns: (
+  xs: $footer-xs-template-columns,
+  sm: $footer-sm-template-columns,
+  md: $footer-md-template-columns,
+  lg: $footer-lg-template-columns,
+  xl: $footer-xl-template-columns,
+  xxl: $footer-xxl-template-columns,
+  xxxl: $footer-xxxl-template-columns
+);/**
+ * Branding
+ **/
+
+$branding-font-size          : 2; // modular scale
+$branding-font-weight:        bold;
+$branding-color              : $white; // text and svg fill if svg fills with currentColor
+$branding-color-dark         : $white;// text and svg fill if svg fills with currentColor
+
+$header-brand-position       : relative;
+$header-brand-width          : 100%;
+$header-brand-z              : 100;
+$header-brand-image-width    : 100%;
+$header-brand-image-max-width: 100%;
+
+/**
+ * Main Navigation
+ * TODO comments
+ **/
+
+// * Light Mode
+$main-menu-color         : $white;
+$main-menu-dropdown-bg   : $primary;
+$main-menu-dropdown-color: $white;
+
+// * Dark Mode
+$main-menu-color-dark         : $white;
+$main-menu-dropdown-bg-dark   : lighten($dark, 10%);
+$main-menu-dropdown-color-dark: $white;
+
+// * Fonts
+$main-menu-font:          1; // modular scale
+$main-menu-dropdown-font: 0; // modular scale
+
+
+$main-menu-margin:           0 -1rem 0 0;
+$main-menu-padding:          0;
+$main-menu-color:            $white;
+$main-menu-color-dark:       $white;
+
+$main-menu-link-margin:      0 0.5rem;
+$main-menu-link-padding:     0.25rem 0.5rem;
+
+$main-menu-dropdown-bg:          $global-menu-bg;
+$main-menu-dropdown-color:       $black;
+$main-menu-dropdown-bg-dark:     lighten( $dark, 10% );
+$main-menu-dropdown-color-dark:  $white;
+
+$main-menu-margin-x:   false; // false | modular scale ratio
+$main-menu-margin-y:   false; // false | modular scale ratio
+$main-menu-padding-x:  false; // false | modular scale ratio
+$main-menu-padding-y:  false; // false | modular scale ratio
+
+$main-menu-justify: flex-end;
+$main-menu-whitespace: normal;
+
+
+/**
+ * Mobile Navigation
+ **/
+
+ $mobile-nav-position: absolute;
+ $mobile-nav-button-width: auto;
+ $mobile-nav-button-height: auto;
+ $mobile-nav-icon-width: 2;
+ $mobile-nav-icon-height: 2;
+
+ $mobile-nav-margin-x:   auto; // false | modular scale ratio
+ $mobile-nav-margin-y:   false; // false | modular scale ratio
+ $mobile-nav-padding-x:  -2; // false | modular scale ratio
+ $mobile-nav-padding-y:  -2; // false | modular scale ratio
+
+ $mobile-nav-bg: $global-menu-bg;
+
+// * Search Form
+// TODO comments & check font size vars
+
+$header-search-font-size                   : 0; //modularscale raito
+$header-search-field-margin                : 0 0 0 0.5rem;
+$header-search-field-padding               : 0.25rem 0.5rem;
+$header-search-button-margin               : 0 0 0 0.5rem;
+// ? is this being used? or is it $header-search-font-size?
+$header-search-font: -2; // modular scale ratio
+
+
+/**
+ * Site Header
+ * * Part of the body element's css grid
+ * * Edit positioning in /variables/elements/_body.scss
+ * TODO prefix each $header to $site-header, so we can modify the header HTML element separately
+ **/
+
+
+// * Fonts
+
+$header-link-weight                        : normal;
+
+
+// * Light Mode
+
+$header-color                              : $light;
+$header-bg                                 : transparent;
+$header-link                               : $global-link-color;
+$header-text-color                         : $light;
+$header-link-color                         : $light;
+$header-link-focus                         : $global-link-focus;
+
+
+// * Dark Mode
+
+$header-color-dark                         : $light;
+$header-bg-dark                            : transparent;
+$header-link-dark                          : $global-link-color-dark;
+$header-bg-dark                            : $dark;
+$header-text-color-dark                    : $light;
+$header-link-color-dark                    : $light;
+$header-link-focus-dark                    : $global-link-focus;
+
+// Dimensions
+$header-width                              : 100%;
+$header-height                             : auto;
+
+$header-margin-x                           : false; // false | modular scale ratio
+$header-margin-y                           : false; // false | modular scale ratio
+$header-padding-x                          : false; // false | modular scale ratio
+$header-padding-y                          : false; // false | modular scale ratio
+
+// Positioning
+$header-position                           : absolute;
+$header-top                                : 0;
+$header-right                              : 0;
+$header-bottom                             : auto;
+$header-left                               : 0;
+$header-z                                  : 2000;
+
+
+/**
+ * Header Navigation Container
+ * * wrapper around all navigation4
+ **/
+
+
+// * Light Mode
+
+$header-nav-container-bg                   : $header-bg;
+
+
+// * Dark Mode
+
+$header-nav-container-bg-dark              : $header-bg-dark;
+
+// * CSS Grid
+$header-nav-container-bg                   : $header-bg;
+$header-nav-container-bg-dark              : $header-bg-dark;
+
+$header-nav-container-margin-x             : auto; // false | modular scale ratio
+$header-nav-container-margin-y             : false; // false | modular scale ratio
+$header-nav-container-padding-x            : false; // false | modular scale ratio
+$header-nav-container-padding-y            : 1; // false | modular scale ratio
+
+$header-nav-container-column-gap           : false; // false | modular scale ratio
+$header-nav-container-row-gap              : 2;  // false | modular scale ratio
+
+$header-nav-container-xs-template-areas    :
+  "brand brand brand ... ... ... ... ... ... mbutton mbutton mbutton";
+$header-nav-container-sm-template-areas    : $header-nav-container-xs-template-areas;
+$header-nav-container-md-template-areas    :
+  "brand brand search search search search search search search search search search"
+  "brand brand nmain nmain nmain nmain nmain nmain nmain nmain nmain nmain";
+$header-nav-container-lg-template-areas    : $header-nav-container-md-template-areas;
+$header-nav-container-xl-template-areas    : $header-nav-container-md-template-areas;
+$header-nav-container-xxl-template-areas   : $header-nav-container-md-template-areas;
+$header-nav-container-xxxl-template-areas  : $header-nav-container-md-template-areas;
+
+$header-nav-container-xs-template-columns  : repeat( 12, 1fr );
+$header-nav-container-sm-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-md-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-lg-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-xl-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-xxl-template-columns : $header-nav-container-xs-template-columns;
+$header-nav-container-xxxl-template-columns: $header-nav-container-xs-template-columns;
+/**
+ * BUGO LOCATIONS VARIABLES
+ **/
+
+/**
+ * BUGO NAVIGATION Variables
+ * horizontal and vertical navigation
+ **/
+
+/**
+ * Dropdowns
+ **/
+
+ $dropdown-position        : absolute;
+ $dropdown-width           : auto;
+ $dropdown-whitespace      : nowrap;
+
+
+ // * Margin
+ // false | modular scale ratio
+
+ $dropdown-margin-top      : false; // false | modular scale ratio
+ $dropdown-margin-right    : false; // false | modular scale ratio
+ $dropdown-margin-bottom   : false; // false | modular scale ratio
+ $dropdown-margin-left     : false; // false | modular scale ratio
+
+
+ // * Padding
+ // false | modular scale ratio
+
+ $dropdown-padding-top     : -2; // false | modular scale ratio
+ $dropdown-padding-right   : -2; // false | modular scale ratio
+ $dropdown-padding-bottom  : -2; // false | modular scale ratio
+ $dropdown-padding-left    : -2; // false | modular scale ratio
+
+
+ // * Positioning
+
+ $dropdown-position        : absolute;
+ $dropdown-top             : 100%;
+ $dropdown-right           : auto;
+ $dropdown-bottom          : auto;
+ $dropdown-left            : 50%;
+ $dropdown-z               : -1;
+
+
+ // * Colors
+
+ $dropdown-radius          : 0; // CSS unit
+ $dropdown-bg              : $global-menu-bg;
+ $dropdown-color           : $white;
+ $dropdown-link            : $global-link-color;
+ $dropdown-opacity         : 0; // value 0 - 1
+ $dropdown-shadow          : $global-shadow;
+
+
+ // * Transition
+
+ $dropdown-easing          : cubic-bezier(0.250, 0.460, 0.450, 0.940);
+ $dropdown-transition      : all 0.5s $dropdown-easing;
+ $dropdown-transform-origin: 0 -1rem -1rem;
+ $dropdown-transform       : translateX( -50% ) translateY( 1rem ) rotateX( 90deg );
+
+
+ // * Open
+
+ $dropdown-open-transform  : translateX( -50% ) translateY( 1rem ) rotateX( 0 );
+ $dropdown-open-opacity    : 1;
+
+
+ // * Link Margin
+ // false | modular scale ratio
+
+ $dropdown-link-margin-x   : -2; // false | modular scale ratio
+ $dropdown-link-margin-y   : -4; // false | modular scale ratio
+
+ // * Link Padding
+ // false | modular scale ratio
+
+ $dropdown-link-padding-x  : -2; // false | modular scale ratio
+ $dropdown-link-padding-y  : -4; // false | modular scale ratio
+
+/**
+ * BUGO SEARCH VARIABLES
+ **/
+
+/**
+ * BUGO SHARE VARIABLES
+ **/
+
+/**
+  * SPACING
+  * * use a value of: false | modular scale
+  * * false value parses to 0
+  **/
+
+  $share-margin-top: 2; //
+  $share-margin-right: false; // false | modular scale
+  $share-margin-bottom: 2; // false | modular scale
+  $share-margin-left: false; // false | modular scale
+
+  $share-padding-top: false; // false | modular scale
+  $share-padding-right: false; // false | modular scale
+  $share-padding-bottom: false; // false | modular scale
+  $share-padding-left: false; // false | modular scale
+
+  $share-link-margin-top: false; //
+  $share-link-margin-right: false; // false | modular scale
+  $share-link-margin-bottom: flase; // false | modular scale
+  $share-link-margin-left: -5; // false | modular scale
+
+  $share-link-padding-top: false; // false | modular scale
+  $share-link-padding-right: false; // false | modular scale
+  $share-link-padding-bottom: false; // false | modular scale
+  $share-link-padding-left: false; // false | modular scale
+
+
+  $share-icon-width: 1;
+  $share-icon-fill: $primary;
+  $share-icon-fill-dark: $primary;
+
+  $share-modal-bg: transparentize($black,.5);/**
+ * BUGO SIMPLE MODAL VARIABLES
+ **/
+
+/**
+ * BUGO THUMBNAIL VARIABLES
+ *
+ * * note
+ * TODO: something
+ * ! Deprecate
+ * ? Question
+ * @param myParam
+ **/
+
+ // * Thumbnail Options
+
+$thumbnail-scale-on-hover: false;
+$thumbnail-aspect-ratio: 100%;/**
+ * BUGO TYPOGRAPHY
+ * Add typography based on modular scale
+ * * modular scale is relative to the base font size
+ * * Modlular scale value is indexed from 0, so +/- values are accepted
+ * * +/-N returns calc();
+ * * False returns 0;
+ * TODO: need to review
+ **/
+
+/**
+ * Headings
+ * * you can modify most heading attributes here
+ **/
+
+// Fonts & Font Styling
+$heading-font:                $global-font;
+$heading-line-height:         1.2;
+$heading-font-weight:         700;
+$heading-text-transform:      none;
+
+// Colors
+$heading-color:               $primary;
+$heading-bg:                  transparent;
+$heading-link-color:          $global-link-color;
+$heading-link-focus:          $global-link-focus;
+
+// Dark Mode
+$heading-color-dark:          $primary;
+$heading-bg-dark:             transparent;
+$heading-link-color-dark:     $primary;
+$heading-link-focus-dark:     $light;
+
+// Heading Font Sizes using Modular Scale
+$heading-1: ( xs: 5, sm: 5, md: 5, lg: 5, xl: 5, xxl: 5, xxxl: 5 );
+$heading-2: ( xs: 4, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4, xxxl: 4 );
+$heading-3: ( xs: 3, sm: 3, md: 3, lg: 3, xl: 3, xxl: 3, xxxl: 3 );
+$heading-4: ( xs: 2, sm: 2, md: 2, lg: 2, xl: 2, xxl: 2, xxxl: 2 );
+$heading-5: ( xs: 1, sm: 1, md: 1, lg: 1, xl: 1, xxl: 1, xxxl: 1 );
+$heading-6: ( xs: 0, sm: 0, md: 0, lg: 0, xl: 0, xxl: 0, xxxl: 0 );
+
+// Heading Font Sizes using Modular Scale
+$display-1: ( xs: 5, sm: 5, md: 5, lg: 5, xl: 5, xxl: 5, xxxl: 5 );
+$display-2: ( xs: 4, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4, xxxl: 4 );
+$display-3: ( xs: 3, sm: 3, md: 3, lg: 3, xl: 3, xxl: 3, xxxl: 3 );
+$display-4: ( xs: 2, sm: 2, md: 2, lg: 2, xl: 2, xxl: 2, xxxl: 2 );
+$display-5: ( xs: 1, sm: 1, md: 1, lg: 1, xl: 1, xxl: 1, xxxl: 1 );
+$display-6: ( xs: 0.5, sm: 0.5, md: 0.5, lg: 0.5, xl: 0.5, xxl: 0.5, xxxl: 0.5 );
+
+// scale of the heading sizes above. 0 - 1
+$heading-sidebar: 0.66;
+
+
+// Spacing
+$heading-margin-top:          $global-margin; // false | modular scale ratio
+$heading-margin-right:        false; // false | modular scale ratio
+$heading-margin-bottom:       $global-padding; // false | modular scale ratio
+$heading-margin-left:         false; // false | modular scale ratio
+
+$heading-padding-top:         false; // false | modular scale ratio
+$heading-padding-bottom:      false; // false | modular scale ratio
+$heading-padding-right:       false; // false | modular scale ratio
+$heading-padding-left:        false; // false | modular scale ratio
+
+
+ /**
+ * Paragraphs
+ **/
+
+// * Margin
+// * value: false | modular scale ratio
+$paragraph-margin-top:      false;
+$paragraph-margin-right:    false;
+$paragraph-margin-bottom:   $global-padding;
+$paragraph-margin-left:     false;
+
+// * Padding
+// * value: false | modular scale ratio
+$paragraph-padding-top:     false;
+$paragraph-padding-bottom:  false;
+$paragraph-padding-right:   false;
+$paragraph-padding-left:    false;
+
+/**
+ * Blockquotes
+ *
+ **/
+
+
+ // * Light Mode
+
+ $quote-color              : $dark;
+ $quote-bg                 : darken($light,5%);
+ $quote-accent             : $primary;
+
+
+ // * Dark Mode
+
+ $quote-color-dark         : $dark;
+ $quote-bg-dark            : darken($light, 5%);
+ $quote-accent-dark        : $primary;
+
+
+ // * Margin
+ // * false | modular scale ratio
+
+ $blockquote-margin-top    : false;
+ $blockquote-margin-right  : false;
+ $blockquote-margin-bottom : $global-padding;
+ $blockquote-margin-left   : false;
+
+
+ // * Padding
+ // * false | modular scale ratio
+
+ $blockquote-padding-top   : 1;
+ $blockquote-padding-bottom: 1;
+ $blockquote-padding-right : 1;
+ $blockquote-padding-left  : 1;
+
+
+ /**
+ * Code Block
+ *
+ **/
+
+$code-bg            : darken( $light, 5% );
+
+// * Margin
+// * false | modular scale ratio
+
+$code-margin-top    : false;
+$code-margin-right  : false;
+$code-margin-bottom : $global-padding!default;
+$code-margin-left   : false;
+
+
+// * Padding
+// * false | modular scale ratio
+
+$code-padding-top   : 1;
+$code-padding-bottom: 1;
+$code-padding-right : 1;
+$code-padding-left  : 1;/**
+ * Article Summary
+ **/
+
+// * Margin
+// * false | modular scale ratio
+
+$summary-margin-top:        false; // false | modular scale ratio
+$summary-margin-right:      false; // false | modular scale ratio
+$summary-margin-bottom:     $global-margin; // false | modular scale ratio
+$summary-margin-left:       false; // false | modular scale ratio
+
+
+// * Padding
+// * false | modular scale ratio
+
+$summary-padding-top:       false; // false | modular scale ratio
+$summary-padding-bottom:    false; // false | modular scale ratio
+$summary-padding-right:     $global-padding; // false | modular scale ratio
+$summary-padding-left:      $global-padding; // false | modular scale ratio
+
+
+// * Grid
+
+$summary-column-gap:        $global-padding; // false | modular scale ratio
+$summary-row-gap:           false;  // false | modular scale ratio
+$summary-xs-template-areas:
+  "thumb"
+  "head"
+  "tax"
+  "summ";
+
+
+$summary-sm-template-areas: $summary-xs-template-areas;
+$summary-md-template-areas: $summary-xs-template-areas;
+$summary-lg-template-areas: $summary-xs-template-areas;
+$summary-xl-template-areas: $summary-xs-template-areas;
+$summary-xxl-template-areas: $summary-xs-template-areas;
+$summary-xxxl-template-areas: $summary-xs-template-areas;
+
+$summary-xs-template-columns: repeat( 1, 1fr );
+$summary-sm-template-columns: $summary-xs-template-columns;
+$summary-md-template-columns: $summary-xs-template-columns;
+$summary-lg-template-columns: $summary-xs-template-columns;
+$summary-xl-template-columns: $summary-xs-template-columns;
+$summary-xxl-template-columns: $summary-xs-template-columns;
+$summary-xxxl-template-columns: $summary-xs-template-columns;
+
+$summary-template-areas: (
+  xs: $summary-xs-template-areas,
+  sm: $summary-sm-template-areas,
+  md: $summary-md-template-areas,
+  lg: $summary-lg-template-areas,
+  xl: $summary-xl-template-areas,
+  xxl: $summary-xxl-template-areas,
+  xxxl: $summary-xxxl-template-areas
+);
+
+$summary-template-columns: (
+  xs: $summary-xs-template-columns,
+  sm: $summary-sm-template-columns,
+  md: $summary-md-template-columns,
+  lg: $summary-lg-template-columns,
+  xl: $summary-xl-template-columns,
+  xxl: $summary-xxl-template-columns,
+  xxxl: $summary-xxxl-template-columns
+);
+
+// * Child Elements
+
+$summary-header-margin: false;
+$summary-thumb-margin: false;
+$summary-summary-margin-top: $summary-column-gap; // false | modular scale ratio
+
+/**
+ * BUGO ARTICLE VARIABLES
+ **/
+
+// Config
+$article-hide-title:          false;
+$article-hide-date:           false;
+$article-hide-taxonomy:       false;
+$article-hide-featured-image: false;
+$article-hide-gallery:        false;
+
+// Order
+
+// Margin
+// * false | modular scale ratio
+
+$article-margin-top:        false; // false | modular scale ratio
+$article-margin-right:      false; // false | modular scale ratio
+$article-margin-bottom:     $global-margin; // false | modular scale ratio
+$article-margin-left:       false; // false | modular scale ratio
+
+
+// Padding
+// * false | modular scale ratio
+
+$article-padding-top:       false; // false | modular scale ratio
+$article-padding-bottom:    false; // false | modular scale ratio
+$article-padding-right:     false; // false | modular scale ratio
+$article-padding-left:      false; // false | modular scale ratio
+
+$article-img-max-width:     80%;
+/**
+ * Bugo Recent Articles
+ **/
+
+$articles-header-area:            head;
+$articles-thumbnail-area:         thum;
+$articles-date-area:              date;
+$articles-categories-area:        cats;
+$articles-tags-area:              tags;
+$articles-summary-area:           summ;
+
+$articles-xs-flex:                100%;
+$articles-xs-margin-bottom:       0; // false | int
+$articles-xs-header-font-size:    1; // int
+$articles-xs-header-font-weight:  700;
+$articles-xs-header-line-clamp:   3; // false | int
+$articles-xs-grid-gap:            2; // false | int
+$articles-xs-areas:               "thum thum head head head head";
+$articles-xs-hide-thumb:          false;
+$articles-xs-hide-header:         false;
+$articles-xs-hide-date:           true;
+$articles-xs-hide-summary:        true;
+$articles-xs-hide-categories:     true;
+$articles-xs-hide-tags:           true;
+
+$articles-sm-flex:                100%; 
+$articles-sm-margin-bottom:       1; // false | int
+$articles-sm-header-font-size:    1;
+$articles-sm-header-font-weight:  700;
+$articles-sm-header-line-clamp:   false; // false | int
+$articles-sm-grid-gap:            0; // false | int
+$articles-sm-areas:               "thum thum date date date date"
+                                  "thum thum head head head head";
+$articles-sm-hide-thumb:          false;
+$articles-sm-hide-header:         false;
+$articles-sm-hide-date:           false;
+$articles-sm-hide-summary:        true;
+$articles-sm-hide-categories:     true;
+$articles-sm-hide-tags:           true;
+
+$articles-md-flex:                100%;
+$articles-md-margin-bottom:       1; // false | int
+$articles-md-header-font-size:    1;
+$articles-md-header-font-weight:  700;
+$articles-md-header-line-clamp:   false; // false | int
+$articles-md-grid-gap:            0; // false | int
+$articles-md-areas:               "thum thum head head head head"
+                                  "thum thum summ summ summ summ";
+$articles-md-hide-thumb:          false;
+$articles-md-hide-header:         false;
+$articles-md-hide-date:           true;
+$articles-md-hide-summary:        false;
+$articles-md-hide-categories:     true;
+$articles-md-hide-tags:           true;
+
+$articles-lg-flex:                100%; 
+$articles-lg-margin-bottom:       $global-margin; // false | int
+$articles-lg-header-font-size:    1;
+$articles-lg-header-font-weight:  700;
+$articles-lg-header-line-clamp:   false; // false | int
+$articles-lg-grid-gap:            0; // false | int
+$articles-lg-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-lg-hide-thumb:          false;
+$articles-lg-hide-header:         false;
+$articles-lg-hide-date:           false;
+$articles-lg-hide-summary:        false;
+$articles-lg-hide-categories:     true;
+$articles-lg-hide-tags:           true;
+
+$articles-xl-flex:                100%; 
+$articles-xl-margin-bottom:       $global-margin; // false | int
+$articles-xl-header-font-size:    2;
+$articles-xl-header-font-weight:  700;
+$articles-xl-header-line-clamp:   false; // false | int
+$articles-xl-grid-gap:            0; // false | int
+$articles-xl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xl-hide-thumb:          false;
+$articles-xl-hide-header:         false;
+$articles-xl-hide-date:           false;
+$articles-xl-hide-summary:        false;
+$articles-xl-hide-categories:     true;
+$articles-xl-hide-tags:           true;
+
+$articles-xxl-flex:               100%; 
+$articles-xxl-margin-bottom:      $global-margin; // false | int
+$articles-xxl-header-font-size:   2;
+$articles-xxl-header-font-weight: 700;
+$articles-xxl-header-line-clamp:  false; // false | int
+$articles-xxl-grid-gap:           0; // false | int
+$articles-xxl-areas:              "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xxl-hide-thumb:         false;
+$articles-xxl-hide-header:        false;
+$articles-xxl-hide-date:          false;
+$articles-xxl-hide-summary:       false;
+$articles-xxl-hide-categories:    true;
+$articles-xxl-hide-tags:          true;
+
+$articles-xxxl-flex:                100%; 
+$articles-xxxl-margin-bottom:       $global-margin; // false | int
+$articles-xxxl-header-font-size:    2;
+$articles-xxxl-header-font-weight:  700;
+$articles-xxxl-header-line-clamp:   false; // false | int
+$articles-xxxl-grid-gap:            0; // false | int
+$articles-xxxl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ";
+$articles-xxxl-hide-thumb:          false;
+$articles-xxxl-hide-header:         false;
+$articles-xxxl-hide-date:           false;
+$articles-xxxl-hide-summary:        false;
+$articles-xxxl-hide-categories:     true;
+$articles-xxxl-hide-tags:           true;
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$aside-summ-header-area:            head;
+$aside-summ-thumbnail-area:         thum;
+$aside-summ-date-area:              date;
+$aside-summ-categories-area:        cats;
+$aside-summ-tags-area:              tags;
+$aside-summ-summary-area:           summ;
+
+$aside-summ-xs-flex:                100%; 
+$aside-summ-xs-margin-bottom:       0;
+$aside-summ-xs-header-font-size:    1;
+$aside-summ-xs-header-font-weight:  700;
+$aside-summ-xs-header-line-clamp:   3; // false | int
+$aside-summ-xs-grid-gap:            0; // false | int
+$aside-summ-xs-areas:               "thum thum head head head head";
+$aside-summ-xs-hide-thumb:          false;
+$aside-summ-xs-hide-header:         false;
+$aside-summ-xs-hide-date:           true;
+$aside-summ-xs-hide-summary:        true;
+$aside-summ-xs-hide-categories:     true;
+$aside-summ-xs-hide-tags:           true;
+
+$aside-summ-sm-flex:                100%; 
+$aside-summ-sm-margin-bottom:       0;
+$aside-summ-sm-header-font-size:    1;
+$aside-summ-sm-header-font-weight:  700;
+$aside-summ-sm-header-line-clamp:   false; // false | int
+$aside-summ-sm-grid-gap:            0; // false | int
+$aside-summ-sm-areas:               "thum thum date date date date"
+                                    "thum thum head head head head";
+$aside-summ-sm-hide-thumb:          false;
+$aside-summ-sm-hide-header:         false;
+$aside-summ-sm-hide-date:           false;
+$aside-summ-sm-hide-summary:        true;
+$aside-summ-sm-hide-categories:     true;
+$aside-summ-sm-hide-tags:           true;
+
+$aside-summ-md-flex:                100%;
+$aside-summ-md-margin-bottom:       0;
+$aside-summ-md-header-font-size:    1;
+$aside-summ-md-header-font-weight:  700;
+$aside-summ-md-header-line-clamp:   false; // false | int
+$aside-summ-md-grid-gap:            1; // false | int
+$aside-summ-md-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ";
+$aside-summ-md-hide-thumb:          false;
+$aside-summ-md-hide-header:         false;
+$aside-summ-md-hide-date:           true;
+$aside-summ-md-hide-summary:        true;
+$aside-summ-md-hide-categories:     true;
+$aside-summ-md-hide-tags:           true;
+
+$aside-summ-lg-flex:                100%; 
+$aside-summ-lg-margin-bottom:       0;  
+$aside-summ-lg-header-font-size:    1;
+$aside-summ-lg-header-font-weight:  700;
+$aside-summ-lg-header-line-clamp:   false; // false | int
+$aside-summ-lg-grid-gap:            0; // false | int
+$aside-summ-lg-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ";
+$aside-summ-lg-hide-thumb:          false;
+$aside-summ-lg-hide-header:         false;
+$aside-summ-lg-hide-date:           false;
+$aside-summ-lg-hide-summary:        false;
+$aside-summ-lg-hide-categories:     true;
+$aside-summ-lg-hide-tags:           true;
+
+$aside-summ-xl-flex:                100%; 
+$aside-summ-xl-margin-bottom:       0;
+$aside-summ-xl-header-font-size:    1;
+$aside-summ-xl-header-font-weight:  700;
+$aside-summ-xl-header-line-clamp:   false; // false | int
+$aside-summ-xl-grid-gap:            0; // false | int
+$aside-summ-xl-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ";
+$aside-summ-xl-hide-thumb:          false;
+$aside-summ-xl-hide-header:         false;
+$aside-summ-xl-hide-date:           true;
+$aside-summ-xl-hide-summary:        true;
+$aside-summ-xl-hide-categories:     true;
+$aside-summ-xl-hide-tags:           true;
+
+$aside-summ-xxl-flex:               100%; 
+$aside-summ-xxl-margin-bottom:       0;
+$aside-summ-xxl-header-font-size:   1;
+$aside-summ-xxl-header-font-weight: 700;
+$aside-summ-xxl-header-line-clamp:  false; // false | int
+$aside-summ-xxl-grid-gap:           0; // false | int
+$aside-summ-xxl-areas:              "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ";
+$aside-summ-xxl-hide-thumb:         false;
+$aside-summ-xxl-hide-header:        false;
+$aside-summ-xxl-hide-date:          true;
+$aside-summ-xxl-hide-summary:       true;
+$aside-summ-xxl-hide-categories:    true;
+$aside-summ-xxl-hide-tags:          true;
+
+$aside-summ-xxxl-flex:                100%; 
+$aside-summ-xxxl-margin-bottom:       0;
+$aside-summ-xxxl-header-font-size:    1;
+$aside-summ-xxxl-header-font-weight:  700;
+$aside-summ-xxxl-header-line-clamp:   false; // false | int
+$aside-summ-xxxl-grid-gap:            0; // false | int
+$aside-summ-xxxl-areas:               "thum thum thum thum thum thum"
+                                      "head head head head head head"
+                                      "date date date date date date"
+                                      "summ summ summ summ summ summ";
+$aside-summ-xxxl-hide-thumb:          false;
+$aside-summ-xxxl-hide-header:         false;
+$aside-summ-xxxl-hide-date:           true;
+$aside-summ-xxxl-hide-summary:        true;
+$aside-summ-xxxl-hide-categories:     true;
+$aside-summ-xxxl-hide-tags:           true;
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$recent-header-area:            head;
+$recent-thumbnail-area:         thum;
+$recent-date-area:              date;
+$recent-categories-area:        cats;
+$recent-tags-area:              tags;
+$recent-summary-area:           summ;
+
+$recent-xs-flex:                100%; 
+$recent-xs-margin-bottom:       0;
+$recent-xs-header-font-size:    1;
+$recent-xs-header-font-weight:  700;
+$recent-xs-header-line-clamp:   3; // false | int
+$recent-xs-grid-gap:            0; // false | int
+$recent-xs-areas:               "thum thum head head head head";
+$recent-xs-hide-thumb:          false;
+$recent-xs-hide-header:         false;
+$recent-xs-hide-date:           true;
+$recent-xs-hide-summary:        true;
+$recent-xs-hide-categories:     true;
+$recent-xs-hide-tags:           true;
+
+$recent-sm-flex:                100%; 
+$recent-sm-margin-bottom:       0;
+$recent-sm-header-font-size:    1;
+$recent-sm-header-font-weight:  700;
+$recent-sm-header-line-clamp:   false; // false | int
+$recent-sm-grid-gap:            0; // false | int
+$recent-sm-areas:               "thum thum date date date date"
+                                "thum thum head head head head";
+$recent-sm-hide-thumb:          false;
+$recent-sm-hide-header:         false;
+$recent-sm-hide-date:           false;
+$recent-sm-hide-summary:        true;
+$recent-sm-hide-categories:     true;
+$recent-sm-hide-tags:           true;
+
+$recent-md-flex:                33%;
+$recent-md-margin-bottom:       0;
+$recent-md-header-font-size:    1;
+$recent-md-header-font-weight:  700;
+$recent-md-header-line-clamp:   false; // false | int
+$recent-md-grid-gap:            1; // false | int
+$recent-md-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-md-hide-thumb:          false;
+$recent-md-hide-header:         false;
+$recent-md-hide-date:           false;
+$recent-md-hide-summary:        false;
+$recent-md-hide-categories:     true;
+$recent-md-hide-tags:           true;
+
+$recent-lg-flex:                33%; 
+$recent-lg-margin-bottom:       0;
+$recent-lg-header-font-size:    1;
+$recent-lg-header-font-weight:  700;
+$recent-lg-header-line-clamp:   false; // false | int
+$recent-lg-grid-gap:            0; // false | int
+$recent-lg-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-lg-hide-thumb:          false;
+$recent-lg-hide-header:         false;
+$recent-lg-hide-date:           false;
+$recent-lg-hide-summary:        false;
+$recent-lg-hide-categories:     true;
+$recent-lg-hide-tags:           true;
+
+$recent-xl-flex:                33%; 
+$recent-xl-margin-bottom:       0;
+$recent-xl-header-font-size:    1;
+$recent-xl-header-font-weight:  700;
+$recent-xl-header-line-clamp:   false; // false | int
+$recent-xl-grid-gap:            0; // false | int
+$recent-xl-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-xl-hide-thumb:          false;
+$recent-xl-hide-header:         false;
+$recent-xl-hide-date:           false;
+$recent-xl-hide-summary:        false;
+$recent-xl-hide-categories:     true;
+$recent-xl-hide-tags:           true;
+
+$recent-xxl-flex:               33%; 
+$recent-xxl-margin-bottom:       0;
+$recent-xxl-header-font-size:   1;
+$recent-xxl-header-font-weight: 700;
+$recent-xxl-header-line-clamp:  false; // false | int
+$recent-xxl-grid-gap:           0; // false | int
+$recent-xxl-areas:              "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-xxl-hide-thumb:         false;
+$recent-xxl-hide-header:        false;
+$recent-xxl-hide-date:          false;
+$recent-xxl-hide-summary:       false;
+$recent-xxl-hide-categories:    true;
+$recent-xxl-hide-tags:          true;
+
+$recent-xxxl-flex:                33%; 
+$recent-xxxl-margin-bottom:       0;
+$recent-xxxl-header-font-size:    1;
+$recent-xxxl-header-font-weight:  700;
+$recent-xxxl-header-line-clamp:   false; // false | int
+$recent-xxxl-grid-gap:            0; // false | int
+$recent-xxxl-areas:               "thum thum thum thum thum thum"
+                                  "head head head head head head"
+                                  "date date date date date date"
+                                  "summ summ summ summ summ summ";
+$recent-xxxl-hide-thumb:          false;
+$recent-xxxl-hide-header:         false;
+$recent-xxxl-hide-date:           false;
+$recent-xxxl-hide-summary:        false;
+$recent-xxxl-hide-categories:     true;
+$recent-xxxl-hide-tags:           true;
+/**
+ * Body Element <body>
+ **/
+
+$body-background-color: $global-bg-color;
+$body-background-color-dark: $global-bg-color-dark; /**
+ * Hero
+ **/
+
+ $hero-height:             13.5; //modular scale ratio
+ $hero-padding:            $global-padding * 2;
+ $hero-margin-bottom:      $global-margin;
+ $hero-enable-filter:      true;
+ $hero-filter-color:       $black;
+ $hero-filter-blend-mode:  multiply;
+ $hero-filter-opacity:     0.5;
+ $hero-font-size:          5.5;
+ $hero-text-color:         $white;
+ $hero-text-weight:        400;
+ $hero-text-align:         center;
+ $hero-text-transform:     uppercase;
+ $hero-text-line-height:   1.2;
+ /**
+ * Pagination
+ *
+ **/
+
+$pagination-as-buttons:       true;
+$pagination-font-size:        1; // modular scale
+$pagination-text-decoration:  none;
+$pagination-text-link-color:  $global-link-color;
+$pagination-text-focus-color: $global-link-focus;

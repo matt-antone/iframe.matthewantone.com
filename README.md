@@ -74,3 +74,9 @@ Bugo Site uses the Bugo Origin Theme. All the SASS varaibles for Origin have bee
 
 For more specific documentation on customizing the Bugo Origin Theme go to https://github.com/bugoio/bugo-theme-origin
 
+## Generate Sample Content
+
+Bugo Site offers the ability to add sample content to work with. This allows you to build a site without having content first.
+
+
+

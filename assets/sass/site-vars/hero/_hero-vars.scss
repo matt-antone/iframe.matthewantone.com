@@ -1,0 +1,18 @@
+/**
+ * Hero
+ **/
+
+ $hero-height:             13.5; //modular scale ratio
+ $hero-padding:            $global-padding * 2;
+ $hero-margin-bottom:      $global-margin;
+ $hero-enable-filter:      true;
+ $hero-filter-color:       $black;
+ $hero-filter-blend-mode:  multiply;
+ $hero-filter-opacity:     0.5;
+ $hero-font-size:          5.5;
+ $hero-text-color:         $white;
+ $hero-text-weight:        400;
+ $hero-text-align:         center;
+ $hero-text-transform:     uppercase;
+ $hero-text-line-height:   1.2;
+ 

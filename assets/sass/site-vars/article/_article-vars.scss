@@ -1,0 +1,32 @@
+
+/**
+ * BUGO ARTICLE VARIABLES
+ **/
+
+// Config
+$article-hide-title:          false;
+$article-hide-date:           false;
+$article-hide-taxonomy:       false;
+$article-hide-featured-image: false;
+$article-hide-gallery:        false;
+
+// Order
+
+// Margin
+// * false | modular scale ratio
+
+$article-margin-top:        false; // false | modular scale ratio
+$article-margin-right:      false; // false | modular scale ratio
+$article-margin-bottom:     $global-margin; // false | modular scale ratio
+$article-margin-left:       false; // false | modular scale ratio
+
+
+// Padding
+// * false | modular scale ratio
+
+$article-padding-top:       false; // false | modular scale ratio
+$article-padding-bottom:    false; // false | modular scale ratio
+$article-padding-right:     false; // false | modular scale ratio
+$article-padding-left:      false; // false | modular scale ratio
+
+$article-img-max-width:     80%;

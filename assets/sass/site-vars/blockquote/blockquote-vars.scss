@@ -1,0 +1,35 @@
+/**
+ * Bugo Blockquotes
+ **/
+
+
+ // * Light Mode
+
+ $quote-color              : $dark;
+ $quote-bg                 : darken($light,5%);
+ $quote-accent             : $primary;
+
+
+ // * Dark Mode
+
+ $quote-color-dark         : $dark;
+ $quote-bg-dark            : darken($light, 5%);
+ $quote-accent-dark        : $primary;
+
+
+ // * Margin
+ // * false | modular scale ratio
+
+ $blockquote-margin-top    : false;
+ $blockquote-margin-right  : false;
+ $blockquote-margin-bottom : $global-padding;
+ $blockquote-margin-left   : false;
+
+
+ // * Padding
+ // * false | modular scale ratio
+
+ $blockquote-padding-top   : 1;
+ $blockquote-padding-bottom: 1;
+ $blockquote-padding-right : 1;
+ $blockquote-padding-left  : 1;

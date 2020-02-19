@@ -10,6 +10,7 @@ goldmark:
     table: true
     taskList: true
     typographer: true
+    emoji: true
   parser:
     attribute: true
     autoHeadingID: true

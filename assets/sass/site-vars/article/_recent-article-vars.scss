@@ -1,0 +1,125 @@
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$recent-header-area:            head;
+$recent-thumbnail-area:         thum;
+$recent-date-area:              date;
+$recent-categories-area:        cats;
+$recent-tags-area:              tags;
+$recent-summary-area:           summ;
+
+$recent-xs-flex:                100%; 
+$recent-xs-margin-bottom:       0;
+$recent-xs-header-font-size:    1;
+$recent-xs-header-font-weight:  700;
+$recent-xs-header-line-clamp:   3; // false | int
+$recent-xs-grid-gap:            0; // false | int
+$recent-xs-areas:               "thum thum head head head head";
+$recent-xs-hide-thumb:          false;
+$recent-xs-hide-header:         false;
+$recent-xs-hide-date:           true;
+$recent-xs-hide-summary:        true;
+$recent-xs-hide-categories:     true;
+$recent-xs-hide-tags:           true;
+
+$recent-sm-flex:                100%; 
+$recent-sm-margin-bottom:       0;
+$recent-sm-header-font-size:    1;
+$recent-sm-header-font-weight:  700;
+$recent-sm-header-line-clamp:   false; // false | int
+$recent-sm-grid-gap:            0; // false | int
+$recent-sm-areas:               "thum thum date date date date"
+                                "thum thum head head head head";
+$recent-sm-hide-thumb:          false;
+$recent-sm-hide-header:         false;
+$recent-sm-hide-date:           false;
+$recent-sm-hide-summary:        true;
+$recent-sm-hide-categories:     true;
+$recent-sm-hide-tags:           true;
+
+$recent-md-flex:                33%;
+$recent-md-margin-bottom:       0;
+$recent-md-header-font-size:    1;
+$recent-md-header-font-weight:  700;
+$recent-md-header-line-clamp:   false; // false | int
+$recent-md-grid-gap:            1; // false | int
+$recent-md-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-md-hide-thumb:          false;
+$recent-md-hide-header:         false;
+$recent-md-hide-date:           false;
+$recent-md-hide-summary:        false;
+$recent-md-hide-categories:     true;
+$recent-md-hide-tags:           true;
+
+$recent-lg-flex:                33%; 
+$recent-lg-margin-bottom:       0;
+$recent-lg-header-font-size:    1;
+$recent-lg-header-font-weight:  700;
+$recent-lg-header-line-clamp:   false; // false | int
+$recent-lg-grid-gap:            0; // false | int
+$recent-lg-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-lg-hide-thumb:          false;
+$recent-lg-hide-header:         false;
+$recent-lg-hide-date:           false;
+$recent-lg-hide-summary:        false;
+$recent-lg-hide-categories:     true;
+$recent-lg-hide-tags:           true;
+
+$recent-xl-flex:                33%; 
+$recent-xl-margin-bottom:       0;
+$recent-xl-header-font-size:    1;
+$recent-xl-header-font-weight:  700;
+$recent-xl-header-line-clamp:   false; // false | int
+$recent-xl-grid-gap:            0; // false | int
+$recent-xl-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-xl-hide-thumb:          false;
+$recent-xl-hide-header:         false;
+$recent-xl-hide-date:           false;
+$recent-xl-hide-summary:        false;
+$recent-xl-hide-categories:     true;
+$recent-xl-hide-tags:           true;
+
+$recent-xxl-flex:               33%; 
+$recent-xxl-margin-bottom:       0;
+$recent-xxl-header-font-size:   1;
+$recent-xxl-header-font-weight: 700;
+$recent-xxl-header-line-clamp:  false; // false | int
+$recent-xxl-grid-gap:           0; // false | int
+$recent-xxl-areas:              "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ";
+$recent-xxl-hide-thumb:         false;
+$recent-xxl-hide-header:        false;
+$recent-xxl-hide-date:          false;
+$recent-xxl-hide-summary:       false;
+$recent-xxl-hide-categories:    true;
+$recent-xxl-hide-tags:          true;
+
+$recent-xxxl-flex:                33%; 
+$recent-xxxl-margin-bottom:       0;
+$recent-xxxl-header-font-size:    1;
+$recent-xxxl-header-font-weight:  700;
+$recent-xxxl-header-line-clamp:   false; // false | int
+$recent-xxxl-grid-gap:            0; // false | int
+$recent-xxxl-areas:               "thum thum thum thum thum thum"
+                                  "head head head head head head"
+                                  "date date date date date date"
+                                  "summ summ summ summ summ summ";
+$recent-xxxl-hide-thumb:          false;
+$recent-xxxl-hide-header:         false;
+$recent-xxxl-hide-date:           false;
+$recent-xxxl-hide-summary:        false;
+$recent-xxxl-hide-categories:     true;
+$recent-xxxl-hide-tags:           true;

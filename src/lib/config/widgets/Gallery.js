@@ -69,7 +69,7 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    getCloudinaryHash()
+    this.getCloudinaryHash()
   }
 
   render() {

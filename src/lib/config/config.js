@@ -27,7 +27,7 @@ const config ={
   config: {
     "backend": {
       "name": "git-gateway",
-      "branch": "netlifycms"
+      "branch": "netlifydev"
     },
     "local_backend": false,
     "load_config_file": false,

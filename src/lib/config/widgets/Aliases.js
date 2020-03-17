@@ -19,7 +19,7 @@ export default class Aliases extends Component {
     const { field, onChange, value } = this.props;
     let aliases = []
     value.map(x => {
-      console.log(x)
+      //console.log(x)
       aliases.push({
         id: x,
         text: x,

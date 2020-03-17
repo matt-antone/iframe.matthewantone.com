@@ -19,7 +19,7 @@ export default class Categories extends Component {
     const { field, onChange, value } = this.props;
     let categories = []
     value.map(x => {
-      console.log(x)
+      //console.log(x)
       categories.push({
         id: x,
         text: x,

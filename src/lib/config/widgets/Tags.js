@@ -9,10 +9,15 @@ const KeyCodes = {
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter]
 
+
+var myHeaders = new Headers({
+  'Authorization': 'Bearer '+,
+});
+
 fetch("/.netlify/functions/get-cloudinary-hash")
       .then(res => res.json())
       .then((result)=>{
-        console.log(result);
+        //console.log(result);
       })
 
 
@@ -23,16 +28,17 @@ export default class Tags extends Component {
   }
 
   componentDidMount = () => {
-    const { field, onChange, value } = this.props;
+    //console.log("props",window.netlifyIdentity.currentUser());
+    const { field, onChange, currentUser, value } = this.props;
     let tags = []
     value.map(x => {
-      console.log(x)
+      //console.log(x)
       tags.push({
         id: x,
         text: x,
       })
     })
-    console.log('tags',tags);
+    //console.log('tags',tags);
     this.setState({tags: tags});
     fetch("/tags/index.json")
       .then(res => res.json())

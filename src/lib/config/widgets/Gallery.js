@@ -54,7 +54,7 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    console.log('BugoCloudinary Mounted');
+    //console.log('BugoCloudinary Mounted');
     window.ML = window.cloudinary.createMediaLibrary({
       cloud_name: this.state.cloudName,
       api_key: this.state.api,
@@ -62,10 +62,10 @@ export default class Gallery extends Component {
       button_caption: 'Select Image or Video',
     }, {insertHandler: (data) => {
           data.assets.forEach(asset => { 
-            console.log(asset)
+            //console.log(asset)
             if(!asset.context){
               asset.context = this.state.image.context;
-              console.log('IMAGE HAS NO CONTEXT');
+              //console.log('IMAGE HAS NO CONTEXT');
             }
             this.setState({image: asset})
             //send
@@ -75,7 +75,7 @@ export default class Gallery extends Component {
         },
         document.getElementById("cloudinary-btn")
     )
-    console.log(ML);
+    //console.log(ML);
   }
 
   render() {

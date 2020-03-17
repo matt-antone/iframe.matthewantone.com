@@ -32,9 +32,9 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
-    var identityHeader = new Headers({
-      'Authorization': 'Bearer ' + window.user.token.access_token
-    });
+    //setup authorization
+    var identityHeader = new Headers();
+    identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
     
     fetch("/.netlify/functions/get-cloudinary-hash", {
       headers: identityHeader

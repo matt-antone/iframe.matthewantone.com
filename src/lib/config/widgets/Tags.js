@@ -9,6 +9,13 @@ const KeyCodes = {
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter]
 
+fetch("/.netlify/functions/get-cloudinary-hash")
+      .then(res => res.json())
+      .then((result)=>{
+        console.log(result);
+      })
+
+
 export default class Tags extends Component {  
   state = {
     tags: [],

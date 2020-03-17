@@ -2,7 +2,7 @@ const checkAuth = require('./utils/auth')
 
 exports.handler = (event, context, callback) => {
   // Use the event data auth header to verify
-  checkAuth(event).then((user) => {
+  checkAuth(context).then((user) => {
     console.log('user', user)
     // Do stuff
     return callback(null, {

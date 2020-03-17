@@ -33,7 +33,7 @@ export default class Gallery extends Component {
 
   getCloudinaryHash = () => {
     var identityHeader = new Headers({
-      'Authorization': 'Bearer ' + window.SubtleCrypto.token.access_token
+      'Authorization': 'Bearer ' + window.user.token.access_token
     });
     
     fetch("/.netlify/functions/get-cloudinary-hash", {

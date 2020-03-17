@@ -15,40 +15,6 @@ export default class Aliases extends Component {
     suggestions: []
   }
 
-  componentDidMount = () => {
-    const { field, onChange, value } = this.props;
-    let aliases = []
-    value.map(x => {
-      //console.log(x)
-      aliases.push({
-        id: x,
-        text: x,
-      })
-    })
-    this.setState({aliases: aliases});
-    fetch("/aliases/index.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          let i = 1
-          const suggestions = result.map(x => { 
-            const suggestion = {id: x, text: x}
-            i++
-            return suggestion 
-          });
-          this.setState({suggestions: suggestions})
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
 
   handleCMSChange = (newAliases) => {
     const { aliases } = this.state

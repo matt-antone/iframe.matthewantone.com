@@ -48,8 +48,7 @@ const pages = {
     {
       label: "Images",
       name: "images",
-      widget: "list",
-      "field": {label: "Image", name: "image", widget: "image"}
+      widget: "gallery",
     },
     {
       label: "Categories",

@@ -9,20 +9,6 @@ const KeyCodes = {
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter]
 
-
-console.log(window.netlifyIdentity.currentUser());
-
-var myHeaders = new Headers({
-  'Authorization': 'Bearer '
-});
-
-fetch("/.netlify/functions/get-cloudinary-hash")
-      .then(res => res.json())
-      .then((result)=>{
-        //console.log(result);
-      })
-
-
 export default class Tags extends Component {  
   state = {
     tags: [],

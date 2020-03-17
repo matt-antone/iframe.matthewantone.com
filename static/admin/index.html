@@ -13,13 +13,13 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    const user = netlifyIdentity.currentUser();
-
-    console.log(user);
 
     // Bind to events
     netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.on('login', user => console.log('login', user));
+    netlifyIdentity.on('login', user => {
+      console.log('login', user)
+      window.user = user
+    });
     netlifyIdentity.on('logout', () => console.log('Logged out'));
     netlifyIdentity.on('error', err => console.error('Error', err));
     netlifyIdentity.on('open', () => console.log('Widget opened'));

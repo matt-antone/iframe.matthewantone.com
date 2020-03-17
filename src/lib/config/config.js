@@ -9,6 +9,9 @@ CMS.registerWidget('tags', Tags);
 import Categories from './widgets/Categories'
 CMS.registerWidget('categories', Categories)
 
+import Gallery from './widgets/Gallery'
+CMS.registerWidget('gallery', Gallery)
+
 import MetaString from './widgets/MetaString'
 CMS.registerWidget('metastring', MetaString)
 

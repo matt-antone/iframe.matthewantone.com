@@ -30,6 +30,21 @@ export default class Gallery extends Component {
    },
   }
 
+
+  getCloudinaryHash = () => {
+    var identityHeader = new Headers({
+      'Authorization': 'Bearer ' + window.SubtleCrypto.token.access_token
+    });
+    
+    fetch("/.netlify/functions/get-cloudinary-hash", {
+      headers: identityHeader
+    })
+    .then(res => res.json())
+    .then((result)=>{
+      console.log(result);
+    })
+  }
+
   handleChange = (e) => {
     const image =  {
       alt: this.state.image.context.custom.alt,

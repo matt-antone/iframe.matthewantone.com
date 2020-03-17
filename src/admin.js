@@ -1,3 +1,4 @@
+window.CMS_MANUAL_INIT = true
 import CMS, { init } from 'netlify-cms'
 import config from './lib/config/config'
 

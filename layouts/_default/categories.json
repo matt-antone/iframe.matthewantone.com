@@ -1,0 +1,5 @@
+{{- $categories := slice -}}
+{{- range $key,$meta := .Site.Taxonomies.categories -}}
+  {{- $categories = $categories | append ($key | humanize | title) -}}
+{{- end -}}
+{{- $categories | jsonify -}}

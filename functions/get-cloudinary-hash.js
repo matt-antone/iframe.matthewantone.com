@@ -9,7 +9,7 @@
 
 
 /* Check context for user */
-module.exports = function checkAuth(context) {
+exports.handler = function checkAuth(context) {
   return new Promise((resolve, reject) => {
     // Reading the context.clientContext will give us the current user
     const user = context.clientContext && context.clientContext.user

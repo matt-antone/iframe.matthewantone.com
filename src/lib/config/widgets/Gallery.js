@@ -69,71 +69,11 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    //console.log('BugoCloudinary Mounted');
-    window.ML = window.cloudinary.createMediaLibrary({
-      cloud_name: this.state.cloudName,
-      api_key: this.state.api,
-      button_class: 'mediaLibrary',
-      button_caption: 'Select Image or Video',
-    }, {insertHandler: (data) => {
-          data.assets.forEach(asset => { 
-            //console.log(asset)
-            if(!asset.context){
-              asset.context = this.state.image.context;
-              //console.log('IMAGE HAS NO CONTEXT');
-            }
-            this.setState({image: asset})
-            //send
-            this.handleChange()
-          })
-        }
-        },
-        document.getElementById("cloudinary-btn")
-    )
-    //console.log(ML);
+    getCloudinaryHash()
   }
 
   render() {
     const {cloudName,image} = this.state
-    return h('div', {},[
-      h(Image,{
-        cloudName: cloudName,
-        publicId: image.public_id,
-        crop: 'scale',
-        width: '100',
-        // style: "float: right;",
-      }),
-      h('fieldset', {},[
-        h('button', {
-          id: "cloudinary-btn",
-          className: 'mediaLibrary',
-        }, 'Add Image'),
-      ]),
-      h('fieldset', {}, [
-        h('label',{
-          htmlFor: 'cloudinary-title',
-        }, 'Title'),
-        h('input',{
-          id: "cloudinary-title", 
-          name: "title", 
-          type: "text",
-          value: this.state.image.context.custom.caption,
-          onChange: e => this.handleTitle(e),
-        }),  
-      ]),
-      h('fieldset', {}, [
-        h('label',{
-          htmlFor: 'cloudinary-alt',
-        }, 'Alt Tag'),
-        h('input',{
-          id: "cloudinary-alt", 
-          name: "title", 
-          type: "text",
-          value: this.state.image.context.custom.alt,
-          onChange: e => this.handleAlt(e),
-        }),  
-      ]),
-    ]
-  );
+    return h('div', {})
   }
 }

@@ -11,7 +11,7 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter]
 
 
 var myHeaders = new Headers({
-  'Authorization': 'Bearer '+,
+  'Authorization': 'Bearer '
 });
 
 fetch("/.netlify/functions/get-cloudinary-hash")

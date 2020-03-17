@@ -10,6 +10,8 @@ const KeyCodes = {
 const delimiters = [KeyCodes.comma, KeyCodes.enter]
 
 
+console.log(window.netlifyIdentity.currentUser());
+
 var myHeaders = new Headers({
   'Authorization': 'Bearer '
 });

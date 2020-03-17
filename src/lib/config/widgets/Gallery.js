@@ -69,11 +69,13 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    this.getCloudinaryHash()
+    // this.getCloudinaryHash()
   }
 
   render() {
     const {cloudName,image} = this.state
-    return h('div', {})
+    return h('div', {}, h('button',{
+      onClick: this.getCloudinaryHash
+    },"test"))
   }
 }

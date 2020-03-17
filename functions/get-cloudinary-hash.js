@@ -1,25 +1,24 @@
+const checkAuth = require('./utils/auth')
+
 exports.handler = (event, context, callback) => {
-  const {identity, user} = context.clientContext
-  const loggedin = checkAuth(context)
-
-  // return JSON.stringify([identity,user])
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify(loggedin)
-  });
-}
-
-
-/* Check context for user */
-function checkAuth(context) {
-  return new Promise((resolve, reject) => {
-    // Reading the context.clientContext will give us the current user
-    const user = context.clientContext && context.clientContext.user
-    if (!user) {
-      console.log('No claims! Begone!')
-      return reject(new Error('No user claims'))
-    }
-    // console.log('user', user)
-    return resolve(user)
+  // Use the event data auth header to verify
+  checkAuth(event).then((user) => {
+    console.log('user', user)
+    // Do stuff
+    return callback(null, {
+      statusCode: 200,
+      body: JSON.stringify({
+        data: true
+      })
+    })
+  }).catch((error) => {
+    console.log('error', error)
+    // return error back to app
+    return callback(null, {
+      statusCode: 401,
+      body: JSON.stringify({
+        error: error.message,
+      })
+    })
   })
 }

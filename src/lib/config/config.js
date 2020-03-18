@@ -31,7 +31,7 @@ const config ={
     },
     "local_backend": false,
     "load_config_file": false,
-    // "publish_mode": "editorial_workflow",
+    "publish_mode": "editorial_workflow",
     "media_folder": "static/images/uploads",
     "public_folder": "/images/uploads",
     "collections": [

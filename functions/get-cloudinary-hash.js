@@ -15,6 +15,7 @@ const clData = {
   signature: hash.digest('hex'),
   cloud: cloud,
   key: key,
+  timestamp: timestamp,
 }
 
 exports.handler = (event, context, callback) => {

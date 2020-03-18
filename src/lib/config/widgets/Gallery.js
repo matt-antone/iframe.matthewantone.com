@@ -45,11 +45,14 @@ export default class Gallery extends Component {
     .then((result)=>{
       console.log(result);
       window.ML = window.cloudinary.createMediaLibrary({
-        cloud_name: result.cloud,
-        signature: result.signature,
         api_key: result.key,
         button_class: 'mediaLibrary',
         button_caption: 'Select Image or Video',
+        cloud_name: result.cloud,
+        signature: result.signature,
+        timestamp: result.timestamp,
+        username: 'accounts@bugo.io',
+        
       }, {insertHandler: (data) => {
             data.assets.forEach(asset => { 
               console.log(asset)

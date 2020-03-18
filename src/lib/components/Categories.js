@@ -31,30 +31,33 @@ export default class Categories extends Component {
       this.setState({categories: categories});  
     }
 
-    // Set Suggestions
-    fetch("/index.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result)
-          let i = 1
-          const suggestions = result.taxonomies.categories.map(x => { 
-            const suggestion = {id: x, text: x}
-            i++
-            return suggestion 
-          });
-          this.setState({suggestions: suggestions})
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+    if(!this.state.suggestions.length){
+
+      // Set Suggestions
+      fetch("/index.json")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            console.log(result)
+            let i = 1
+            const suggestions = result.taxonomies.categories.map(x => { 
+              const suggestion = {id: x, text: x}
+              i++
+              return suggestion 
+            });
+            this.setState({suggestions: suggestions})
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        )
+    }
   }
 
   handleCMSChange = (newCategories) => {

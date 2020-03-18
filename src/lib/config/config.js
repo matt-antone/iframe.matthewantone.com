@@ -31,7 +31,7 @@ const config ={
       "name": "git-gateway",
       "branch": "netlifydev"
     },
-    "local_backend": false,
+    "local_backend": true,
     "load_config_file": false,
     "publish_mode": "editorial_workflow",
     "media_folder": "static/images/uploads",

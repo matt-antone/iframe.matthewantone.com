@@ -52,8 +52,26 @@ export default class Aliases extends Component {
       this.setState({ aliases: newAliases })
   }
 
+  componentDidMount = () => {
+    const { field, onChange, value } = this.props;
+    let aliases = []
+
+    // Set Value
+    if(typeof(value) !== 'undefined'){
+      // transform value for use with ReactTags
+      value.map(x => {
+        aliases.push({
+          id: x,
+          text: x,
+        })
+      })
+      this.setState({aliases: aliases});  
+    }
+  }
+
   render() {
     const { aliases, suggestions } = this.state
+    console.log(this.props.value);
     return h(
       "div",{
         style: wrapperStyle,

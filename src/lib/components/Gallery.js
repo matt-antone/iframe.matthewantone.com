@@ -33,39 +33,43 @@ export default class Gallery extends Component {
 
   getCloudinaryHash = () => {
     //setup authorization
-    var identityHeader = new Headers();
-    identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
-    
-    fetch("/.netlify/functions/get-cloudinary-hash", {
-      headers: identityHeader
-    })
-    .then(res => res.json())
-    .then((result)=>{
-      console.log(result);
-      window.ML = window.cloudinary.createMediaLibrary({
-        api_key: result.data.key,
-        button_class: 'mediaLibrary',
-        button_caption: 'Select Image or Video',
-        cloud_name: result.data.cloud,
-        signature: result.data.signature,
-        timestamp: result.data.timestamp,
-        username: 'accounts@bugo.io',
-      }, {insertHandler: (data) => {
-            data.assets.forEach(asset => { 
-              console.log(asset)
-              if(!asset.context){
-                asset.context = this.state.image.context;
-                console.log('IMAGE HAS NO CONTEXT');
+    if(window.user){
+      var identityHeader = new Headers();
+      identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
+      
+      fetch("/.netlify/functions/get-cloudinary-hash", {
+        headers: identityHeader
+      })
+      .then(res => res.json())
+      .then((result)=>{
+        console.log("yo",result);
+        if(typeof(result.data) !== 'undefined'){
+          window.ML = window.cloudinary.createMediaLibrary({
+            api_key: result.data.key,
+            button_class: 'mediaLibrary',
+            button_caption: 'Select Image or Video',
+            cloud_name: result.data.cloud,
+            signature: result.data.signature,
+            timestamp: result.data.timestamp,
+            username: 'accounts@bugo.io',
+          }, {insertHandler: (data) => {
+                data.assets.forEach(asset => { 
+                  console.log(asset)
+                  if(!asset.context){
+                    asset.context = this.state.image.context;
+                    console.log('IMAGE HAS NO CONTEXT');
+                  }
+                  this.setState({image: asset})
+                  //send
+                  this.handleChange()
+                })
               }
-              this.setState({image: asset})
-              //send
-              this.handleChange()
-            })
-          }
-          },
-          document.getElementById("cloudinary-btn")
-      )
-    })
+              },
+              document.getElementById("cloudinary-btn")
+          )
+        }
+      })
+    }
   }
 
   handleChange = (e) => {

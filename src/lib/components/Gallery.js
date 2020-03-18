@@ -33,6 +33,7 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
+    console.log(this.state.status)
     //setup authorization
     if(window.user && this.state.status !== "loading" && this.state.status !== "loaded"){
       this.setState({status: 'loaded'})

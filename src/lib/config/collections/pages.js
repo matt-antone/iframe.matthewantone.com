@@ -44,25 +44,28 @@ const pages = {
       label: "Body",
       name: "body",
       widget: "markdown"
+      required: false,
     },
     {
       label: "Images",
       name: "images",
       widget: "gallery",
+      required: false,
+      hint: "Attach images to this page."
     },
     {
       label: "Categories",
       name: "categories",
       widget: "categories",
       required: false,
-      hint: "Add a category to this document."
+      hint: "Add a category to this page."
     },
     {
       label: "Tags",
       name: "tags",
       widget: "tags",
       required: false,
-      hint: "Add a tag(s) to this document."
+      hint: "Add a tag(s) to this page."
     },
     {
       label: "Slug",
@@ -75,7 +78,7 @@ const pages = {
       label: "Aliases",
       name: "aliases",
       widget: "aliases",
-      hint: "Aliases allow you to add more slugs for navigating to this document."
+      hint: "Aliases allow you to add more slugs for navigating to this page."
     },
     {
       label: "Show Sidebar",

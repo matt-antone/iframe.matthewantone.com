@@ -95,7 +95,6 @@ export default class Gallery extends Component {
     const { media } = this.state
     console.log('BugoCloudinary Mounted');
     if(typeof(window.ML) === 'undefined'){
-      window.ML = null
       this.getCloudinaryHash()
     }
   }

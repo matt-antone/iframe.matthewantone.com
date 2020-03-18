@@ -17,6 +17,11 @@ const pages = {
     //   default: true,
     // },
     {
+      label: "Depoly Status",
+      name: 'deploystatus',
+      widget: "netlifydeploy"
+    },
+    {
       label: "Title",
       name: "title",
       widget: "string"

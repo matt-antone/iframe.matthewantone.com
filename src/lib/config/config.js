@@ -18,6 +18,8 @@ CMS.registerWidget('metastring', MetaString)
 import MetaText from '../components/MetaText'
 CMS.registerWidget('metatext', MetaText)
 
+import NetlifyDeploy from '../components/NetlifyDeploy'
+CMS.registerWidget('netlifydeploy', NetlifyDeploy)
 
 
 //Import Collections

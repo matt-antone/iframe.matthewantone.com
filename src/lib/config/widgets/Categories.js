@@ -18,14 +18,20 @@ export default class Categories extends Component {
   componentDidMount = () => {
     const { field, onChange, value } = this.props;
     let categories = []
-    value.map(x => {
-      //console.log(x)
-      categories.push({
-        id: x,
-        text: x,
+
+    // Set Value
+    if(typeof(value) !== 'undefined'){
+      // transform value for use with ReactTags
+      value.map(x => {
+        categories.push({
+          id: x,
+          text: x,
+        })
       })
-    })
-    this.setState({categories: categories});
+      this.setState({categories: categories});  
+    }
+
+    // Set Suggestions
     fetch("index.json")
       .then(res => res.json())
       .then(

@@ -19,15 +19,20 @@ export default class Tags extends Component {
     //console.log("props",window.netlifyIdentity.currentUser());
     const { field, onChange, currentUser, value } = this.props;
     let tags = []
+
+    // Set Value
+    if(typeof(value) !== 'undefined'){
+    // transform value for state
     value.map(x => {
-      //console.log(x)
-      tags.push({
-        id: x,
-        text: x,
+        tags.push({
+          id: x,
+          text: x,
+        })
       })
-    })
-    //console.log('tags',tags);
-    this.setState({tags: tags});
+      this.setState({tags: tags});  
+    }
+
+    // Set Suggesstions
     fetch("/index.json")
       .then(res => res.json())
       .then(

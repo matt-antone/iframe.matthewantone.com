@@ -45,6 +45,7 @@ export default class Gallery extends Component {
     .then((result)=>{
       console.log(result);
       window.ML = window.cloudinary.createMediaLibrary({
+        cloud_name: 'bugo',
         signature: result.data,
         button_class: 'mediaLibrary',
         button_caption: 'Select Image or Video',

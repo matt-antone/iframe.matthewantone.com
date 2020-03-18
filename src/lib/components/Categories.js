@@ -38,7 +38,6 @@ export default class Categories extends Component {
         .then(res => res.json())
         .then(
           (result) => {
-            console.log(result)
             let i = 1
             const suggestions = result.taxonomies.categories.map(x => { 
               const suggestion = {id: x, text: x}

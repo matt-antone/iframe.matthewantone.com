@@ -7,16 +7,14 @@ export default class Gallery extends Component {
 
   state = {
     images: [],
-   status: "idle",
+    status: "idle",
   }
 
 
   getCloudinaryHash = () => {
     // Check for the media library button before doing anyting.
-    const mediaLibrary = document.getElementsByClassName('mediaLibrary')
-    console.log("mediaLibary",mediaLibrary);
     //setup authorization
-    if(window.user && mediaLibrary.length === 0){
+    if(window.user){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       
@@ -49,6 +47,7 @@ export default class Gallery extends Component {
                 //   //send
                 //   this.handleChange()
                 // })
+                this.handleChange()
               }
             },
             document.getElementById("cloudinary-btn")
@@ -59,12 +58,11 @@ export default class Gallery extends Component {
   }
 
   handleChange = (e) => {
-    const image =  {
-      alt: this.state.image.context.custom.alt,
-      title: this.state.image.context.custom.caption,
-      image: this.state.image.secure_url,
-    }
-    this.props.onChange(image)
+    let images = []
+    this.state.images.forEach( image => {
+      images[images.length] = image.secure_url
+    })
+    this.props.onChange(images)
   }
 
   handleTitle = (e) => {

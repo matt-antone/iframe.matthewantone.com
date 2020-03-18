@@ -71,7 +71,6 @@ export default class Aliases extends Component {
 
   render() {
     const { aliases, suggestions } = this.state
-    console.log(this.props.value);
     return h(
       "div",{
         style: wrapperStyle,

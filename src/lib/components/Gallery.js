@@ -91,10 +91,12 @@ export default class Gallery extends Component {
     return h('div', {
       style: wrapperStyle,
     },[
-      h('span', {
-        id: "cloudinary-btn",
-        // className: 'mediaLibrary',
-      }, 'Loading Media Library...'),
+      h('div',{}, 
+        h('span', {
+          id: "cloudinary-btn",
+          // className: 'mediaLibrary',
+        }, 'Loading Media Library...'),
+      )
       // h(Image,{
       //   cloudName: cloudName,
       //   publicId: image.public_id,

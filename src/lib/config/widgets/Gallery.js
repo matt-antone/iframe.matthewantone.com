@@ -26,8 +26,13 @@ export default class Gallery extends Component {
          }
       },
       metadata: [],
-      created_at: ""
+      created_at: "",
    },
+   mediaoptions: {
+      signature: this.getCloudinaryHash(),
+      button_class: 'myBtn',
+      button_caption: 'Insert Images',
+    }
   }
 
 

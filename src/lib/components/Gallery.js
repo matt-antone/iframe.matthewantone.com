@@ -42,7 +42,7 @@ export default class Gallery extends Component {
       })
       .then(res => res.json())
       .then((result)=>{
-        console.log("yo",window.ML);
+        console.log("yo",result,window.ML);
         if(typeof(result.data) !== 'undefined'){
           window.ML = window.cloudinary.createMediaLibrary({
             api_key: result.data.key,

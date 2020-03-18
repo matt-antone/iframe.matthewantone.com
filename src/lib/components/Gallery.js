@@ -6,7 +6,28 @@ import wrapperStyle from './styles/wrapper'
 export default class Gallery extends Component {
 
   state = {
-    images: [],
+    images: {
+      public_id: "",
+      resource_type: "",
+      type: "",
+      format: "",
+      version: null,
+      url: "",
+      secure_url: "",
+      width: 0,
+      height: 0,
+      bytes: 0,
+      duration: null,
+      tags: null,
+      context: {
+         custom: {
+            alt: "",
+            caption: ""
+         }
+      },
+      metadata: [],
+      created_at: "",
+   },
   }
 
 
@@ -20,8 +41,7 @@ export default class Gallery extends Component {
     })
     .then(res => res.json())
     .then((result)=>{
-
-      // Create the Media Library
+      console.log(result);
       window.ML = window.cloudinary.createMediaLibrary({
         api_key: result.data.key,
         button_class: 'mediaLibrary',
@@ -31,13 +51,20 @@ export default class Gallery extends Component {
         timestamp: result.data.timestamp,
         username: 'accounts@bugo.io',
       }, {insertHandler: (data) => {
-          let images = JSON.parse(JSON.stringify(this.state.images))
-          images.push.apply(images, assets)
-          this.setState({images: images})
-          //send
-          this.handleChange()
-        }
-      })
+            data.assets.forEach(asset => { 
+              console.log(asset)
+              if(!asset.context){
+                asset.context = this.state.image.context;
+                console.log('IMAGE HAS NO CONTEXT');
+              }
+              this.setState({image: asset})
+              //send
+              this.handleChange()
+            })
+          }
+          },
+          document.getElementById("cloudinary-btn")
+      )
     })
   }
 

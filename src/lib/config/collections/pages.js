@@ -43,7 +43,7 @@ const pages = {
     {
       label: "Body",
       name: "body",
-      widget: "markdown"
+      widget: "markdown",
       required: false,
     },
     {

@@ -6,28 +6,7 @@ import wrapperStyle from './styles/wrapper'
 export default class Gallery extends Component {
 
   state = {
-    images: {
-      public_id: "",
-      resource_type: "",
-      type: "",
-      format: "",
-      version: null,
-      url: "",
-      secure_url: "",
-      width: 0,
-      height: 0,
-      bytes: 0,
-      duration: null,
-      tags: null,
-      context: {
-         custom: {
-            alt: "",
-            caption: ""
-         }
-      },
-      metadata: [],
-      created_at: "",
-   },
+    images: [],
    status: "idle",
   }
 
@@ -59,16 +38,17 @@ export default class Gallery extends Component {
               username: 'accounts@bugo.io',
             }, 
             {insertHandler: (data) => {
-                data.assets.forEach(asset => { 
-                  console.log(asset)
-                  if(!asset.context){
-                    asset.context = this.state.image.context;
-                    console.log('IMAGE HAS NO CONTEXT');
-                  }
-                  this.setState({image: asset})
-                  //send
-                  this.handleChange()
-                })
+              this.setState({images: data.assets})
+                // data.assets.forEach(asset => { 
+                //   console.log(asset)
+                //   if(!asset.context){
+                //     asset.context = this.state.image.context;
+                //     console.log('IMAGE HAS NO CONTEXT');
+                //   }
+                //   this.setState({image: asset})
+                //   //send
+                //   this.handleChange()
+                // })
               }
             },
             document.getElementById("cloudinary-btn")

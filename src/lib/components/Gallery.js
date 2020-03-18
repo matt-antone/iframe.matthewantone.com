@@ -110,7 +110,7 @@ export default class Gallery extends Component {
     },[
       h('span', {
         id: "cloudinary-btn",
-        className: 'mediaLibrary',
+        // className: 'mediaLibrary',
       }, 'Loading Media Library...'),
       // h(Image,{
       //   cloudName: cloudName,

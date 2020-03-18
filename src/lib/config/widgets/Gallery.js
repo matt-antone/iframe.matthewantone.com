@@ -30,11 +30,6 @@ export default class Gallery extends Component {
       metadata: [],
       created_at: "",
    },
-   mediaoptions: {
-      signature: this.getCloudinaryHash(),
-      button_class: 'myBtn',
-      button_caption: 'Insert Images',
-    }
   }
 
 
@@ -97,6 +92,7 @@ export default class Gallery extends Component {
   componentDidMount = (e) => {
     const { media } = this.state
     console.log('BugoCloudinary Mounted');
+    this.getCloudinaryHash()
     console.log(ML);
   }
 

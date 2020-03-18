@@ -49,10 +49,9 @@ export default class Gallery extends Component {
         button_class: 'mediaLibrary',
         button_caption: 'Select Image or Video',
         cloud_name: result.cloud,
-        signature: result.signature,
-        timestamp: result.timestamp,
-        username: 'accounts@bugo.io',
-        
+        // signature: result.signature,
+        // timestamp: result.timestamp,
+        // username: 'accounts@bugo.io',
       }, {insertHandler: (data) => {
             data.assets.forEach(asset => { 
               console.log(asset)

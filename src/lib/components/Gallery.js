@@ -33,7 +33,7 @@ export default class Gallery extends Component {
 
   getCloudinaryHash = () => {
     //setup authorization
-    if(window.user){
+    if(window.user && typeof(window.ML) === 'undefined'){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       
@@ -43,7 +43,7 @@ export default class Gallery extends Component {
       .then(res => res.json())
       .then((result)=>{
         console.log("yo",window.ML);
-        if(typeof(result.data) !== 'undefined' && typeof(window.ML) === 'undefined'){
+        if(typeof(result.data) !== 'undefined'){
           window.ML = window.cloudinary.createMediaLibrary({
             api_key: result.data.key,
             button_class: 'mediaLibrary',

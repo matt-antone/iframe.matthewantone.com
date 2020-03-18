@@ -32,10 +32,11 @@ export default class Categories extends Component {
     }
 
     // Set Suggestions
-    fetch("index.json")
+    fetch("/index.json")
       .then(res => res.json())
       .then(
         (result) => {
+          console.log(result)
           let i = 1
           const suggestions = result.taxonomies.categories.map(x => { 
             const suggestion = {id: x, text: x}

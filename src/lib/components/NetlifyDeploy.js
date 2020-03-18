@@ -6,7 +6,7 @@ export default class NetlifyDeploy extends Component {
   }
 
   startTimer = () => {
-    date = new Date();
+    const date = new Date()
     setInterval(()=>{
       this.setState({url: this.state.url+date.now()})
     },1000)

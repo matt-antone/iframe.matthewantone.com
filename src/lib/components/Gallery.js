@@ -79,13 +79,13 @@ export default class Gallery extends Component {
         id: "cloudinary-btn",
         className: 'mediaLibrary',
       }, 'Add Image'),
-      h(Image,{
-        cloudName: cloudName,
-        publicId: image.public_id,
-        crop: 'scale',
-        width: '100',
-        // style: "float: right;",
-      }),
+      // h(Image,{
+      //   cloudName: cloudName,
+      //   publicId: image.public_id,
+      //   crop: 'scale',
+      //   width: '100',
+      //   // style: "float: right;",
+      // }),
     ])
   }
 }

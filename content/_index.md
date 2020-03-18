@@ -4,6 +4,11 @@ title: Home
 meta_title: etst
 description: 'testasdf asdf dfsag sdrtg hsdfghsdfg '
 date: 2020-03-18T06:45:11.133Z
+categories:
+  - Category 1
+tags:
+  - Tag 1
+  - Tag 2
 aliases:
   - /home
 show_sidebar: true

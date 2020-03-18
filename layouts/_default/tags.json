@@ -1,5 +1,0 @@
-{{- $tags := slice -}}
-{{- range $key,$meta := .Site.Taxonomies.tags -}}
-  {{- $tags = $tags | append ($key | humanize | title) -}}
-{{- end -}}
-{{- $tags | jsonify -}}

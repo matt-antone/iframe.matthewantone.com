@@ -28,12 +28,12 @@ export default class Tags extends Component {
     })
     //console.log('tags',tags);
     this.setState({tags: tags});
-    fetch("/tags/index.json")
+    fetch("/index.json")
       .then(res => res.json())
       .then(
         (result) => {
           let i = 1
-          const suggestions = result.map(x => { 
+          const suggestions = result.taxonomies.tags.map(x => { 
             const suggestion = {id: x, text: x}
             i++
             return suggestion 

@@ -26,12 +26,12 @@ export default class Categories extends Component {
       })
     })
     this.setState({categories: categories});
-    fetch("/categories/index.json")
+    fetch("index.json")
       .then(res => res.json())
       .then(
         (result) => {
           let i = 1
-          const suggestions = result.map(x => { 
+          const suggestions = result.taxonomies.categories.map(x => { 
             const suggestion = {id: x, text: x}
             i++
             return suggestion 

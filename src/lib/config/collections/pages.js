@@ -78,13 +78,15 @@ const pages = {
       name: "slug",
       widget: "string",
       required: false,
-      hint: "Change the slug of this page."
+      hint: "Change the slug of this page.",
+      pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$','You can only use alphanumeric characters and dashes.']
     },
     {
       label: "Aliases",
       name: "aliases",
       widget: "aliases",
-      hint: "Aliases allow you to add more slugs for navigating to this page."
+      hint: "Aliases allow you to add more slugs for navigating to this page.",
+      required: false,
     },
     {
       label: "Show Sidebar",

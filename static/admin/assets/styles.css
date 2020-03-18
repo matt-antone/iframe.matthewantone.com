@@ -93,3 +93,8 @@
 [for^="deploystatus"] {
   display: none !important;
 }
+
+
+.mediaLibrary:nth-child(1n+2){
+  display: none;
+}

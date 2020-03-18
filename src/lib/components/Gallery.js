@@ -32,8 +32,11 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
+    // Check for the media library button before doing anyting.
+    const mediaLibrary = document.getElementsByClassName('mediaLibrary')
+    console.log("mediaLibary",mediaLibrary);
     //setup authorization
-    if(window.user){
+    if(window.user && mediaLibrary.length === 0){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       

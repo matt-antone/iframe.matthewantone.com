@@ -77,8 +77,9 @@ export default class Gallery extends Component {
             },
             document.getElementById("cloudinary-btn")
           )
+          this.setState({status: 'loaded'})
+          window.MLstatus = "loaded"  
         }
-        this.setState({status: 'loaded'})
       })
     }
   }

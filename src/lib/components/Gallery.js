@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Image} from 'cloudinary-react'
 import wrapperStyle from './styles/wrapper'
+import GalleryList from './GalleryList'
 
 
 export default class Gallery extends Component {
@@ -101,6 +102,7 @@ export default class Gallery extends Component {
       //   width: '100',
       //   // style: "float: right;",
       // }),
+      h(GalleryList,{}),
     ])
   }
 }

@@ -9,7 +9,6 @@ images:
   - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-1b.png'
 aliases:
   - home
-  - /
 show_sidebar: true
 show_featured_image: false
 ---

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {Image} from 'cloudinary-react'
 
+
+
 export default class Gallery extends Component {
 
   state = {
@@ -47,6 +49,25 @@ export default class Gallery extends Component {
     .then(res => res.json())
     .then((result)=>{
       console.log(result);
+      window.ML = window.cloudinary.createMediaLibrary({
+        signature: result.data,
+        button_class: 'mediaLibrary',
+        button_caption: 'Select Image or Video',
+      }, {insertHandler: (data) => {
+            data.assets.forEach(asset => { 
+              console.log(asset)
+              if(!asset.context){
+                asset.context = this.state.image.context;
+                console.log('IMAGE HAS NO CONTEXT');
+              }
+              this.setState({image: asset})
+              //send
+              this.handleChange()
+            })
+          }
+          },
+          document.getElementById("cloudinary-btn")
+      )
     })
   }
 
@@ -74,7 +95,9 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    // this.getCloudinaryHash()
+    const { media } = this.state
+    console.log('BugoCloudinary Mounted');
+    console.log(ML);
   }
 
   render() {

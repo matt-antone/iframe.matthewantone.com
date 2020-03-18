@@ -89,3 +89,7 @@
   border-bottom-style: dashed;
   border-bottom-color: var(--blue) !important;
 }
+
+[for^="deploystatus"] {
+  display: none !important;
+}

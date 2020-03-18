@@ -10,12 +10,12 @@ const pages = {
       widget: "hidden",
       default: "page"
     },
-    {
-      label: "Draft",
-      name: "draft",
-      widget: "boolean",
-      default: true,
-    },
+    // {
+    //   label: "Draft",
+    //   name: "draft",
+    //   widget: "boolean",
+    //   default: true,
+    // },
     {
       label: "Title",
       name: "title",

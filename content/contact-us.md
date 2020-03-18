@@ -5,7 +5,6 @@ images: []
 videos: []
 categories: []
 tags: []
-draft: true
 show_sidebar: true
 hero_text: ''
 menu:

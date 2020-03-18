@@ -1,6 +1,5 @@
 ---
 layout: page
-draft: false
 title: Home
 meta_title: etst
 description: 'testasdf asdf dfsag sdrtg hsdfghsdfg '

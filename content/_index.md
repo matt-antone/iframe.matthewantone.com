@@ -10,4 +10,7 @@ aliases:
 show_sidebar: true
 show_featured_image: false
 ---
+
 asdfasdfasd fasdgf
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3cdd61b0-ffbd-4f9a-b81e-16049fc014e5/deploy-status)](https://app.netlify.com/sites/happy-cray-6f2972/deploys)

@@ -10,7 +10,6 @@ const paramters = `cloud_name=${cloud}&timestamp=${timestamp}&username=${email}$
 let hash = crypto.createHash('sha256');
 hash.update(paramters)
 const clhash = hash.digest('hex')
-hash.end()
 
 exports.handler = (event, context, callback) => {
   // Use the event data auth header to verify
@@ -20,7 +19,7 @@ exports.handler = (event, context, callback) => {
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify({
-        data: hash.digest('hex')
+        data: clhash
       })
     })
   }).catch((error) => {

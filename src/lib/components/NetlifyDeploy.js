@@ -9,7 +9,7 @@ export default class NetlifyDeploy extends Component {
     const date = new Date()
     setInterval(()=>{
       this.setState({url: this.state.url+"?"+Math.floor(Math.random() * 1000000)})
-    },1000)
+    },5000)
   }
 
   componentDidMount = (e) => {

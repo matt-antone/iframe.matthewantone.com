@@ -33,7 +33,7 @@ export default class Gallery extends Component {
 
   getCloudinaryHash = () => {
     //setup authorization
-    if(window.user && typeof(window.ML) === 'undefined'){
+    if(window.user){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       

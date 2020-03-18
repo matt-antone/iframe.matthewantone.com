@@ -1,21 +1,21 @@
 //Import custom widgets
 
-import Aliases from './widgets/Aliases'
+import Aliases from '../components/Aliases'
 CMS.registerWidget('aliases', Aliases)
 
-import Tags from './widgets/Tags'
+import Tags from '../components/Tags'
 CMS.registerWidget('tags', Tags);
 
-import Categories from './widgets/Categories'
+import Categories from '../components/Categories'
 CMS.registerWidget('categories', Categories)
 
-import Gallery from './widgets/Gallery'
+import Gallery from '../components/Gallery'
 CMS.registerWidget('gallery', Gallery)
 
-import MetaString from './widgets/MetaString'
+import MetaString from '../components/MetaString'
 CMS.registerWidget('metastring', MetaString)
 
-import MetaText from './widgets/MetaText'
+import MetaText from '../components/MetaText'
 CMS.registerWidget('metatext', MetaText)
 
 

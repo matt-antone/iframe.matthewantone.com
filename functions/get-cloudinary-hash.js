@@ -9,7 +9,8 @@ const timestamp = date.getTime();
 const paramters = `cloud_name=${cloud}&timestamp=${timestamp}&username=${email}${apiSecret}`
 let hash = crypto.createHash('sha256');
 hash.update(paramters)
-
+const clhash = hash.digest('hex')
+hash.end()
 
 exports.handler = (event, context, callback) => {
   // Use the event data auth header to verify

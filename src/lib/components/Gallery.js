@@ -33,7 +33,8 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
-    console.log(this.state.status)
+    console.log(this.state.status,window.cloudinary)
+
     //setup authorization
     if(window.user && this.state.status !== "loading" && this.state.status !== "loaded"){
       this.setState({status: 'loaded'})
@@ -45,7 +46,9 @@ export default class Gallery extends Component {
       })
       .then(res => res.json())
       .then((result)=>{
+
         console.log("yo",result,window.ML);
+
         if(typeof(result.data) !== 'undefined'){
           window.ML = window.cloudinary.createMediaLibrary(
             {
@@ -59,7 +62,9 @@ export default class Gallery extends Component {
             }, 
             {insertHandler: (data) => {
                 data.assets.forEach(asset => { 
+
                   console.log(asset)
+
                   if(!asset.context){
                     asset.context = this.state.image.context;
                     console.log('IMAGE HAS NO CONTEXT');

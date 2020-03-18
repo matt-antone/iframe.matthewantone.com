@@ -95,6 +95,6 @@
 }
 
 
-.mediaLibrary:nth-child(1n+2){
+.mediaLibrary:nth-child(1n+3){
   display: none;
 }

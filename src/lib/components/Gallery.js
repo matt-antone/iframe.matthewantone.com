@@ -28,15 +28,14 @@ export default class Gallery extends Component {
       metadata: [],
       created_at: "",
    },
+   status: "idle",
   }
 
 
   getCloudinaryHash = () => {
-    // Check for the media library button before doing anyting.
-    const mediaLibrary = document.getElementsByClassName('mediaLibrary')
-    console.log("mediaLibary",mediaLibrary);
     //setup authorization
-    if(window.user && mediaLibrary.length === 0){
+    if(window.user && this.state.status !== "loading" && this.state.status !== "loaded"){
+      this.setState({status: 'loaded'})
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       
@@ -73,6 +72,7 @@ export default class Gallery extends Component {
             document.getElementById("cloudinary-btn")
           )
         }
+        this.setState({status: 'loaded'})
       })
     }
   }

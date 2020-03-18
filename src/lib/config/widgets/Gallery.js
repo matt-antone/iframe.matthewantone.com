@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Image} from 'cloudinary-react'
-
+import wrapperStyle from './styles/wrapper'
 
 
 export default class Gallery extends Component {
@@ -101,7 +101,9 @@ export default class Gallery extends Component {
 
   render() {
     const {cloudName,image} = this.state
-    return h('div', {},[
+    return h('div', {
+      style: wrapperStyle,
+    },[
       h(Image,{
         cloudName: cloudName,
         publicId: image.public_id,

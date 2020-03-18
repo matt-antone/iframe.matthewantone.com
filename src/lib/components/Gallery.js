@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {Image} from 'cloudinary-react'
 import wrapperStyle from './styles/wrapper'
 
-
 export default class Gallery extends Component {
 
   state = {
@@ -33,11 +32,12 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
-    console.log(this.state.status,window.cloudinary)
+    console.log(this.state.status,window.cloudinary,window.MLstatus)
 
     //setup authorization
-    if(window.user && this.state.status !== "loading" && this.state.status !== "loaded"){
-      this.setState({status: 'loaded'})
+    if(window.user && window.MLstatus === 'idle'){
+      this.setState({status: 'loading'})
+      window.MLstatus = "loading"
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       

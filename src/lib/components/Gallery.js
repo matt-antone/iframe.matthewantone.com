@@ -94,9 +94,7 @@ export default class Gallery extends Component {
   componentDidMount = (e) => {
     const { media } = this.state
     console.log('BugoCloudinary Mounted');
-    if(typeof(window.ML) === 'undefined'){
-      this.getCloudinaryHash()
-    }
+    this.getCloudinaryHash()
   }
 
   render() {
@@ -107,7 +105,7 @@ export default class Gallery extends Component {
       h('button', {
         id: "cloudinary-btn",
         className: 'mediaLibrary',
-      }, 'Add Image'),
+      }, 'Loading...'),
       // h(Image,{
       //   cloudName: cloudName,
       //   publicId: image.public_id,

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Image} from 'cloudinary-react'
 import wrapperStyle from './styles/wrapper'
 
+
 export default class Gallery extends Component {
 
   state = {
@@ -32,12 +33,11 @@ export default class Gallery extends Component {
 
 
   getCloudinaryHash = () => {
-    console.log(this.state.status,window.cloudinary,window.MLstatus)
-
+    // Check for the media library button before doing anyting.
+    const mediaLibrary = document.getElementsByClassName('mediaLibrary')
+    console.log("mediaLibary",mediaLibrary);
     //setup authorization
-    if(window.user && window.MLstatus === 'idle'){
-      this.setState({status: 'loading'})
-      window.MLstatus = "loading"
+    if(window.user && mediaLibrary.length === 0){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
       
@@ -46,9 +46,7 @@ export default class Gallery extends Component {
       })
       .then(res => res.json())
       .then((result)=>{
-
         console.log("yo",result,window.ML);
-
         if(typeof(result.data) !== 'undefined'){
           window.ML = window.cloudinary.createMediaLibrary(
             {
@@ -62,9 +60,7 @@ export default class Gallery extends Component {
             }, 
             {insertHandler: (data) => {
                 data.assets.forEach(asset => { 
-
                   console.log(asset)
-
                   if(!asset.context){
                     asset.context = this.state.image.context;
                     console.log('IMAGE HAS NO CONTEXT');
@@ -77,8 +73,6 @@ export default class Gallery extends Component {
             },
             document.getElementById("cloudinary-btn")
           )
-          this.setState({status: 'loaded'})
-          window.MLstatus = "loaded"  
         }
       })
     }

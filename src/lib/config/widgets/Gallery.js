@@ -45,8 +45,9 @@ export default class Gallery extends Component {
     .then((result)=>{
       console.log(result);
       window.ML = window.cloudinary.createMediaLibrary({
-        cloud_name: 'bugo',
-        signature: result.data,
+        cloud_name: result.cloud,
+        signature: result.signature,
+        api_key: result.key,
         button_class: 'mediaLibrary',
         button_caption: 'Select Image or Video',
       }, {insertHandler: (data) => {
@@ -99,8 +100,44 @@ export default class Gallery extends Component {
 
   render() {
     const {cloudName,image} = this.state
-    return h('div', {}, h('button',{
-      onClick: this.getCloudinaryHash
-    },"test"))
+    return h('div', {},[
+      h(Image,{
+        cloudName: cloudName,
+        publicId: image.public_id,
+        crop: 'scale',
+        width: '100',
+        // style: "float: right;",
+      }),
+      h('fieldset', {},[
+        h('button', {
+          id: "cloudinary-btn",
+          className: 'mediaLibrary',
+        }, 'Add Image'),
+      ]),
+      h('fieldset', {}, [
+        h('label',{
+          htmlFor: 'cloudinary-title',
+        }, 'Title'),
+        h('input',{
+          id: "cloudinary-title", 
+          name: "title", 
+          type: "text",
+          value: this.state.image.context.custom.caption,
+          onChange: e => this.handleTitle(e),
+        }),  
+      ]),
+      h('fieldset', {}, [
+        h('label',{
+          htmlFor: 'cloudinary-alt',
+        }, 'Alt Tag'),
+        h('input',{
+          id: "cloudinary-alt", 
+          name: "title", 
+          type: "text",
+          value: this.state.image.context.custom.alt,
+          onChange: e => this.handleAlt(e),
+        }),  
+      ]),
+    ])
   }
 }

@@ -53,7 +53,7 @@ const pages = {
       required: false,
     },
     {
-      label: "Images",
+      label: "Gallery",
       name: "images",
       widget: "gallery",
       required: false,

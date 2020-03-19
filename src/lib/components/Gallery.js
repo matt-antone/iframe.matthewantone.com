@@ -8,7 +8,7 @@ export default class Gallery extends Component {
   state = {
     images: [],
     status: "idle",
-    urls: [],
+    urls: this.props.value,
   }
 
 
@@ -65,8 +65,8 @@ export default class Gallery extends Component {
     }
   }
 
-  handleChange = (e) => {
-    this.props.onChange(this.state.urls)
+  handleChange = (urls) => {
+    this.props.onChange(urls)
   }
 
   addToGallery = (assets) => {
@@ -77,16 +77,16 @@ export default class Gallery extends Component {
       urls[urls.length] = image.secure_url
     })
     console.log(urls);
-    this.setState({urls: urls})
-    this.handleChange()
+    
+    this.handleChange(urls)
   }
 
   deleteImage = (url) => {
     console.log("GAllery delteImage",url)
     const newUrls = this.state.urls.filter((index) => index !== url)
     console.log(newUrls)
-    this.setState({urls: newUrls})
-    this.props.onChange(newUrls)
+    // this.setState({urls: newUrls})
+    this.handleChange(newUrls)
   }
 
   componentDidMount = (e) => {
@@ -95,8 +95,7 @@ export default class Gallery extends Component {
     this.getCloudinaryHash()
     if(typeof(value) != 'undefined'){
       const urls = JSON.parse(JSON.stringify(value))
-      this.setState({urls: urls})
-      this.handleChange()
+      this.handleChange(urls)
     }
   }
 
@@ -119,7 +118,7 @@ export default class Gallery extends Component {
       //   // style: "float: right;",
       // }),
       h(GalleryList,{
-        images: this.state.urls,
+        images: this.props.value,
         _deleteImage: this.deleteImage.bind(this)
       }),
     ])

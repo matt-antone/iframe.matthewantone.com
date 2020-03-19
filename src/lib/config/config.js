@@ -25,15 +25,23 @@ CMS.registerWidget('netlifydeploy', NetlifyDeploy)
 //Import Collections
 import pages from "./collections/pages"
 
+let localBackend = false
+
+console.log("host",window.location.hostname)
+
+if(window.location.hostname === 'localhost'){
+  localBackend = true
+}
+
 const config ={
   config: {
     "backend": {
       "name": "git-gateway",
       "branch": "netlifydev"
     },
-    "local_backend": false,
+    "local_backend": localBackend,
     "load_config_file": false,
-    "publish_mode": "editorial_workflow",
+    // "publish_mode": "editorial_workflow",
     "media_folder": "static/images/uploads",
     "public_folder": "/images/uploads",
     "collections": [

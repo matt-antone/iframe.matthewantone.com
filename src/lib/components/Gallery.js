@@ -72,7 +72,10 @@ export default class Gallery extends Component {
   addToGallery = (assets) => {
     console.log('adding to gallery',assets);
     this.setState({images: assets})
-    let urls = JSON.parse(JSON.stringify(this.state.urls))
+    let urls = []
+    if(this.props.value){
+      urls = JSON.parse(JSON.stringify(this.props.value))
+    }
     assets.forEach( image => {
       urls[urls.length] = image.secure_url
     })

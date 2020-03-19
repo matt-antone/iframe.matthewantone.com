@@ -5,6 +5,12 @@ date: 2020-03-18T21:36:54.734Z
 images:
   - >-
     https://res.cloudinary.com/bugo/image/upload/v1571697953/xdbcrb05sfkp9nds5atk.jpg
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-4b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-6b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-1b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-2b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-5b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-3b.png'
 aliases:
   - home
 show_sidebar: true

@@ -50,9 +50,7 @@ export default class Gallery extends Component {
           },
           document.getElementById("cloudinary-btn")
         )}
-      }).fail(function() {
-        console.log("error");
-      });
+      })
     } else {
       console.log('no user');
       window.ML = window.cloudinary.createMediaLibrary(

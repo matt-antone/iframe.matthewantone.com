@@ -66,8 +66,7 @@ export default class Gallery extends Component {
   }
 
   handleChange = (e) => {
-    let images = JSON.parse(JSON.stringify(this.state.urls))
-    this.props.onChange(images)
+    this.props.onChange(this.state.urls)
   }
 
   addToGallery = (assets) => {

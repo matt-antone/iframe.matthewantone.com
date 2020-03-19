@@ -11,9 +11,9 @@ export default class GalleryImage extends Component {
     
   }
 
-  deleteImage = (e) => {
-    console.log("galleryImage",e.target.value);
-    this.props._deleteImage(e.target.value)
+  deleteImage = (e,image) => {
+    console.log("galleryImage",e.target,image);
+    this.props._deleteImage(image)
   }
 
   render() {
@@ -23,7 +23,7 @@ export default class GalleryImage extends Component {
         <button 
           style={buttonStyle}
           className={ `gallery-button ${this.state.focus ? 'focus' : ''} ${this.state.hover ? 'hover' : ''}`}
-          onClick={ e => this.deleteImage(e) }
+          onClick={ e => this.deleteImage(e,image) }
           onBlur={ _ => this.setState({focus: false, hover: false})}
           onFocus={ _ => this.setState({focus: true})}
           onMouseOver={ _ => this.setState({hover: true})}

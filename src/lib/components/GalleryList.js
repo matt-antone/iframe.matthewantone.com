@@ -5,9 +5,15 @@ export default class GalleryList extends Component {
 
   render() {
     console.log(this.props);
+    let gallery
+    if(this.props.images){
+      gallery = this.props.images
+    } else {
+      gallery = []
+    }
     return (
       <div style={containerStyle}>
-         {this.props.images.map(item => (
+         {gallery.map(item => (
           <div key={item} className="gallery-item">
             <GalleryImage 
               image={item}

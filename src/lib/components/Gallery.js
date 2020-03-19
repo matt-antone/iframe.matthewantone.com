@@ -107,16 +107,8 @@ export default class Gallery extends Component {
       h('div',{}, 
         h('span', {
           id: "cloudinary-btn",
-          // className: 'mediaLibrary',
         }, 'Loading Media Library...'),
       ),
-      // h(Image,{
-      //   cloudName: cloudName,
-      //   publicId: image.public_id,
-      //   crop: 'scale',
-      //   width: '100',
-      //   // style: "float: right;",
-      // }),
       h(GalleryList,{
         images: this.props.value,
         _deleteImage: this.deleteImage.bind(this)

@@ -107,6 +107,7 @@ export default class Tags extends Component {
           handleDrag: this.handleDrag,
           handleAddition: this.handleAddition,
           inputFieldPosition: "top",
+          autofocus: false,
         }),
       ]
     )

@@ -10,16 +10,11 @@ const pages = {
       widget: "hidden",
       default: "page"
     },
-    // {
-    //   label: "Draft",
-    //   name: "draft",
-    //   widget: "boolean",
-    //   default: true,
-    // },
     {
-      label: "Depoly Status",
-      name: 'deploystatus',
-      widget: "netlifydeploy",
+      label: "Draft",
+      name: "draft",
+      widget: "draftfield",
+      default: true,
       required: false,
     },
     {

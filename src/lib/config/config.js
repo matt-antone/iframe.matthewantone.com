@@ -3,8 +3,8 @@
 import Aliases from '../components/Aliases'
 CMS.registerWidget('aliases', Aliases)
 
-import Tags from '../components/Tags'
-CMS.registerWidget('tags', Tags);
+import DraftField from '../components/DraftField'
+CMS.registerWidget('draftfield',DraftField)
 
 import Categories from '../components/Categories'
 CMS.registerWidget('categories', Categories)
@@ -21,6 +21,11 @@ CMS.registerWidget('metatext', MetaText)
 import NetlifyDeploy from '../components/NetlifyDeploy'
 CMS.registerWidget('netlifydeploy', NetlifyDeploy)
 
+import Tags from '../components/Tags'
+CMS.registerWidget('tags', Tags);
+
+import ToggleSwitch from '../components/ToggleSwitch'
+CMS.registerWidget('toggleswitch', ToggleSwitch)
 
 //Import Collections
 import pages from "./collections/pages"

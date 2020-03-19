@@ -110,6 +110,7 @@ export default class Categories extends Component {
           handleAddition: this.handleAddition,
           inputFieldPosition: "top",
           placeholder: "Add a Category",
+          autofocus: false,
         }),
       ]
     )

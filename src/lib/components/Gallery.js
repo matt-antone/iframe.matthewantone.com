@@ -86,9 +86,8 @@ export default class Gallery extends Component {
 
   deleteImage = (url) => {
     console.log("GAllery delteImage",url)
-    const newUrls = this.state.urls.filter((index) => index !== url)
+    const newUrls = this.props.value.filter((index) => index !== url)
     console.log(newUrls)
-    // this.setState({urls: newUrls})
     this.handleChange(newUrls)
   }
 

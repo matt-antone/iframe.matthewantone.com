@@ -89,10 +89,13 @@ export default class Gallery extends Component {
   }
 
   componentDidMount = (e) => {
-    console.log('BugoCloudinary Mounted',this.props.value);
+    const { value } = this.props
+    console.log('BugoCloudinary Mounted',value);
     this.getCloudinaryHash()
-    const urls = JSON.parse(JSON.stringify(this.props.value))
-    this.setState({urls: urls})
+    if(typeof(value) != 'undefined'){
+      const urls = JSON.parse(JSON.stringify(value))
+      this.setState({urls: urls})  
+    }
   }
 
   render() {

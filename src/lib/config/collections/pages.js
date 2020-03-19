@@ -93,12 +93,14 @@ const pages = {
       name: "show_sidebar",
       widget: "boolean",
       default: true,
+      required: false,
     },
     {
       label: "Show Featured Image",
       name: "show_featured_image",
       widget: "boolean",
       default: false,
+      required: false,
     },
   ]
 }

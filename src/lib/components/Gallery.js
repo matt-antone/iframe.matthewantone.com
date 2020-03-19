@@ -76,6 +76,7 @@ export default class Gallery extends Component {
     assets.forEach( image => {
       urls[urls.length] = image.secure_url
     })
+    console.log(urls);
     this.setState({urls: urls})
     this.handleChange()
   }

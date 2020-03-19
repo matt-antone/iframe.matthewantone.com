@@ -94,7 +94,8 @@ export default class Gallery extends Component {
     this.getCloudinaryHash()
     if(typeof(value) != 'undefined'){
       const urls = JSON.parse(JSON.stringify(value))
-      this.setState({urls: urls})  
+      this.setState({urls: urls})
+      this.handleChange()
     }
   }
 

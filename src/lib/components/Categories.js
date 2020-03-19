@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import wrapperStyle from './styles/wrapper'
 import { WithContext as ReactTags } from 'react-tag-input'
+import {flexContainerTagStyle, flexContainerTagColumnStyle} from './styles/flexContainerTags';
 
 const KeyCodes = {
   comma: 188,
@@ -12,7 +13,8 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter]
 export default class Categories extends Component {  
   state = {
     categories: [],
-    suggestions: []
+    suggestions: [],
+    suggestionsText: '',
   }
 
   componentDidMount = () => {
@@ -32,9 +34,19 @@ export default class Categories extends Component {
     }
 
     if(!this.state.suggestions.length){
+      let requestHeaders = new Headers();
+      requestHeaders.append('pragma', 'no-cache');
+      requestHeaders.append('cache-control', 'no-cache');
+
+      const requestConfig = {
+        method: 'GET',
+        headers: requestHeaders,
+      };
+
+      const request = new Request("/index.json");
 
       // Set Suggestions
-      fetch("/index.json")
+      fetch(request,requestConfig)
         .then(res => res.json())
         .then(
           (result) => {
@@ -45,6 +57,7 @@ export default class Categories extends Component {
               return suggestion 
             });
             this.setState({suggestions: suggestions})
+            this.setState({suggestionsText: this.renderSuggestionsText(suggestions)})
           },
           // Note: it's important to handle errors here
           // instead of a catch() block so that we don't swallow
@@ -78,9 +91,16 @@ export default class Categories extends Component {
   }
 
   handleAddition = (category) => {
-    const { categories } = this.state
+    const { categories, suggestions, suggestionsText } = this.state
     const newCategories = [...categories, category]
-    this.setState({ categories: newCategories })
+    const newSuggestions = [...suggestions, category]
+    const newSuggestionsText = suggestionsText.toString() +', '+ category.text
+    console.log('newSuggestionsText',newSuggestionsText)
+    this.setState({ 
+      categories: newCategories,
+      suggestions: newSuggestions, 
+      suggestionsText: newSuggestionsText
+    })
     this.handleCMSChange(newCategories)
   }
 
@@ -95,24 +115,40 @@ export default class Categories extends Component {
       this.setState({ categories: newCategories })
   }
 
+  renderSuggestionsText = (arr) => {
+    let suggestions = []
+    arr.map( sug => {
+      suggestions[suggestions.length] = sug.text
+    })
+    return suggestions.join(', ')
+  }
+
   render() {
     const { categories, suggestions } = this.state
-    return h(
-      "div",{
+    return h("div",{
         style: wrapperStyle,
-      },[
-        h(ReactTags, {
-          delimiters: delimiters,
-          tags: categories,
-          suggestions: suggestions,
-          handleDelete: this.handleDelete,
-          handleDrag: this.handleDrag,
-          handleAddition: this.handleAddition,
-          inputFieldPosition: "top",
-          placeholder: "Add a Category",
-          autofocus: false,
-        }),
-      ]
+        },h('div',{
+          style: flexContainerTagStyle
+        }, [
+            h(ReactTags, {
+              delimiters: delimiters,
+              tags: categories,
+              suggestions: suggestions,
+              handleDelete: this.handleDelete,
+              handleDrag: this.handleDrag,
+              handleAddition: this.handleAddition,
+              inputFieldPosition: "top",
+              placeholder: "Add a Category",
+              autofocus: false,
+              style: flexContainerTagColumnStyle,
+            }),
+            h('div',{
+              style: flexContainerTagColumnStyle
+            },[
+              h('p',{},[h('strong',{},'Suggestions:'),h('br'),this.state.suggestionsText]),
+            ])
+          ]
+        )
     )
   }
 }

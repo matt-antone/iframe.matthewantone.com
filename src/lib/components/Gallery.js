@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import wrapperStyle from './styles/wrapper'
 import GalleryList from './GalleryList'
+import CMSconfig from '../config/config'
 
 
 export default class Gallery extends Component {
@@ -15,12 +16,14 @@ export default class Gallery extends Component {
   getCloudinaryHash = () => {
     // Check for the media library button before doing anyting.
     //setup authorization
+
     let config = {
-      api_key: '987834768892112',
+      api_key: CMSconfig.config.media_library.config.api_key,
       button_class: 'mediaLibrary',
       button_caption: 'Select Image or Video',
-      cloud_name: 'bugo',
+      cloud_name: CMSconfig.config.media_library.config.cloud_name,
     }
+
     if(window.user){
       var identityHeader = new Headers();
       identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)

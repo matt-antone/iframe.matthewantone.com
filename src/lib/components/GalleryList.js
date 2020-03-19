@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GalleryImage from './GalleryImage'
+import flexContainerStyle from './styles/flexContainer'
 
 export default class GalleryList extends Component {
 
@@ -12,7 +13,7 @@ export default class GalleryList extends Component {
       gallery = []
     }
     return (
-      <div style={containerStyle}>
+      <div style={flexContainerStyle}>
          {gallery.map(item => (
           <div key={item} className="gallery-item">
             <GalleryImage 
@@ -23,10 +24,4 @@ export default class GalleryList extends Component {
       </div>
     )
   }
-}
-
-const containerStyle = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  marginTop: '1rem',
 }

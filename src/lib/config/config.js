@@ -38,21 +38,28 @@ if(window.location.hostname === 'localhost'){
   localBackend = true
 }
 
-const config ={
+const CMSconfig ={
   config: {
-    "backend": {
-      "name": "git-gateway",
-      "branch": "netlifydev"
+    backend: {
+      name: "git-gateway",
+      branch: "netlifydev"
     },
-    "local_backend": localBackend,
-    "load_config_file": false,
-    // "publish_mode": "editorial_workflow",
-    "media_folder": "static/images/uploads",
-    "public_folder": "/images/uploads",
-    "collections": [
+    local_backend: localBackend,
+    load_config_file: false,
+    // publish_mode: "editorial_workflow",
+    // media_folder: "static/images/uploads",
+    // public_folder: "/images/uploads",
+    media_library: {
+      name: 'cloudinary',
+      config: {
+        cloud_name: 'bugo',
+        api_key: '987834768892112',    
+      }
+    },
+    collections: [
       pages,
     ]  
   }
 }
 
-export default config
+export default CMSconfig

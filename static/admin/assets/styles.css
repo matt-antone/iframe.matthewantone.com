@@ -4,6 +4,7 @@
   --dkgray: rgb(121, 130, 145);
   --blue: #3a69c7;
   --border: 2px solid var(--gray);
+  flex: 0 0 48% !important;
 }
 
 .ReactTags__tagInput {
@@ -19,7 +20,8 @@
 }
 
 .ReactTags__selected {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ReactTags__selected .ReactTags__tag {
@@ -27,7 +29,7 @@
   padding: 7px;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   border-radius: 0.125rem;
 }

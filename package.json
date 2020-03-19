@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf public",
-    "start": "concurrently \"npx netlify-cms-proxy-server\" \"hugo server -v -w -D -d public -e development\"  \"webpack --mode development\"",
+    "start": "concurrently \"npx netlify-cms-proxy-server\" \"hugo --cleanDestinationDir && hugo server -v -w -D -d public -e development --ignoreCache  --forceSyncStatic\"  \"webpack --mode development\"",
     "build": "gulp build",
     "setup": "gulp setupSite",
     "vars": "gulp getVars"

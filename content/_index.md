@@ -5,7 +5,7 @@ date: 2020-03-18T21:36:54.734Z
 hero:
   urls:
     - >-
-      https://res.cloudinary.com/bugo/image/upload/v1571112057/hoqacmcgbfsizhzayfmq.jpg
+      https://res.cloudinary.com/bugo/image/upload/v1571697953/xdbcrb05sfkp9nds5atk.jpg
   text: |-
     # This guys serious
 

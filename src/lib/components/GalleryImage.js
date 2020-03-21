@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Image } from 'cloudinary-react'
+import CMSconfig from '../config/config'
 
 export default class GalleryImage extends Component {
   state = {
@@ -21,7 +22,7 @@ export default class GalleryImage extends Component {
     return (
       <div>
         <button 
-          style={buttonStyle}
+          style={this.props.buttonStyle}
           className={ `gallery-button ${this.state.focus ? 'focus' : ''} ${this.state.hover ? 'hover' : ''}`}
           onClick={ e => this.deleteImage(e,image) }
           onBlur={ _ => this.setState({focus: false, hover: false})}
@@ -38,13 +39,7 @@ export default class GalleryImage extends Component {
   }
 }
 
-const buttonStyle = {
-  background: 'none',
-  border: 'none',
-  marginRight: '1rem',
-  padding: 0,
-  cursor: 'pointer',
-}
-
 const itemStyle = {
+  width: '100%',
+  height: 'auto',
 }

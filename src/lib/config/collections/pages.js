@@ -39,7 +39,13 @@ const pages = {
     {
       label: "Publish Date",
       name: "date",
-      widget: "datetime"
+      widget: "metadatetime"
+    },
+    {
+      label: "Hero",
+      name: "hero",
+      widget: "hero",
+      required: false,
     },
     {
       label: "Body",
@@ -47,13 +53,13 @@ const pages = {
       widget: "markdown",
       required: false,
     },
-    {
-      label: "Gallery",
-      name: "images",
-      widget: "gallery",
-      required: false,
-      hint: "Attach images to this page."
-    },
+    // {
+    //   label: "Gallery",
+    //   name: "images",
+    //   widget: "gallery",
+    //   required: false,
+    //   hint: "Attach images to this page."
+    // },
     {
       label: "Categories",
       name: "categories",

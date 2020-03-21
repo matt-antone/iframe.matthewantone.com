@@ -5,7 +5,6 @@ import wrapperStyle from './styles/wrapper'
 
 export default class DraftField extends Component {
   render() {
-    console.log('draft',this.props.value)
     return h('div',{
       id: "draft-field",
     },h('div',{

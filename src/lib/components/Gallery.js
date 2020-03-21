@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaLibrary from './MediaLibrary'
 import wrapperStyle from './styles/wrapper'
 import GalleryList from './GalleryList'
 import CMSconfig from '../config/config'
@@ -10,62 +11,6 @@ export default class Gallery extends Component {
     images: [],
     status: "idle",
     urls: this.props.value,
-  }
-
-
-  getCloudinaryHash = () => {
-    // Check for the media library button before doing anyting.
-    //setup authorization
-
-    let config = {
-      api_key: CMSconfig.config.media_library.config.api_key,
-      button_class: 'mediaLibrary',
-      button_caption: 'Select Image or Video',
-      cloud_name: CMSconfig.config.media_library.config.cloud_name,
-    }
-
-    if(window.user){
-      var identityHeader = new Headers();
-      identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
-      
-      fetch("/.netlify/functions/get-cloudinary-hash", {
-        headers: identityHeader
-      })
-      .then(res => res.json())
-      .then((result)=>{
-        console.log("yo",result,window.ML);
-        if(typeof(result.data) !== 'undefined'){
-          config = {
-            api_key: result.data.key,
-            button_class: 'mediaLibrary',
-            button_caption: 'Select Image or Video',
-            cloud_name: result.data.cloud,
-            signature: result.data.signature,
-            timestamp: result.data.timestamp,
-            username: 'accounts@bugo.io',
-          }
-          window.ML = window.cloudinary.createMediaLibrary(
-            config, 
-            {insertHandler: (data) => {
-              // this.setState({images: data.assets})
-              this.addToGallery(data.assets)
-            }
-          },
-          document.getElementById("cloudinary-btn")
-        )}
-      })
-    } else {
-      console.log('no user');
-      window.ML = window.cloudinary.createMediaLibrary(
-        config, 
-        {
-          insertHandler: (data) => {
-            this.addToGallery(data.assets)
-          }
-        },
-        document.getElementById("cloudinary-btn")
-      )
-    }
   }
 
   handleChange = (urls) => {
@@ -96,8 +41,8 @@ export default class Gallery extends Component {
 
   componentDidMount = (e) => {
     const { value } = this.props
-    console.log('BugoCloudinary Mounted',value);
-    this.getCloudinaryHash()
+    console.log('Gallery Mounted',value);
+    // window.getCloudinaryHash()
     if(typeof(value) != 'undefined'){
       const urls = JSON.parse(JSON.stringify(value))
       this.handleChange(urls)
@@ -110,9 +55,11 @@ export default class Gallery extends Component {
       style: wrapperStyle,
     },[
       h('div',{}, 
-        h('span', {
-          id: "cloudinary-btn",
-        }, 'Loading Media Library...'),
+        h(MediaLibrary,{
+          deleteImage: this.deleteImage.bind(this),
+          addToGallery: this.addToGallery.bind(this),
+          value: this.props.value,
+        }),
       ),
       h(GalleryList,{
         images: this.props.value,

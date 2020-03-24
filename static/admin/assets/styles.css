@@ -257,3 +257,12 @@
   position: relative;
   width: 120px;
 }
+
+.tui-editor-contents {
+  font-size: 14px;
+}
+
+.tui-editor-contents h1 {
+  font-size: 1.5rem;
+  border-bottom: 0;
+}

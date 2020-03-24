@@ -11,6 +11,7 @@ const app = {
     path: path.resolve(__dirname, "assets", "js"),
     filename: "app.js"
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -45,6 +46,7 @@ const admin = {
     path: path.resolve(__dirname, "static", "admin", "assets"),
     filename: "admin.js"
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {

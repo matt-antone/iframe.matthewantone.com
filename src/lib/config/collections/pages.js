@@ -46,6 +46,7 @@ const pages = {
       name: "hero",
       widget: "hero",
       required: false,
+      // default: "{text: '',urls:[]}"
     },
     {
       label: "Body",
@@ -53,24 +54,24 @@ const pages = {
       widget: "markdown",
       required: false,
     },
-    // {
-    //   label: "Gallery",
-    //   name: "images",
-    //   widget: "gallery",
-    //   required: false,
-    //   hint: "Attach images to this page."
-    // },
+    {
+      label: "Gallery",
+      name: "images",
+      widget: "gallery",
+      required: false,
+      hint: "Attach images to this page."
+    },
     {
       label: "Categories",
       name: "categories",
-      widget: "categories",
+      widget: "categoriesPicker",
       required: false,
       hint: "Add a category to this page."
     },
     {
       label: "Tags",
       name: "tags",
-      widget: "tags",
+      widget: "tagsPicker",
       required: false,
       hint: "Add a tag(s) to this page."
     },

@@ -36,6 +36,7 @@ export default class HeroPreview extends Component {
     let divImage = {
       backgroundColor: '#c4c7cc',
       backgroundSize: 'cover',
+      backgroundPosition: 'center',
       padding: '2rem',
       color: '#fff',
       fontSize: '2rem',
@@ -45,16 +46,24 @@ export default class HeroPreview extends Component {
       const val = JSON.parse(JSON.stringify(this.props.value))
       const rendered = MarkdownIt.render(val.text || '')
 
-      if(val.urls.length){
+      // console.log(rendered)
+      //   /{{<?(#[a-z]+ )?[a-z]+.[a-z]*}?>}}/g
+
+      if(val.urls && val.urls.length){
         const imageName = val.urls[0].substring(val.urls[0].lastIndexOf('/')+1);
         divImage.backgroundImage = `url(${cl.url(imageName, { width: 1000, crop: "fill"})})`
-        console.log('add the background',divImage);
+        // console.log('add the background',divImage);
       }
       return h("div",{
         style: divImage,
         dangerouslySetInnerHTML: {__html: rendered},
       }) 
     }
-    return h("div",{},"loading")
+    return h('div',{
+      type: 'ThreeDots',
+      color: 'gray',
+      height: 20,
+      width: 20,
+    },'loading')
   }
 }

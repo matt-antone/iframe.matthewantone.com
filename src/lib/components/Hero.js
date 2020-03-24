@@ -9,39 +9,45 @@ let heroText = ""
 export default class Hero extends Component {
 
   state = {
+    id: Math.floor(Math.random() * 1000000000),
     images: [],
     urls: [],
     text: heroText,
+    config: {
+      multiple: false,
+    }
   }
 
 
   handleImageChange = (urls) => {
-    const heroValue = {...this.state,...{ urls: urls},}
-    delete heroValue.images
-    this.props.onChange(heroValue)
-    this.setState(heroValue)
+    let newValue = JSON.parse(JSON.stringify(this.props.value))
+    newValue.urls = urls
+    // console.log("image change: ", newValue)
+    this.props.onChange(newValue)
   }
 
   handleTextChange = (text) => {
-    const heroValue = {...this.state,...{ text: text},}
-    delete heroValue.images
-    this.props.onChange(heroValue)
-    this.setState(heroValue)
+    // console.log(text,typeof(text))
+    if(text.length){
+      let newValue = JSON.parse(JSON.stringify(this.props.value))
+      newValue.text = text
+      // console.log("text change: ", newValue)
+      this.props.onChange(newValue)  
+    }
   }
 
   addToGallery = (assets) => {
+    // console.log('adding to gallery',assets);
     this.setState({images: assets})
-
     let urls = []
-
-    if(this.props.value.urls){
-      urls = JSON.parse(JSON.stringify(this.props.value.urls))
-    }
-
+    let x = 0
     assets.forEach( image => {
-      urls[urls.length] = image.secure_url
+      if(x<1){
+        urls[urls.length] = image.secure_url
+      }
+      x++
     })
-    
+    // console.log(urls);
     this.handleImageChange(urls)
   }
 
@@ -52,48 +58,58 @@ export default class Hero extends Component {
 
   componentDidMount = (e) => {
     const {value} = this.props
-    const newValue = JSON.parse(JSON.stringify(value))
-    console.log('Hero Mounted',value)
-    if(heroText !== newValue.text){
-      heroText = newValue.text
-      this.setState({text: newValue.text})
+    // console.log('Hero Mounted',value,this.state)
+    if(typeof(value) === 'undefined') {
+      this.props.onChange({urls: [], text: false })
     }
   }
 
   render() {
+    let text = ''
+    let urls = []
     if(this.props.value){
-      return h('div',{
-        style: wrapperStyle,
+      let pVals = JSON.parse(JSON.stringify(this.props.value))
+      text = pVals.text
+      urls = pVals.urls
+    } 
+    // console.log('deconstructed: ',text,urls)
+    
+    const heroText = typeof(text) !== "undefined" ? text : false
+    const heroUrls = typeof(urls) !== 'undefined' ? urls : ['sample.jpg']
+    // console.log('processed: ',heroText,heroUrls)
+      
+    return h('div',{
+      style: wrapperStyle,
+    },[
+      h('div', {
+        style: flexContainer
       },[
         h('div', {
-          style: flexContainer
+          style: imageContainer,
         },[
-          h('div', {
-            style: imageContainer,
-          },[
-            h(MediaLibrary,{
-              deleteImage: this.deleteImage.bind(this),
-              addToGallery: this.addToGallery.bind(this),
-            }),
-            h(GalleryList,{
-              images: this.props.value.urls,
-              _deleteImage: this.deleteImage.bind(this),
-              style: imageBlock,
-              buttonStyle: buttonStyle,
-            }),
-          ]),
-          h('div',{
-            style: contentBlock,
-          },
-            h(SimpleMarkdownEditor,{
-              text: this.state.text,
-              handleChange: this.handleTextChange.bind(this)
-            }),
-          )        
+          h(MediaLibrary,{
+            deleteImage: this.deleteImage.bind(this),
+            addToGallery: this.addToGallery.bind(this),
+            config: this.state.config,
+            id: this.state.id,
+          }),
+          h(GalleryList,{
+            images: heroUrls,
+            _deleteImage: this.deleteImage.bind(this),
+            style: imageBlock,
+            buttonStyle: buttonStyle,
+          }),
         ]),
-      ])        
-    }
-    return h('div')
+        h('div',{
+          style: contentBlock,
+        },
+          h(SimpleMarkdownEditor,{
+            text: heroText,
+            handleChange: this.handleTextChange.bind(this)
+          }),
+        )        
+      ]),
+    ])        
   }
 }
 

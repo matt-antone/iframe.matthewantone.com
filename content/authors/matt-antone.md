@@ -13,5 +13,6 @@ linkedin:
 twitter:
 images: []
 weight: 0
+layout: author
 ---
 Enter bio here

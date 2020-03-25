@@ -9,11 +9,15 @@ import CategoriesPicker from './lib/components/CategoriesPicker'
 import Gallery from './lib/components/Gallery'
 import Hero from './lib/components/Hero'
 import HeroPreview from './lib/components/HeroPreview'
+import HugoRelationalControl from './lib/components/HugoRelationControl'
 import MetaString from './lib/components/MetaString'
 import MetaDate from './lib/components/MetaDate'
 import MetaDateTime from './lib/components/MetaDateTime'
 import MetaText from './lib/components/MetaText'
 import NetlifyDeploy from './lib/components/NetlifyDeploy'
+import PageOptions from './lib/components/PageOptions'
+import PostOptions from './lib/components/PostOptions'
+import PostPreview from './lib/components/PostPreview'
 import TagsPicker from './lib/components/TagsPicker'
 import ToggleSwitch from './lib/components/ToggleSwitch'
 
@@ -23,13 +27,18 @@ const adminInit = () => {
   CMS.registerWidget('categoriesPicker', CategoriesPicker)
   CMS.registerWidget('gallery', Gallery)
   CMS.registerWidget('hero', Hero, HeroPreview)
+  CMS.registerWidget('hugoRelation',HugoRelationalControl)
   CMS.registerWidget('metastring', MetaString)
   CMS.registerWidget('metadate', MetaDate)
   CMS.registerWidget('metadatetime', MetaDateTime)
   CMS.registerWidget('metatext', MetaText)
   CMS.registerWidget('netlifydeploy', NetlifyDeploy)
+  CMS.registerWidget('pageOptions',PageOptions)
+  CMS.registerWidget('postOptions',PostOptions)
   CMS.registerWidget('tagsPicker', TagsPicker)
   CMS.registerWidget('toggleswitch', ToggleSwitch)
+  //Previewqs
+  CMS.registerPreviewTemplate("posts", PostPreview);
   console.log(CMSconfig)
   init(CMSconfig)  
 }
@@ -40,44 +49,6 @@ let cloudinaryInstanceConfig = {
   button_caption: 'Add Image',
   cloud_name: cloudinaryConfig.cloud_name,
 }
-
-// if(window.user){
-//   var identityHeader = new Headers();
-//   identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
-  
-//   fetch("/.netlify/functions/get-cloudinary-hash", {
-//     headers: identityHeader
-//   })
-//   .then(res => res.json())
-//   .then((result)=>{
-//     console.log("yo",result,window.ML);
-//     if(typeof(result.data) !== 'undefined'){
-//       cloudinaryInstanceConfig = {
-//         api_key: result.data.key,
-//         button_class: 'mediaLibrary',
-//         button_caption: 'Add Image',
-//         cloud_name: result.data.cloud,
-//         signature: result.data.signature,
-//         timestamp: result.data.timestamp,
-//         username: 'accounts@bugo.io',
-//       }
-//       window.ML = cloudinary.createMediaLibrary(config,{
-//         insertHandler: (data) => {
-//           this.props.addToGallery(data.assets)
-//         }
-//       })
-//       adminInit()
-//     }
-//   })
-// } else {
-//   console.log('no user',cloudinaryInstanceConfig,cloudinary);
-//   window.ML = cloudinary.createMediaLibrary(cloudinaryInstanceConfig,{
-//     insertHandler: (data) => {
-//       this.props.addToGallery(data.assets)
-//     }
-//   })
-//   adminInit()
-// }
 
 adminInit()
 // Export the CMS JIC

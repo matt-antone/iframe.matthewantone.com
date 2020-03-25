@@ -1,5 +1,7 @@
 //Import Collections
 import pages from "./collections/pages"
+import posts from "./collections/posts"
+import authors from "./collections/authors"
 
 let localBackend = false
 
@@ -31,7 +33,7 @@ export const CMSconfig = {
     //   }
     // },
     collections: [
-      pages,
+      pages,posts,authors,
     ]  
   }
 }

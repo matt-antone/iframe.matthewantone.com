@@ -46,7 +46,6 @@ const pages = {
       name: "hero",
       widget: "hero",
       required: false,
-      // default: "{text: '',urls:[]}"
     },
     {
       label: "Body",
@@ -91,17 +90,9 @@ const pages = {
       required: false,
     },
     {
-      label: "Show Sidebar",
-      name: "show_sidebar",
-      widget: "boolean",
-      default: true,
-      required: false,
-    },
-    {
-      label: "Show Featured Image",
-      name: "show_featured_image",
-      widget: "boolean",
-      default: false,
+      label: "Page Options",
+      name: "options",
+      widget: 'pageOptions',
       required: false,
     },
   ]

@@ -15,12 +15,13 @@ class ToggleSwitch extends Component {
     this.setState({
       checked: e.target.checked
     });
-    if (typeof this.props.onChange === "function") this.props.onChange(e);
+    if (typeof this.props.onChange === "function") this.props.onChange(e,this.state.checked);
   };
   render() {
     return (
       <div
         className={"toggle-switch" + (this.props.Small ? " small-switch" : "")}
+        style={this.props.style}
       >
         <input
           type="checkbox"

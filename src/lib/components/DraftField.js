@@ -13,12 +13,12 @@ export default class DraftField extends Component {
       },[
         h(ToggleSwitch,{
           id: 'draft',
-          Text: ['draft','public'],
+          Text: ['public','draft',],
           defaultChecked: this.props.value,
           checked: this.props.value,
           onChange: (e) => { 
             console.log('checkbox',e)
-            this.props.onChange(e.target.checked) 
+            this.props.onChange(!e.target.checked)
           },
         }),
         h(NetlifyDeploy,{}),

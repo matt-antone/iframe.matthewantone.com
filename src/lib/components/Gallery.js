@@ -59,6 +59,7 @@ export default class Gallery extends Component {
     const {cloudName,image} = this.state
     return h('div', {
       style: wrapperStyle,
+      className: "gallery-container"
     },[
       h('div',{
         // style: [flexContainer]

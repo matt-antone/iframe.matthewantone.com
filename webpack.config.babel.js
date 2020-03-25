@@ -1,15 +1,15 @@
 // ./webpack.config.babel.js
 const path = require('path');
 
-module.exports = {
+const app = {
   entry: {
-    app: ["./src/es6/app.js"],
+    app: ["./src/app.js"],
     // js bundle for other posts, e.g.
     // secondpost: ["./app/second-post.js"]
   },
   output: {
     path: path.resolve(__dirname, "assets", "js"),
-    filename: "[name].js"
+    filename: "app.js"
   },
   module: {
     rules: [
@@ -22,3 +22,27 @@ module.exports = {
   },
   watch: true
 };
+
+const admin = {
+  entry: {
+    app: ["./src/admin.js"],
+    // js bundle for other posts, e.g.
+    // secondpost: ["./app/second-post.js"]
+  },
+  output: {
+    path: path.resolve(__dirname, "static", "admin", "assets"),
+    filename: "admin.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      }
+    ]
+  },
+  watch: true
+};
+
+module.exports = [admin,app]

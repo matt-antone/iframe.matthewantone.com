@@ -13,8 +13,9 @@ const pages = {
     {
       label: "Draft",
       name: "draft",
-      widget: "boolean",
+      widget: "draftfield",
       default: true,
+      required: false,
     },
     {
       label: "Title",
@@ -38,56 +39,61 @@ const pages = {
     {
       label: "Publish Date",
       name: "date",
-      widget: "datetime"
+      widget: "metadatetime"
+    },
+    {
+      label: "Hero",
+      name: "hero",
+      widget: "hero",
+      required: false,
     },
     {
       label: "Body",
       name: "body",
-      widget: "markdown"
+      widget: "markdown",
+      required: false,
     },
     {
-      label: "Images",
+      label: "Gallery",
       name: "images",
       widget: "gallery",
+      required: false,
+      hint: "Attach images to this page."
     },
     {
       label: "Categories",
       name: "categories",
-      widget: "categories",
+      widget: "categoriesPicker",
       required: false,
-      hint: "Add a category to this document."
+      hint: "Add a category to this page."
     },
     {
       label: "Tags",
       name: "tags",
-      widget: "tags",
+      widget: "tagsPicker",
       required: false,
-      hint: "Add a tag(s) to this document."
+      hint: "Add a tag(s) to this page."
     },
     {
       label: "Slug",
       name: "slug",
       widget: "string",
       required: false,
-      hint: "Change the slug of this page."
+      hint: "Change the slug of this page.",
+      pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$','You can only use alphanumeric characters and dashes.']
     },
     {
       label: "Aliases",
       name: "aliases",
       widget: "aliases",
-      hint: "Aliases allow you to add more slugs for navigating to this document."
+      hint: "Aliases allow you to add more slugs for navigating to this page.",
+      required: false,
     },
     {
-      label: "Show Sidebar",
-      name: "show_sidebar",
-      widget: "boolean",
-      default: true,
-    },
-    {
-      label: "Show Featured Image",
-      name: "show_featured_image",
-      widget: "boolean",
-      default: false,
+      label: "Page Options",
+      name: "options",
+      widget: 'pageOptions',
+      required: false,
     },
   ]
 }

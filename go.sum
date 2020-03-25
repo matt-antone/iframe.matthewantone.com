@@ -37,6 +37,7 @@ github.com/bugoio/bugo-mod-netlify-contact-form v0.0.0-20191018025751-260ebd8909
 github.com/bugoio/bugo-mod-search v0.0.0-20191018025829-c58ea7bc6ea3/go.mod h1:nM5aILJeqPZ5YShq3NP63oOP2hJNN0IOrZGHbrtGsZ0=
 github.com/bugoio/bugo-mod-search v0.0.1/go.mod h1:nM5aILJeqPZ5YShq3NP63oOP2hJNN0IOrZGHbrtGsZ0=
 github.com/bugoio/bugo-mod-search v0.0.2/go.mod h1:0uHsrirPmPxuHfJ5ga60SVXCJGp1I6DcA8L0vxc3UrU=
+github.com/bugoio/bugo-mod-search v0.1.0/go.mod h1:0uHsrirPmPxuHfJ5ga60SVXCJGp1I6DcA8L0vxc3UrU=
 github.com/bugoio/bugo-mod-share v0.0.0-20191018025945-b4d123fc27ee/go.mod h1:gjjJGUDxBE9ql2sKeIfizMS+Oc8JL92gpPFyduH0DNM=
 github.com/bugoio/bugo-mod-share v0.0.1/go.mod h1:gjjJGUDxBE9ql2sKeIfizMS+Oc8JL92gpPFyduH0DNM=
 github.com/bugoio/bugo-mod-share v0.0.4/go.mod h1:8aJE0b1FLlNbthSflcya9c5+f4wUWY3z5EI2QtYWE68=

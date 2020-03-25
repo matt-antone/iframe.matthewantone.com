@@ -1,31 +1,35 @@
 ---
 layout: page
 draft: false
-meta_title: asd;lfkajsdf;lkajsdf
-description: 'asdfasdfasdfasdfasdf  asdfasdf asdfasdfasdf  asdfasdf '
-date: 2019-09-02T05:12:08.000Z
-categories:
-  - asdfasdf
-slug: ''
-show_slideshow: false
-tags:
-  - tag
-  - another tag
-  - some other tag
-  - new tag
-aliases:
-  - /home
-show_sidebar: false
-show_featured_image: true
-image_captions: []
-hero_text: This text will display if your theme uses a hero on this page.
-title: Bugo Site Starter
+show_featured_image: false
+title: Home
+date: 2020-03-18T21:36:54.734Z
+hero:
+  urls:
+    - >-
+      https://res.cloudinary.com/bugo/image/upload/v1571697952/d0zngfrob9d5mtpadtl2.jpg
+  text: |-
+    # Home Page
+
+    Something shitty is happening and that's not good.
 images:
   - >-
-    https://res.cloudinary.com/bugo/image/upload/v1563774135/seattle-space-needle-from-kerry-park.jpg
-videos: []
-show_videos: false
+    https://res.cloudinary.com/bugo/image/upload/v1571697953/xdbcrb05sfkp9nds5atk.jpg
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-6b.png'
+  - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-2b.png'
+  - >-
+    https://res.cloudinary.com/bugo/image/upload/v1571697952/d0zngfrob9d5mtpadtl2.jpg
+categories:
+  - Announcements
+  - News
+tags:
+  - Birds
+  - Invite
+show_sidebar: true
+aliases:
+  - home
+options:
+  showSidebar: false
+  showFeaturedImage: false
 ---
-Vis arvis altera cauda quadripedes dierum et auro unum, ipse ignibus putares intraque propago. Patulis illic; tamen dolentes sim unum coniunctior [per](http://ulterius.com/ut) meo medii animam viri aliter nomen: positu. Vicem addere neve color virque, nec adpositis vires [terraeque](http://orbaest.io/dixit-versis.html). Ne ora freta Thisbe formamque vocassent populandas te venit. Et viae populos unda tamen virgo, quid damna telis stabulorum.
-
-{{<recent-articles 3>}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus mattis molestie a iaculis at erat pellentesque adipiscing. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Sit amet luctus venenatis lectus magna fringilla. Pretium fusce id velit ut tortor pretium viverra. Diam maecenas ultricies mi eget mauris pharetra. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Consectetur lorem donec massa sapien faucibus et. Ante in nibh mauris cursus mattis molestie a iaculis at. Mattis aliquam faucibus purus in. Pellentesque id nibh tortor id aliquet. Odio tempor orci dapibus ultrices in iaculis nunc. Nulla aliquet enim tortor at auctor urna. Tristique nulla aliquet enim tortor at auctor urna. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Facilisi etiam dignissim diam quis. Non nisi est sit amet facilisis. Arcu non odio euismod lacinia at.

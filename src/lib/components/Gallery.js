@@ -1,102 +1,57 @@
 import React, { Component } from 'react'
-import wrapperStyle from './styles/wrapper'
+import {cloudinaryConfig} from '../config/config'
+
+import MediaLibrary from './MediaLibrary'
 import GalleryList from './GalleryList'
+import CMSconfig from '../config/config'
 
 
 export default class Gallery extends Component {
 
   state = {
+    id: Math.floor(Math.random() * 1000000000),
     images: [],
     status: "idle",
-    urls: [],
+    urls: this.props.value,
   }
 
-
-  getCloudinaryHash = () => {
-    // Check for the media library button before doing anyting.
-    //setup authorization
-    let config = {
-      api_key: '987834768892112',
-      button_class: 'mediaLibrary',
-      button_caption: 'Select Image or Video',
-      cloud_name: 'bugo',
-    }
-    if(window.user){
-      var identityHeader = new Headers();
-      identityHeader.append('Authorization',`Bearer ${window.user.token.access_token}`)
-      
-      fetch("/.netlify/functions/get-cloudinary-hash", {
-        headers: identityHeader
-      })
-      .then(res => res.json())
-      .then((result)=>{
-        console.log("yo",result,window.ML);
-        if(typeof(result.data) !== 'undefined'){
-          config = {
-            api_key: result.data.key,
-            button_class: 'mediaLibrary',
-            button_caption: 'Select Image or Video',
-            cloud_name: result.data.cloud,
-            signature: result.data.signature,
-            timestamp: result.data.timestamp,
-            username: 'accounts@bugo.io',
-          }
-          window.ML = window.cloudinary.createMediaLibrary(
-            config, 
-            {insertHandler: (data) => {
-              // this.setState({images: data.assets})
-              this.addToGallery(data.assets)
-            }
-          },
-          document.getElementById("cloudinary-btn")
-        )}
-      })
-    } else {
-      console.log('no user');
-      window.ML = window.cloudinary.createMediaLibrary(
-        config, 
-        {
-          insertHandler: (data) => {
-            this.addToGallery(data.assets)
-          }
-        },
-        document.getElementById("cloudinary-btn")
-      )
-    }
-  }
-
-  handleChange = (e) => {
-    this.props.onChange(this.state.urls)
+  handleChange = (urls) => {
+    this.props.onChange(urls)
   }
 
   addToGallery = (assets) => {
-    console.log('adding to gallery',assets);
+    //console.log('adding to gallery',assets);
     this.setState({images: assets})
-    let urls = JSON.parse(JSON.stringify(this.state.urls))
+    let urls = []
+    if(this.props.value){
+      urls = JSON.parse(JSON.stringify(this.props.value))
+    }
     assets.forEach( image => {
-      urls[urls.length] = image.secure_url
+      if(typeof this.props.value !== 'undefined' && !this.props.value.includes(image.secure_url)){
+        urls[urls.length] = image.secure_url
+      }
     })
-    console.log(urls);
-    this.setState({urls: urls})
-    this.handleChange()
+    //console.log(urls);
+    
+    this.handleChange(urls)
   }
 
   deleteImage = (url) => {
-    console.log("GAllery delteImage",url)
-    const newUrls = this.state.urls.filter((index) => index !== url)
-    console.log(newUrls)
-    this.setState({urls: newUrls})
-    this.props.onChange(newUrls)
+    //console.log("GAllery delteImage",url)
+    const newUrls = this.props.value.filter((index) => index !== url)
+    //console.log(newUrls)
+    this.handleChange(newUrls)
   }
 
   componentDidMount = (e) => {
     const { value } = this.props
-    console.log('BugoCloudinary Mounted',value);
-    this.getCloudinaryHash()
-    if(typeof(value) != 'undefined'){
+    //console.log('Gallery Mounted',this.state.id,window[this.state.id]);
+    // window.getCloudinaryHash()
+    if(typeof(value) !== 'undefined'){
       const urls = JSON.parse(JSON.stringify(value))
-      this.setState({urls: urls})
-      this.handleChange()
+      this.handleChange(urls)
+    }else{
+      this.handleChange([])
     }
   }
 
@@ -104,24 +59,70 @@ export default class Gallery extends Component {
     const {cloudName,image} = this.state
     return h('div', {
       style: wrapperStyle,
+      className: "gallery-container"
     },[
-      h('div',{}, 
-        h('span', {
-          id: "cloudinary-btn",
-          // className: 'mediaLibrary',
-        }, 'Loading Media Library...'),
+      h('div',{
+        // style: [flexContainer]
+      }, 
+        h(MediaLibrary,{
+          deleteImage: this.deleteImage.bind(this),
+          addToGallery: this.addToGallery.bind(this),
+          value: this.props.value,
+          id: this.state.id,
+        }),
       ),
-      // h(Image,{
-      //   cloudName: cloudName,
-      //   publicId: image.public_id,
-      //   crop: 'scale',
-      //   width: '100',
-      //   // style: "float: right;",
-      // }),
       h(GalleryList,{
-        images: this.state.urls,
-        _deleteImage: this.deleteImage.bind(this)
+        images: this.props.value,
+        _deleteImage: this.deleteImage.bind(this),
+        style: galleryStyle,
+        buttonStyle: imageBlock,
       }),
     ])
   }
+}
+
+
+import wrapperStyle from './styles/wrapper'
+import marginNone from './styles/margin'
+import {flexContainer, flexItem25, flexItem75, justifyCenter, flexColumnReverse, justifyEnd } from './styles/flexContainer';
+
+const imageStyle = {...flexItem25,...justifyCenter,...flexColumnReverse}
+const imageBlock = {
+  ...marginNone,...{
+    width: '100px',
+    height: '100px',
+    backgroundColor: 'gray',
+    marginBottom: '1rem',
+    border: 'none',
+    padding: 0,
+    marginRight: '0.25rem',
+  }
+}
+
+const galleryStyle = {...flexContainer,...{
+  marginTop: "1rem"
+}}
+
+const contentBlock = {
+  ...marginNone,...{
+    flex: '1 6 auto'
+  }
+}
+
+
+const imageContainer = {
+  ...flexContainer,
+  ...flexColumnReverse,
+  ...justifyEnd,...{
+    flex: '0 0 auto',
+    paddingRight: '1rem',
+  }
+}
+
+const buttonStyle = {
+  background: 'none',
+  border: 'none',
+  padding: 0,
+  cursor: 'pointer',
+  // marginTop: '1rem',
 }

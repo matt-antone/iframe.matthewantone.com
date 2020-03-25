@@ -84,6 +84,7 @@ export default class Aliases extends Component {
           handleAddition: this.handleAddition,
           inputFieldPosition: "top",
           placeholder: "Add a Alias",
+          autofocus: false
         }),
       ]
     )

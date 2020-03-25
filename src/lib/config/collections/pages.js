@@ -10,16 +10,11 @@ const pages = {
       widget: "hidden",
       default: "page"
     },
-    // {
-    //   label: "Draft",
-    //   name: "draft",
-    //   widget: "boolean",
-    //   default: true,
-    // },
     {
-      label: "Depoly Status",
-      name: 'deploystatus',
-      widget: "netlifydeploy",
+      label: "Draft",
+      name: "draft",
+      widget: "draftfield",
+      default: true,
       required: false,
     },
     {
@@ -44,7 +39,13 @@ const pages = {
     {
       label: "Publish Date",
       name: "date",
-      widget: "datetime"
+      widget: "metadatetime"
+    },
+    {
+      label: "Hero",
+      name: "hero",
+      widget: "hero",
+      required: false,
     },
     {
       label: "Body",
@@ -62,14 +63,14 @@ const pages = {
     {
       label: "Categories",
       name: "categories",
-      widget: "categories",
+      widget: "categoriesPicker",
       required: false,
       hint: "Add a category to this page."
     },
     {
       label: "Tags",
       name: "tags",
-      widget: "tags",
+      widget: "tagsPicker",
       required: false,
       hint: "Add a tag(s) to this page."
     },
@@ -89,17 +90,9 @@ const pages = {
       required: false,
     },
     {
-      label: "Show Sidebar",
-      name: "show_sidebar",
-      widget: "boolean",
-      default: true,
-      required: false,
-    },
-    {
-      label: "Show Featured Image",
-      name: "show_featured_image",
-      widget: "boolean",
-      default: false,
+      label: "Page Options",
+      name: "options",
+      widget: 'pageOptions',
       required: false,
     },
   ]

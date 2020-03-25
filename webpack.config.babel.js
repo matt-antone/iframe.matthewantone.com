@@ -11,13 +11,26 @@ const app = {
     path: path.resolve(__dirname, "assets", "js"),
     filename: "app.js"
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
         use: ['babel-loader'],
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ]
   },
   watch: true
@@ -33,13 +46,33 @@ const admin = {
     path: path.resolve(__dirname, "static", "admin", "assets"),
     filename: "admin.js"
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
-      }
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/react',{
+              'plugins': ['@babel/plugin-proposal-class-properties']
+          }]
+        }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ]
   },
   watch: true

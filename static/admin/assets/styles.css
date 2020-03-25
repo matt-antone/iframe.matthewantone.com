@@ -4,6 +4,7 @@
   --dkgray: rgb(121, 130, 145);
   --blue: #3a69c7;
   --border: 2px solid var(--gray);
+  flex: 0 0 48% !important;
 }
 
 .ReactTags__tagInput {
@@ -19,7 +20,8 @@
 }
 
 .ReactTags__selected {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ReactTags__selected .ReactTags__tag {
@@ -27,7 +29,7 @@
   padding: 7px;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   border-radius: 0.125rem;
 }
@@ -90,7 +92,8 @@
   border-bottom-color: var(--blue) !important;
 }
 
-[for^="deploystatus"] {
+[for^="deploystatus"],
+[for^="draft-field"] {
   display: none !important;
 }
 
@@ -131,4 +134,155 @@
 
 .gallery-button:hover svg{
   display: block;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+}
+.toggle-switch-checkbox {
+  display: none;
+}
+.toggle-switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  margin: 0;
+}
+.toggle-switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.toggle-switch-inner::before, .toggle-switch-inner::after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0 0.25rem;
+  line-height: 34px;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.toggle-switch-inner:before {
+  content: "Yes";
+  background-color: #f90;
+  text-transform: uppercase;
+  padding-left: 10px;
+  color: #fff;
+}
+.toggle-switch-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.toggle-switch-disabled::before {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.toggle-switch-inner::after {
+  content: "No";
+  background-color: #ccc;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #fff;
+  text-align: right;
+}
+.toggle-switch-switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  /* right: 40px; */
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  /* right: 0px; */
+  left: calc(100% - 35px);
+}
+
+.toggle-switch-inner::before {
+  content: attr(data-yes);
+  /* other styles */
+}
+.toggle-switch-inner::after {
+  content: attr(data-no);
+  /* other styles */
+}
+
+.toggle-switch.small-switch {
+  width: 40px;
+}
+.toggle-switch.small-switch .toggle-switch-inner:after, .toggle-switch.small-switch .toggle-switch-inner:before {
+  content: "";
+  height: 20px;
+  line-height: 20px;
+}
+.toggle-switch.small-switch .toggle-switch-switch {
+  width: 16px;
+  right: 20px;
+  margin: 2px;
+}
+
+#draft-field .toggle-switch-switch {
+  right: 86px;
+}
+
+#draft-field .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+
+#draft-field .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  right: 0px;
+}
+
+#draft-field .toggle-switch {
+  position: relative;
+  width: 120px;
+}
+
+.tui-editor-contents {
+  font-size: 14px;
+}
+
+.tui-editor-contents h1 {
+  font-size: 1.5rem;
+  border-bottom: 0;
+}
+
+.gallery-container .gallery-item:first-child > div {
+  position: relative;
+}
+
+.gallery-container .gallery-item:first-child > div::before {
+  content: "Featured Image";
+  position: absolute;
+  font-size: 0.85rem;
+  z-index: 100;
+  top: calc(100% - 0.85rem);
+}
+
+.featured-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }

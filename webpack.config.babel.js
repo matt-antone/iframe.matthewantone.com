@@ -1,5 +1,7 @@
 // ./webpack.config.babel.js
 const path = require('path');
+import CompressionPlugin from 'compression-webpack-plugin'
+
 
 const app = {
   entry: {
@@ -33,6 +35,7 @@ const app = {
       },
     ]
   },
+  plugins: [new CompressionPlugin()],
   watch: true
 };
 
@@ -75,6 +78,9 @@ const admin = {
       },
     ]
   },
+  plugins: [new CompressionPlugin({
+    test: /\.js(\?.*)?$/i,
+  })],
   watch: true
 };
 

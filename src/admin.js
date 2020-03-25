@@ -1,5 +1,6 @@
 window.CMS_MANUAL_INIT = true
-import CMS, { init } from 'netlify-cms'
+const CMS = window.CMS
+// import CMS, { init } from 'netlify-cms'
 import {CMSconfig,cloudinaryConfig} from './lib/config/config'
 
 //Import custom widgets
@@ -40,7 +41,7 @@ const adminInit = () => {
   //Previewqs
   CMS.registerPreviewTemplate("posts", PostPreview);
   console.log(CMSconfig)
-  init(CMSconfig)  
+  CMS.init(CMSconfig)  
 }
 
 let cloudinaryInstanceConfig = {

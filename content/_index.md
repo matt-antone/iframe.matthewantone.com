@@ -7,7 +7,7 @@ date: 2020-03-18T21:36:54.734Z
 hero:
   urls:
     - >-
-      https://res.cloudinary.com/bugo/image/upload/v1571112059/lxkvqhsbeltmjudgd659.jpg
+      https://res.cloudinary.com/bugo/image/upload/v1571697952/d0zngfrob9d5mtpadtl2.jpg
   text: |-
     # Home Page
 
@@ -17,6 +17,8 @@ images:
     https://res.cloudinary.com/bugo/image/upload/v1571697953/xdbcrb05sfkp9nds5atk.jpg
   - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-6b.png'
   - 'https://res.cloudinary.com/bugo/image/upload/v1580751495/buildings-2b.png'
+  - >-
+    https://res.cloudinary.com/bugo/image/upload/v1571697952/d0zngfrob9d5mtpadtl2.jpg
 categories:
   - Announcements
   - News

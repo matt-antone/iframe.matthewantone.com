@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: your_cloud_name
+    api_key: your_api_key
+collections:
+  - name: "posts"
+    label: "Post"
+    folder: "posts"
+    filter:
+      field: language
+      value: en
+    fields:
+      - {label: "Language", name: "language"}
+      - {label: "Title", name: title, widget: string }
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Gallery"
+        name: "images"
+        widget: "list"
+        field: {label: Image, name: image, widget: image}

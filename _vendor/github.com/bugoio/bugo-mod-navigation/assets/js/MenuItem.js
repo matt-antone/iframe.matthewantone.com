@@ -6,17 +6,12 @@
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 */
 var MenuItem = function (domNode, menuObj) {
-  // //console.log('MenuItem',domNode,menuObj);
+
   if (typeof popupObj !== 'object') {
     popupObj = false;
   }
 
   this.domNode = domNode;
-
-  //console.log('domNode',this.domNode);
-
-
-
   this.menu = menuObj;
   this.popupMenu = false;
   this.isMenubarItem = false;
@@ -45,25 +40,14 @@ MenuItem.prototype.init = function () {
   this.domNode.addEventListener('blur', this.handleBlur.bind(this));
   this.domNode.addEventListener('mouseup', this.handleMouseover.bind(this));
   this.domNode.addEventListener('mouseover', this.handleMouseover.bind(this));
-  // Initialize flyout menu
 
-  //console.log('this.domNode.nextElementSibling',this.domNode.nextElementSibling);
+  // Initialize flyout menu
 
   var nextElement = this.domNode.nextElementSibling;
 
-  // if(nextElement && nextElement.tagName === 'DIV') {
-  //   nextElement = nextElement.querySelector('ul');
-  // }
-
-  // //console.log('this should be <ul>',nextElement);
-  if (nextElement) {
-
+  if (nextElement && nextElement.tagName === 'UL') {
     this.popupMenu = new PopupMenu(nextElement, this);
     this.popupMenu.init();
-    this.closeButton  = nextElement.querySelector('button');
-    if(this.closeButton){
-      this.closeButton.addEventListener('mouseup',this.handleCloseButton.bind(this));
-    }
   }
 
 };
@@ -180,34 +164,34 @@ MenuItem.prototype.handleKeydown = function (event) {
 };
 
 MenuItem.prototype.setExpanded = function (value) {
-  //console.log("menuItem.js: setExpanded",);
   if (value) {
     this.popupMenu.domNode.classList.add('expanded');
-    this.popupMenu.domNode.classList.remove('default','blurred');
     this.domNode.setAttribute('aria-expanded', 'true');
   }  else {
-    this.popupMenu.domNode.classList.add('blurred');
     this.popupMenu.domNode.classList.remove('expanded');
     this.domNode.setAttribute('aria-expanded', 'false');
   }
 };
 
 MenuItem.prototype.handleClick = function (event) {
-  //console.log('clicked',event);
+  ////console.log('MenuItem.handleClick');
   event.stopPropagation();
-  this.menu.setFocusToController(null,true);
+  this.menu.setFocusToController();
   this.menu.close(true);
 };
 
 MenuItem.prototype.handleFocus = function (event) {
+  ////console.log('MenuItem.handleFocus');
   this.menu.hasFocus = true;
 };
 
 MenuItem.prototype.handleBlur = function (event) {
+  ////console.log('MenuItem.handleBlur');
   this.menu.hasFocus = false;
 };
 
 MenuItem.prototype.handleMouseover = function (event) {
+  ////console.log('MenuItem.handleMouseover');
   if(event.type === 'mouseup'){
     event.stopPropagation();
     this.menu.hasHover = true;
@@ -220,9 +204,3 @@ MenuItem.prototype.handleMouseover = function (event) {
     event.stopPropagation();
   }
 };
-
-MenuItem.prototype.handleCloseButton = function (event) {
-  event.stopPropagation();
-  console.log(this);
-  this.popupMenu.close();
-}

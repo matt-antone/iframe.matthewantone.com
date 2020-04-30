@@ -6,12 +6,6 @@
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 */
 var PopupMenu = function (domNode, controllerObj) {
-
-  function findAncestor (el, sel) {
-    while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
-    return el;
-  }
-
   var elementChildren,
     msgPrefix = 'PopupMenu constructor argument domNode ';
 
@@ -36,7 +30,6 @@ var PopupMenu = function (domNode, controllerObj) {
   this.isMenubar = false;
 
   this.domNode    = domNode;
-  this.parentList  = findAncestor(domNode,'ul');
   this.controller = controllerObj;
 
   this.menuitems = []; // See PopupMenu init method
@@ -44,7 +37,7 @@ var PopupMenu = function (domNode, controllerObj) {
 
   this.firstItem = null; // See PopupMenu init method
   this.lastItem = null; // See PopupMenu init method
-  this.default = true;
+
   this.hasFocus = false; // See MenuItem handleFocus, handleBlur
   this.hasHover = false; // See PopupMenu handleMouseover, handleMouseout
 };
@@ -64,12 +57,14 @@ PopupMenu.prototype.init = function () {
   this.controller.domNode.addEventListener('mouseup', this.handleMouseover.bind(this));
   this.controller.domNode.addEventListener('mouseover', this.handleMouseover.bind(this));
   this.domNode.addEventListener('mouseleave', this.handleMouseout.bind(this));
+  this.domNode.addEventListener('transitionstart', this.handleTransitionStart.bind(this));
+  this.domNode.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
 
   // Traverse the element children of domNode: configure each with
   // menuitem role behavior and store reference in menuitems array.
-  childElement = this.domNode.querySelector('li');
+  childElement = this.domNode.firstElementChild;
+
   while (childElement) {
-    // //console.log("childElement",childElement);
 
     menuElement = childElement.firstElementChild;
 
@@ -100,20 +95,19 @@ numItems = this.menuitems.length;
 /* EVENT HANDLERS */
 
 PopupMenu.prototype.handleMouseover = function (event) {
-  //////console.log('PopupMenu.handleMouseover');
+  ////console.log('PopupMenu.handleMouseover');
   this.hasHover = true;
 };
 
 PopupMenu.prototype.handleMouseout = function (event) {
-    if(event.target.getAttribute('data-mouseout') !== 'false') {
-      this.hasHover = false;
-      setTimeout(this.close.bind(this, true), 300);  
-    }
+    ////console.log('PopupMenu.handleMouseout');
+    this.hasHover = false;
+    setTimeout(this.close.bind(this, true), 300);
 };
 
 PopupMenu.prototype.handleTransitionStart = function(event) {
   event.stopPropagation();
-  ////console.log("PopupMenu.handleTransitionStart",this.hasHover);
+  //console.log("PopupMenu.handleTransitionStart",this.hasHover);
   if(this.hasHover){
     this.domNode.style.visibility = "visible";
   }
@@ -121,23 +115,21 @@ PopupMenu.prototype.handleTransitionStart = function(event) {
 
 PopupMenu.prototype.handleTransitionEnd = function(event) {
   event.stopPropagation();
-  ////console.log("PopupMenu.handleTransitionEnd",this.hasHover);
+  //console.log("PopupMenu.handleTransitionEnd",this.hasHover);
   if(!this.hasHover){
-    this.domNode.style.visibility = "visible";
+    this.domNode.style.visibility = "hidden";
   }
 }
 
 /* FOCUS MANAGEMENT METHODS */
 
 PopupMenu.prototype.setFocusToController = function (command, flag) {
-  ////console.log('setFocusToController',command,flag);
 
   if (typeof command !== 'string') {
     command = '';
   }
 
   function setFocusToMenubarItem (controller, close) {
-    //console.log('controller',controller);
     while (controller) {
       if (controller.isMenubarItem) {
         controller.domNode.focus();
@@ -145,7 +137,6 @@ PopupMenu.prototype.setFocusToController = function (command, flag) {
       }
       else {
         if (close) {
-          this.close();
           controller.menu.close(true);
         }
         controller.hasFocus = false;
@@ -167,8 +158,7 @@ PopupMenu.prototype.setFocusToController = function (command, flag) {
     this.close();
 
     if (command === 'next') {
-      //console.log('focusing next controller');
-      var menubarItem = setFocusToMenubarItem(this.controller, true);
+      var menubarItem = setFocusToMenubarItem(this.controller, false);
       if (menubarItem) {
         menubarItem.menu.setFocusToNextItem(menubarItem, flag);
       }
@@ -176,8 +166,6 @@ PopupMenu.prototype.setFocusToController = function (command, flag) {
   }
   else {
     if (command === 'previous') {
-      //console.log('focusing previous');
-      this.close();
       this.controller.menu.setFocusToPreviousItem(this.controller, flag);
     }
     else if (command === 'next') {
@@ -188,18 +176,16 @@ PopupMenu.prototype.setFocusToController = function (command, flag) {
 };
 
 PopupMenu.prototype.setFocusToFirstItem = function () {
-  //console.log('setFocusToFirstItem',this.firstItem.domNode);
   this.firstItem.domNode.focus();
 };
 
 PopupMenu.prototype.setFocusToLastItem = function () {
-  //console.log('lastItem',this.lastItem);
   this.lastItem.domNode.focus();
 };
 
-PopupMenu.prototype.setFocusToPreviousItem = function (currentItem,flag) {
+PopupMenu.prototype.setFocusToPreviousItem = function (currentItem) {
   var index;
-  //console.log('setFocusToPreviousItem',currentItem,flag);
+
   if (currentItem === this.firstItem) {
     this.lastItem.domNode.focus();
   }
@@ -211,13 +197,12 @@ PopupMenu.prototype.setFocusToPreviousItem = function (currentItem,flag) {
 
 PopupMenu.prototype.setFocusToNextItem = function (currentItem) {
   var index;
-  //console.log('setFocusToNextItem',currentItem);
+
   if (currentItem === this.lastItem) {
     this.firstItem.domNode.focus();
   }
   else {
     index = this.menuitems.indexOf(currentItem);
-    //console.log(this.menuitems,index+1);
     this.menuitems[ index + 1 ].domNode.focus();
   }
 };
@@ -257,14 +242,13 @@ PopupMenu.prototype.getIndexFirstChars = function (startIndex, char) {
 /* MENU DISPLAY METHODS */
 
 PopupMenu.prototype.open = function () {
-  this.parentList.classList.add('child-open');
+  //console.log('PopupMenu.open');
   this.hasHover = true;
-  this.default = false;
   this.controller.setExpanded(true);
 };
 
 PopupMenu.prototype.close = function (force) {
-  this.parentList.classList.remove('child-open');
+  //console.log('PopupMenu.close');
   this.controller.setExpanded(false);
   for (var i = 0, len = this.menuitems.length; i < len; i++) {
     if(this.menuitems[i].popupMenu){
@@ -272,7 +256,3 @@ PopupMenu.prototype.close = function (force) {
     }
   }
 };
-
-PopupMenu.prototype.focusController = function () {
-  this.controller.focus();
-}

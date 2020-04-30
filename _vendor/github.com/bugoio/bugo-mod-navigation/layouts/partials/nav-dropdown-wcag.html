@@ -2,7 +2,7 @@
 {{ $location := .location }}
 <a
 class="dropdown-trigger nav-link {{ if .hasParent }}hasParent{{ end }} {{ .menuItem.Name | urlize }} {{if or ($currentPage.IsMenuCurrent $location .menuItem ) ($currentPage.HasMenuCurrent $location .menuItem ) }} current{{end}}"
-href="{{ .menuItem.URL | absURL }}"
+href="{{ .menuItem.URL }}"
 id="navbarDropdown-{{ .menuItem.Name | urlize }}"
 role="menuitem"
 data-toggle="dropdown"
@@ -29,7 +29,7 @@ aria-label="{{ .menuItem.Name }}"
         {{ else }}
         <a
           class="dropdown-item {{ .Name | urlize }}{{ if $currentPage.IsMenuCurrent $location . }} current{{ end }}"
-          href="{{ .URL | absURL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
+          href="{{ .URL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
           target="new" {{ end }}
           title="{{ .Name }}"
           aria-label="{{ .Name }}"
@@ -43,4 +43,13 @@ aria-label="{{ .menuItem.Name }}"
     </ul>
   </div>
 </div>
+
+{{/*
+  <li id="menu-item-2995" class="menu-item" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <a href="http://localhost/practice-areas/" role="menuitem">Practice Areas</a>
+    <ul class="sub-menu">
+      <li id="menu-item-4078" class="menu-item menu-item-type-post_type menu-item-object-areas menu-item-4078 4078 nav-item-bankruptcy"><a href="http://localhost/practice-areas/bankruptcy/" role="menuitem" tabindex="-1">Bankruptcy</a></li>
+    </ul>
+  </li>
+  */}}
 

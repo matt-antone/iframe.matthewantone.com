@@ -21,14 +21,14 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         {{ range $menuItem.Children }}
-        <a class="dropdown-item {{ $menuItem.Name | urlize }}{{ if $currentPage.IsMenuCurrent "main" . }} current{{ end }}" href="{{ .URL | absURL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}} target="new" {{ end }}>{{ .Name }}</a>
+        <a class="dropdown-item {{ $menuItem.Name | urlize }}{{ if $currentPage.IsMenuCurrent "main" . }} current{{ end }}" href="{{ .URL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}} target="new" {{ end }}>{{ .Name }}</a>
         {{ end }}
       </div>
       {{ else }}
       <a
         aria-label="{{ $menuItem.Name }}"
         class="nav-link {{ $menuItem.Name | urlize }}-link"
-        href="{{ .URL | absURL }}"
+        href="{{ .URL }}"
         {{ if or ( in .URL "http://" ) (in .URL "https://" )}} target="new" {{ end }}
         >
         {{ $menuItem.Pre }}

@@ -21,7 +21,7 @@
         {{ else }}
         <a
           class="dropdown-item {{ .Name | urlize }}{{ if $currentPage.IsMenuCurrent $location . }} current{{ end }}"
-          href="{{ .URL | absURL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
+          href="{{ .URL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
           target="new" {{ end }}
           title="{{ .Name }}"
           tabindex="0"

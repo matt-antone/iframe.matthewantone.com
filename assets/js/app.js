@@ -86,26 +86,35 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/es6/app.js":
-/*!************************!*\
-  !*** ./src/es6/app.js ***!
-  \************************/
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\n * app.js\n * version: 1.0\n * * You can use ES6 Javscript here\n * * All ES6 is transpiles based on .browserlistrc\n * * Transpiled file is copied to /assets/js/app.js for bundling in Hugo\n *\n **/\n\n//# sourceURL=webpack:///./src/es6/app.js?");
+/**
+ * app.js
+ * version: 1.0
+ * * You can use ES6 Javscript here
+ * * All ES6 is transpiles based on .browserlistrc
+ * * Transpiled file is copied to /assets/js/app.js for bundling in Hugo
+ *
+ **/
 
 /***/ }),
 
 /***/ 0:
-/*!******************************!*\
-  !*** multi ./src/es6/app.js ***!
-  \******************************/
+/*!**************************!*\
+  !*** multi ./src/app.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! ./src/es6/app.js */\"./src/es6/app.js\");\n\n\n//# sourceURL=webpack:///multi_./src/es6/app.js?");
+module.exports = __webpack_require__(/*! ./src/app.js */"./src/app.js");
+
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=app.js.map

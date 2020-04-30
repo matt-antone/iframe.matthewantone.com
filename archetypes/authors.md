@@ -1,5 +1,5 @@
 ---
-title:
+title: "{{ replace .Name "-" " " | title }}"
 first_name:
 last_name:
 position:

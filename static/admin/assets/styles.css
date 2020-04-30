@@ -1,0 +1,288 @@
+.ReactTags__tags {
+  position: relative;
+  --gray: rgb(223, 223, 227);
+  --dkgray: rgb(121, 130, 145);
+  --blue: #3a69c7;
+  --border: 2px solid var(--gray);
+  flex: 0 0 48% !important;
+}
+
+.ReactTags__tagInput {
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.alias-input,
+.ReactTags__tagInputField {
+  font-size: 1rem;
+  border-bottom: 1px dashed var(--blue) !important;
+  border-width: 1px;
+}
+
+.ReactTags__selected {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ReactTags__selected .ReactTags__tag {
+  background: var(--gray);
+  padding: 7px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.125rem;
+}
+
+.ReactTags__selected .ReactTags__tag a {
+  background-color: var(--dkgray);
+  color: white;
+  line-height: 1rem;
+  font-size: 1rem;
+  padding: 0;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  border-radius: .5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  text-transform: uppercase;
+}
+
+.ReactTags__selected .ReactTags__tag a:hover {
+  background-color: red;
+}
+
+.ReactTags__selected .ReactTags__remove {
+
+}
+
+.ReactTags__suggestions {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  padding: 14px;
+  margin: 0;
+  background-color: #fff;
+  z-index: 10;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  border-left: var(--border);
+}
+
+.ReactTags__suggestions ul{
+  margin: 0;
+}
+
+.ReactTags__suggestions ul li {
+  list-style-type: none;
+  padding: 7px;
+}
+
+.ReactTags__activeSuggestion {
+  background-color: var(--gray);
+}
+
+.alias-input {
+  font-size: 1rem;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: var(--blue) !important;
+}
+
+[for^="deploystatus"],
+[for^="draft-field"] {
+  display: none !important;
+}
+
+
+.mediaLibrary:nth-child(1n+3){
+  display: none;
+}
+
+.gallery-button {
+  position: relative;
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+}
+
+.gallery-button:hover::after {
+  background-color: rgba(0,0,0,.7);
+  color: #fff;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  fill: #fff;
+  display: none;
+  z-index: 10;
+  width: 33%;
+  height: auto;
+}
+
+.gallery-button:hover svg{
+  display: block;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+}
+.toggle-switch-checkbox {
+  display: none;
+}
+.toggle-switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  margin: 0;
+}
+.toggle-switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.toggle-switch-inner::before, .toggle-switch-inner::after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0 0.25rem;
+  line-height: 34px;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.toggle-switch-inner:before {
+  content: "Yes";
+  background-color: #f90;
+  text-transform: uppercase;
+  padding-left: 10px;
+  color: #fff;
+}
+.toggle-switch-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.toggle-switch-disabled::before {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.toggle-switch-inner::after {
+  content: "No";
+  background-color: #ccc;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #fff;
+  text-align: right;
+}
+.toggle-switch-switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  /* right: 40px; */
+  border: 0 solid #ccc;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  /* right: 0px; */
+  left: calc(100% - 35px);
+}
+
+.toggle-switch-inner::before {
+  content: attr(data-yes);
+  /* other styles */
+}
+.toggle-switch-inner::after {
+  content: attr(data-no);
+  /* other styles */
+}
+
+.toggle-switch.small-switch {
+  width: 40px;
+}
+.toggle-switch.small-switch .toggle-switch-inner:after, .toggle-switch.small-switch .toggle-switch-inner:before {
+  content: "";
+  height: 20px;
+  line-height: 20px;
+}
+.toggle-switch.small-switch .toggle-switch-switch {
+  width: 16px;
+  right: 20px;
+  margin: 2px;
+}
+
+#draft-field .toggle-switch-switch {
+  right: 86px;
+}
+
+#draft-field .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+
+#draft-field .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  right: 0px;
+}
+
+#draft-field .toggle-switch {
+  position: relative;
+  width: 120px;
+}
+
+.tui-editor-contents {
+  font-size: 14px;
+}
+
+.tui-editor-contents h1 {
+  font-size: 1.5rem;
+  border-bottom: 0;
+}
+
+.gallery-container .gallery-item:first-child > div {
+  position: relative;
+}
+
+.gallery-container .gallery-item:first-child > div::before {
+  content: "Featured Image";
+  position: absolute;
+  font-size: 0.85rem;
+  z-index: 100;
+  top: calc(100% - 0.85rem);
+}
+
+.featured-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

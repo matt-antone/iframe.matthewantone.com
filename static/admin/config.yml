@@ -22,3 +22,4 @@ collections:
         name: "images"
         widget: "list"
         field: {label: Image, name: image, widget: image}
+load_config_file: false

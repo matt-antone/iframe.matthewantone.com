@@ -6,3 +6,12 @@ googleAnalytics: ''
 paginate: 10
 sectionPagesMenu: footer
 enableEmoji: true
+outputs:
+  home:
+    - html
+    - rss
+    - json
+  taxonomy:
+    - html
+    - rss
+    - json

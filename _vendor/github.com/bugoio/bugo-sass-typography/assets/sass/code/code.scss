@@ -1,0 +1,8 @@
+pre,code {
+  background-color: $code-bg !important;
+  overflow-x: scroll;
+  @include space-element-x(margin, $code-margin-left, $code-margin-right);
+  @include space-element-y(margin, $code-margin-top, $code-margin-bottom);
+  @include space-element-x(padding, $code-padding-left, $code-padding-right);
+  @include space-element-y(padding, $code-padding-top, $code-padding-bottom);
+}

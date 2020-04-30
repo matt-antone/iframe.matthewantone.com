@@ -1,0 +1,49 @@
+.article-summary-link .categories {
+  grid-area: $recent-categories-area;
+
+  @if $recent-xs-hide-categories {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $recent-sm-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $recent-md-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    @if $recent-lg-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $recent-xl-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $recent-xxl-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $recent-xxxl-hide-categories {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

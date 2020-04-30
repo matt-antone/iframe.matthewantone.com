@@ -1,0 +1,3 @@
+<span class="template bugo-icon icon-{{ range . }}{{ . }} {{ end }}" tabindex="-1">
+  {{ partial (printf "icons/%s" ( index . 0 ) ) }}
+</span>

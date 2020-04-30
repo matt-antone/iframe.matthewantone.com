@@ -1,0 +1,19 @@
+/**
+ * Anchor Element <a>
+ **/
+
+a {
+  color: $global-link-color;
+  font-weight: $global-link-weight;
+
+  @media (codefers-color-scheme: dark) {
+    color: $global-link-color-dark;
+  }
+
+  &:hover {
+    color: darken($global-link-color, 20%);
+    @media (codefers-color-scheme: dark) {
+      color: darken($global-link-color-dark, 20%);
+    }
+  }
+}

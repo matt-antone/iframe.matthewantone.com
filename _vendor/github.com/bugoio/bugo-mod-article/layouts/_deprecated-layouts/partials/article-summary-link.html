@@ -1,0 +1,15 @@
+<a 
+  class="article-summary-link {{- if .Page.Params.images }} has-thumbnail {{ end -}}" 
+  href="{{ .Permalink }}" 
+  tabindex="0"
+  >
+  <article
+    class="a{{ if .Params.images }} has-thumbnail {{end}}"
+    tabindex="0"
+  >
+    {{ partial "thumbnail" . }}
+    <header>{{ .Page.Title }}</header>
+    <time>{{ .Date.Format "January _2, 2006" }}</time>
+    {{ .Summary }}
+  </article>
+</a>

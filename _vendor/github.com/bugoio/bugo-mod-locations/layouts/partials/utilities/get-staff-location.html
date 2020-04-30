@@ -1,0 +1,15 @@
+{{ $headless := .Site.GetPage "/locations" }}
+{{ $resources := $headless.Resources.Match "*.md" }}
+{{ $site := .Site }}
+{{ $staff := printf "%s %s" .Params.first_name .Params.last_name }}
+{{ $staffLocations := slice }}
+{{ range $resources }}
+  {{ $location := . }}
+  {{ range .Params.staff }}
+    {{ $s := . }}
+    {{ if eq $s $staff }}
+        {{ $staffLocations = $staffLocations | append $location }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $staffLocations }}

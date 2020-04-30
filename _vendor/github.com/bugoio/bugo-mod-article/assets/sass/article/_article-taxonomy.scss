@@ -1,0 +1,45 @@
+/**
+ * ARTCILE TAXONOMY SECTION
+ **/
+
+.tax-section {
+  background-color: $accent1;
+  @include set-padding($global-padding,$global-padding,$global-padding,$global-padding);
+  margin-bottom: 2rem;
+
+  h1,h2,h3,h4,h5,h6,
+  .h1,.h2,.h3,.h4,.h5,.h6 {
+    margin-top: 0;
+  }
+
+
+  &:nth-child(even) {
+    background-color: $accent2;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .term-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    > :nth-child(2) {
+      min-width: 2rem;
+    }
+
+    .bugo-icon {
+      width: 2rem;
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

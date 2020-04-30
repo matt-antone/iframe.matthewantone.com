@@ -1,0 +1,6 @@
+<div class="recent-articles recent-articles-{{ .qty }}">
+  {{ $posts := where .site.RegularPages "Section" "posts"}}
+  {{ range first .qty $posts }}
+    {{ partial "article-summary-link" . }}
+  {{ end }}
+</div>

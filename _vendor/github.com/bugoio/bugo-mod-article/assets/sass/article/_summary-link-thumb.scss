@@ -1,0 +1,51 @@
+.article-summary-link .thumbnail {
+  grid-area: $recent-thumbnail-area;
+  padding-bottom: 0;
+
+  @if $recent-xs-hide-thumb {
+    display: none;
+  }
+ 
+  @include respond-to(sm){
+    @if $recent-sm-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $recent-md-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    @if $recent-lg-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $recent-xl-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $recent-xxl-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $recent-xxxl-hide-thumb {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

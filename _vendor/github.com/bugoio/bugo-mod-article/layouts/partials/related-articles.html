@@ -1,0 +1,8 @@
+{{ $posts :=  where ( $.Site.Pages.Related . ) "Section" "posts" }}
+{{ with $posts }}
+<div class="recent-posts related-posts">
+  {{ range first 3 . }}
+  {{ partial "article-summary-link" . }}
+  {{ end }}
+</div>
+{{ end }}

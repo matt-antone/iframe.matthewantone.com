@@ -1,0 +1,28 @@
+{{ $globals := resources.Get "sass/_global-variables.scss" }}
+
+
+{{ $files := slice ( $globals ) }}
+{{ $newFiles := slice }}
+{{ $imports := slice }}
+
+<!-- Get all partial scss files ending with variables -->
+{{ $components := resources.Match "sass/**/*-vars.scss" }}
+{{ $files = $files | append $components }}
+<!-- Add all components to the files array -->
+{{ range $components }}
+  {{ $path := printf "site-vars/%s" ( replace . "sass/" "" ) }}
+  {{ $newFiles = $newFiles | append ( replace ( replace $path "site-vars/" "" ) "_" "" ) }}
+  {{ $fileConcat := slice . | resources.Concat $path }}
+  <!-- Sass Variables can be found here {{ $fileConcat.RelPermalink }} {{ . }}-->
+{{ end }}
+
+{{ range $newFiles }}
+  {{ $import := replace (printf "@import \"%s\";" .) ".scss" "" }}
+  {{ $imports = $imports | append $import }}
+{{ end }}
+{{ $vars := (delimit $imports "\n") | resources.FromString "site-vars/_index-vars.scss" }}
+<!-- Sass Variables can be found here {{ $vars.RelPermalink }} -->
+<!-- concatenate all the files togther -->
+{{ $scssConcat := $files | resources.Concat "site-variables-example.scss" }}
+
+<!-- Sass Variables can be found here {{ $scssConcat.RelPermalink }} -->

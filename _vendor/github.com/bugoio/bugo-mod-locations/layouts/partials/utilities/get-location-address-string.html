@@ -1,0 +1,11 @@
+{{ $location := . }}
+{{ $a := slice }}
+{{ $meta := slice "address_1" "adress_2" "city" "state" "zip_code" }}
+{{ $s := slice "a" "b" "c" }}
+{{ range $meta }}
+  {{ $value := index $location.Params . }}
+  {{ with $value }}
+    {{ $a = $a | append (printf "%v," . ) }}
+  {{ end }}
+{{ end }}
+{{ return strings.TrimRight "," (replace ( delimit $a "" ) " " "+") }}

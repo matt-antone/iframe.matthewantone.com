@@ -1,0 +1,10 @@
+<form aria-label="Search Website" role="search" class="search-form" action="/search">
+  <div>
+    <label class="sr-only" for="search-query-{{ . }}">
+      Search {{ .Site.Title }}
+      <p role="alert"></p>
+    </label>
+    <input tabindex="0" type="text" class="form-control form-control-sm" id="search-query-{{ . }}" name="q" placeholder="Search {{ .Site.Title }}">
+    <button type="submit" class="btn btn-sm btn-dark" tabindex="0">Search</button>
+  </div>
+</form>

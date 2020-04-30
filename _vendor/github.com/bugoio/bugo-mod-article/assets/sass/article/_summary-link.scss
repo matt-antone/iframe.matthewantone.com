@@ -1,0 +1,67 @@
+.article-summary-link {
+  display: block;
+  text-decoration: none;
+  @include ms-respond(margin-bottom,$recent-xs-margin-bottom);
+
+  @include respond-to(sm){
+    @include ms-respond(margin-bottom,$recent-sm-margin-bottom);
+  }
+
+  @include respond-to(md){
+    @include ms-respond(margin-bottom,$recent-md-margin-bottom);
+  }
+
+  @include respond-to(lg){
+    @include ms-respond(margin-bottom,$recent-lg-margin-bottom);
+  }
+
+  @include respond-to(xl){
+    @include ms-respond(margin-bottom,$recent-xl-margin-bottom);
+  }
+
+  @include respond-to(xxl){
+    @include ms-respond(margin-bottom,$recent-xxl-margin-bottom);
+  }
+
+  @include respond-to(xxxl){
+    @include ms-respond(margin-bottom,$recent-xxxl-margin-bottom);
+  }
+
+  article {
+    display: grid;
+    color: $global-font-color;
+    @include ms-respond(grid-gap,$recent-xs-grid-gap);
+    margin-bottom: 0;
+    grid-template-areas: $recent-xs-areas;
+  
+    @include respond-to(sm){
+      grid-template-areas: $recent-sm-areas;
+      @include ms-respond(grid-gap,$recent-sm-grid-gap);
+    }
+  
+    @include respond-to(md){
+      grid-template-areas: $recent-md-areas;
+      @include ms-respond(grid-gap,$recent-md-grid-gap);
+    }
+  
+    @include respond-to(lg){
+      grid-template-areas: $recent-lg-areas;
+      @include ms-respond(grid-gap,$recent-lg-grid-gap);
+    }
+  
+    @include respond-to(xl){
+      grid-template-areas: $recent-xl-areas;
+      @include ms-respond(grid-gap,$recent-xl-grid-gap);
+    }
+  
+    @include respond-to(xxl){
+      grid-template-areas: $recent-xxl-areas;
+      @include ms-respond(grid-gap,$recent-xxl-grid-gap);
+    }
+  
+    @include respond-to(xxxl){
+      grid-template-areas: $recent-xxxl-areas;
+      @include ms-respond(grid-gap,$recent-xxxl-grid-gap);
+    }
+  }
+}

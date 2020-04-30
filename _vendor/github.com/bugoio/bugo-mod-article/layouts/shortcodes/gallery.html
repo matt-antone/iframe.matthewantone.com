@@ -1,0 +1,13 @@
+<div class="gallery">
+  {{ if len .Inner}}
+    {{ .Inner }}
+  {{ else if $.Page.Params.images }}
+    {{ range $.Page.Params.images }}
+      <div class="gallery-item">
+        <img src="{{ . }}"/>
+      </div>
+    {{ end }}
+  {{ else }}
+      I got nuttin.
+  {{ end }}
+</div>

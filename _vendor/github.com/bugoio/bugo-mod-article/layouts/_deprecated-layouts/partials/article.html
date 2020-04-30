@@ -1,0 +1,12 @@
+<article class="">
+  <header>
+    <time>{{ .Date.Format "January _2, 2006" }}</time>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="content">
+    {{ .Content }}
+  </div>
+  <footer>
+    {{ partial "share_buttons" . }}
+  </footer>
+</article>

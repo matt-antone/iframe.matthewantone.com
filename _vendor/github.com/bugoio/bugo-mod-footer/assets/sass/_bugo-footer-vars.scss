@@ -1,0 +1,78 @@
+/**
+ * BUGO FOOTER VARIABLES
+ **/
+
+// * Margin
+// * false | modular scale ratio
+
+$footer-margin-top:        false !default; // false | modular scale ratio
+$footer-margin-right:      false !default; // false | modular scale ratio
+$footer-margin-bottom:     $global-margin !default; // false | modular scale ratio
+$footer-margin-left:       false !default; // false | modular scale ratio
+
+
+// * Padding
+// * false | modular scale ratio
+
+$footer-padding-top:       false !default; // false | modular scale ratio
+$footer-padding-bottom:    false !default; // false | modular scale ratio
+$footer-padding-right:     false !default; // false | modular scale ratio
+$footer-padding-left:      false !default; // false | modular scale ratio
+
+/**
+ *
+ * BACKUP Footer VARS
+ *
+ **/
+$footer-margin-x:   false !default; // false | modular scale ratio
+$footer-margin-y:   false !default; // false | modular scale ratio
+$footer-padding-x:  false !default; // false | modular scale ratio
+$footer-padding-y:  2 !default; // false | modular scale ratio
+
+$footer-column-gap: 0 !default;
+$footer-row-gap: 0 !default;
+
+$footer-xs-template-areas: "header" "wrap" "footer" !default; // TODO: need to define
+$footer-sm-template-areas: $footer-xs-template-areas !default;
+$footer-md-template-areas: $footer-xs-template-areas !default;
+$footer-lg-template-areas: $footer-xs-template-areas !default;
+$footer-xl-template-areas: $footer-xs-template-areas !default;
+$footer-xxl-template-areas: $footer-xs-template-areas !default;
+$footer-xxxl-template-areas: $footer-xs-template-areas !default;
+
+$footer-xs-template-columns: repeat( 1, 1fr ) !default;
+$footer-sm-template-columns: $footer-xs-template-columns !default;
+$footer-md-template-columns: $footer-xs-template-columns !default;
+$footer-lg-template-columns: $footer-xs-template-columns !default;
+$footer-xl-template-columns: $footer-xs-template-columns !default;
+$footer-xxl-template-columns: $footer-xs-template-columns !default;
+$footer-xxxl-template-columns: $footer-xs-template-columns !default;
+
+
+/**
+ * BUGO LOCATIONS LAYOUT
+ **/
+
+$footer-loc-bg:             $primary !default;
+$footer-loc-color:          $white !default;
+
+
+$footer-template-areas: (
+  xs: $footer-xs-template-areas,
+  sm: $footer-sm-template-areas,
+  md: $footer-md-template-areas,
+  lg: $footer-lg-template-areas,
+  xl: $footer-xl-template-areas,
+  xxl: $footer-xxl-template-areas,
+  xxxl: $footer-xxxl-template-areas
+);
+
+$footer-template-columns: (
+  xs: $footer-xs-template-columns,
+  sm: $footer-sm-template-columns,
+  md: $footer-md-template-columns,
+  lg: $footer-lg-template-columns,
+  xl: $footer-xl-template-columns,
+  xxl: $footer-xxl-template-columns,
+  xxxl: $footer-xxxl-template-columns
+);

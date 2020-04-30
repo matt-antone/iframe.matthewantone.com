@@ -1,0 +1,4 @@
+{{ $mapAddress := partial "utilities/get-location-address-string" . }}
+{{ if $mapAddress }}
+{{ partial "google-map" ( dict "address" $mapAddress "key" .Site.Params.googleCloudApi ) }}
+{{ end }}

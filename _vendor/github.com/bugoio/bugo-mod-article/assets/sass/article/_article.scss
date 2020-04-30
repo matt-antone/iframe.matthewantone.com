@@ -1,0 +1,64 @@
+/**
+ * ARTICLE ELEMENT
+ **/
+
+article {
+  // Margin
+  @include space-element-x(margin, $article-margin-left, $article-margin-right);
+  @include space-element-y(margin, $article-margin-top, $article-margin-bottom);
+
+  // Padding
+  @include space-element-x(padding, $article-padding-left, $article-padding-right);
+  @include space-element-y(padding, $article-padding-top, $article-padding-bottom);
+
+  header {
+    h1 {
+      margin-top: 0;
+
+      @if $article-hide-title {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .date {
+    @if $article-hide-date {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .taxonomy {
+    @if $article-hide-taxonomy {
+      display: none;
+      visibility: hidden;
+    }  
+  }
+
+  .featured-image {
+    @if $article-hide-featured-image {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .gallery {
+    @if $article-hide-featured-image {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .content {
+    img {
+      max-width: $article-img-max-width;
+
+      // Margin
+      @include ms-respond(margin-top,$global-margin);
+      margin-right: auto;
+      @include ms-respond(margin-bottom,$global-margin);
+      margin-left: auto;
+    }
+  }
+}

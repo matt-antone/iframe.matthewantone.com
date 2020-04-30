@@ -1,0 +1,125 @@
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$recent-header-area:            head !default;
+$recent-thumbnail-area:         thum !default;
+$recent-date-area:              date !default;
+$recent-categories-area:        cats !default;
+$recent-tags-area:              tags !default;
+$recent-summary-area:           summ !default;
+
+$recent-xs-flex:                100% !default; 
+$recent-xs-margin-bottom:       0 !default;
+$recent-xs-header-font-size:    1 !default;
+$recent-xs-header-font-weight:  700 !default;
+$recent-xs-header-line-clamp:   3 !default; // false | int
+$recent-xs-grid-gap:            0 !default; // false | int
+$recent-xs-areas:               "thum thum head head head head" !default;
+$recent-xs-hide-thumb:          false !default;
+$recent-xs-hide-header:         false !default;
+$recent-xs-hide-date:           true !default;
+$recent-xs-hide-summary:        true !default;
+$recent-xs-hide-categories:     true !default;
+$recent-xs-hide-tags:           true !default;
+
+$recent-sm-flex:                100% !default; 
+$recent-sm-margin-bottom:       0 !default;
+$recent-sm-header-font-size:    1 !default;
+$recent-sm-header-font-weight:  700 !default;
+$recent-sm-header-line-clamp:   false !default; // false | int
+$recent-sm-grid-gap:            0 !default; // false | int
+$recent-sm-areas:               "thum thum date date date date"
+                                "thum thum head head head head" !default;
+$recent-sm-hide-thumb:          false !default;
+$recent-sm-hide-header:         false !default;
+$recent-sm-hide-date:           false !default;
+$recent-sm-hide-summary:        true !default;
+$recent-sm-hide-categories:     true !default;
+$recent-sm-hide-tags:           true !default;
+
+$recent-md-flex:                33% !default;
+$recent-md-margin-bottom:       0 !default;
+$recent-md-header-font-size:    1 !default;
+$recent-md-header-font-weight:  700 !default;
+$recent-md-header-line-clamp:   false !default; // false | int
+$recent-md-grid-gap:            1 !default; // false | int
+$recent-md-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ" !default;
+$recent-md-hide-thumb:          false !default;
+$recent-md-hide-header:         false !default;
+$recent-md-hide-date:           false !default;
+$recent-md-hide-summary:        false !default;
+$recent-md-hide-categories:     true !default;
+$recent-md-hide-tags:           true !default;
+
+$recent-lg-flex:                33% !default; 
+$recent-lg-margin-bottom:       0 !default;
+$recent-lg-header-font-size:    1 !default;
+$recent-lg-header-font-weight:  700 !default;
+$recent-lg-header-line-clamp:   false !default; // false | int
+$recent-lg-grid-gap:            0 !default; // false | int
+$recent-lg-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ" !default;
+$recent-lg-hide-thumb:          false !default;
+$recent-lg-hide-header:         false !default;
+$recent-lg-hide-date:           false !default;
+$recent-lg-hide-summary:        false !default;
+$recent-lg-hide-categories:     true !default;
+$recent-lg-hide-tags:           true !default;
+
+$recent-xl-flex:                33% !default; 
+$recent-xl-margin-bottom:       0 !default;
+$recent-xl-header-font-size:    1 !default;
+$recent-xl-header-font-weight:  700 !default;
+$recent-xl-header-line-clamp:   false !default; // false | int
+$recent-xl-grid-gap:            0 !default; // false | int
+$recent-xl-areas:               "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ" !default;
+$recent-xl-hide-thumb:          false !default;
+$recent-xl-hide-header:         false !default;
+$recent-xl-hide-date:           false !default;
+$recent-xl-hide-summary:        false !default;
+$recent-xl-hide-categories:     true !default;
+$recent-xl-hide-tags:           true !default;
+
+$recent-xxl-flex:               33% !default; 
+$recent-xxl-margin-bottom:       0 !default;
+$recent-xxl-header-font-size:   1 !default;
+$recent-xxl-header-font-weight: 700 !default;
+$recent-xxl-header-line-clamp:  false !default; // false | int
+$recent-xxl-grid-gap:           0 !default; // false | int
+$recent-xxl-areas:              "thum thum thum thum thum thum"
+                                "head head head head head head"
+                                "date date date date date date"
+                                "summ summ summ summ summ summ" !default;
+$recent-xxl-hide-thumb:         false !default;
+$recent-xxl-hide-header:        false !default;
+$recent-xxl-hide-date:          false !default;
+$recent-xxl-hide-summary:       false !default;
+$recent-xxl-hide-categories:    true !default;
+$recent-xxl-hide-tags:          true !default;
+
+$recent-xxxl-flex:                33% !default; 
+$recent-xxxl-margin-bottom:       0 !default;
+$recent-xxxl-header-font-size:    1 !default;
+$recent-xxxl-header-font-weight:  700 !default;
+$recent-xxxl-header-line-clamp:   false !default; // false | int
+$recent-xxxl-grid-gap:            0 !default; // false | int
+$recent-xxxl-areas:               "thum thum thum thum thum thum"
+                                  "head head head head head head"
+                                  "date date date date date date"
+                                  "summ summ summ summ summ summ" !default;
+$recent-xxxl-hide-thumb:          false !default;
+$recent-xxxl-hide-header:         false !default;
+$recent-xxxl-hide-date:           false !default;
+$recent-xxxl-hide-summary:        false !default;
+$recent-xxxl-hide-categories:     true !default;
+$recent-xxxl-hide-tags:           true !default;

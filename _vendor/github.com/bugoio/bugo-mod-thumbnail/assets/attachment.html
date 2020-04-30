@@ -1,0 +1,20 @@
+---
+{{ range first 1 .Params.images -}}
+{{- $image := . -}}
+{{- $url := urls.Parse . -}}
+{{- $pathArray := split (path.Base $url.Path) "." -}}
+{{- $fileBase := (index $pathArray 0) -}}
+{{- $fileDir := delimit (after 4 (split (path.Dir $url.Path) "/")) "/" -}}
+title: {{ $fileBase | humanize }}
+type: attachment
+url: 
+image:
+  alt: ""
+  caption: ""
+  description: 
+  href: 
+  src: {{ $image }}
+  title:
+{{ end -}}
+date: {{ .Date }}
+---

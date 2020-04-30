@@ -1,0 +1,5 @@
+<div class="columns {{ range .Params -}}{{ . }} {{ end }}">
+  <div class="container">
+    {{.Inner | markdownify }}
+  </div>
+</div>

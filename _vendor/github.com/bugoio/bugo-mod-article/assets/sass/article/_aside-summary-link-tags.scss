@@ -1,0 +1,47 @@
+aside .article-summary-link   .tags {
+  grid-area: $aside-summ-tags-area;
+
+  @if $aside-summ-xs-hide-tags {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $aside-summ-sm-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $aside-summ-md-hide-tags {
+      display: none;
+    }
+  }
+  @include respond-to(lg){
+    @if $aside-summ-lg-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $aside-summ-xl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $aside-summ-xxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $aside-summ-xxxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

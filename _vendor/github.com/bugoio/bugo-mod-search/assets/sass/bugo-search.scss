@@ -1,0 +1,13 @@
+@debug "Loading Bugo Search Module SASS";
+@import "custom-variables";
+
+.search-form {
+  &.form-inline {
+    display: flex;
+    @include ms-respond(font-size,0);
+
+    input,button {
+      @include ms-respond(font-sizef,0);
+    }
+  }
+}

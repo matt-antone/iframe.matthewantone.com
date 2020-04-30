@@ -1,0 +1,17 @@
+.bugo-icon {
+  svg {
+    @include ms-respond(max-width,$fa-icon-size);
+  }
+
+  &.icon-small {
+    svg {
+      @include ms-respond(max-width,$fa-icon-size-sm);
+    }
+  }
+
+  &.icon-large {
+    svg {
+      @include ms-respond(max-width,$fa-icon-size-lg);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.columns {
+  @include ms-respond(--margin,$global-padding);
+  margin-left: calc( var(--margin) * -1);
+  margin-right: calc( var(--margin) * -1);
+  display: flex;
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    color: inherit;
+    max-width: none;
+  
+    h1,h2,h3,h4,h5,h6 {
+      color: inherit;
+    }
+  }
+
+  &.full-width {
+    // margin-left: 0;
+    // margin-right: 0;
+    > .container {
+      // Spacing & Dimensions
+      margin: 0 auto;
+      width: 100%;
+    
+      @each $key, $value in $breakpoints {
+        @media (min-width: $value) {
+          max-width: map-get($container-max-widths, $key);
+        }
+      }
+    }
+  }
+
+  &[class*=bg-] {
+    margin-left: 0;
+    margin-right: 0;
+
+   > .container {
+      margin-left: auto;
+      margin-right: auto;
+      // @each $key, $value in $breakpoints {
+      //   @media (min-width: $value) {
+      //     max-width: map-get($container-max-widths, $key);
+      //   }
+      // }
+    }
+  }
+}
+
+
+.column {
+  display: block;
+  position: relative;
+
+  > * {
+    @include ms-respond(margin-left,$global-padding);
+    @include ms-respond(margin-right,$global-padding);
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

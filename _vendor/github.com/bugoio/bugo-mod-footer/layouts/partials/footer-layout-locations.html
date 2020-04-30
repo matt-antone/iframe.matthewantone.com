@@ -1,0 +1,43 @@
+{{/**
+* Footer Template
+*
+* The footer for the site.
+* It is used on every page.
+*
+* @version 1.0.0
+*
+*/}}
+{{ if .Site.Data.config.layout_options.footer.pre_footer_blocks }}
+<div class="above-footer-content">
+  {{ partial "blocks/blocks" (dict "page" .Page "site" .Site "content" .Site.Data.config.layout_options.footer.pre_footer_blocks) }}
+</div>
+{{ end }}
+<footer class="site-footer footer-locations" role="contentinfo">
+  <div class="container dflex">
+    <div class="text-left">
+        {{ partial "footer-part-logo" . }}
+    </div>
+    <div class="text-left">
+        {{ partial "locations-list-inline-small" . }}
+    </div>
+    <div class="text-left">
+        {{ .Scratch.Set "location" "footer" }}
+        {{ .Scratch.Set "menu" .Site.Menus.footer }}
+        {{ partial "nav-vertical" . }}
+    </div>
+  </div>
+  <div class="text-center pt-2">
+      {{ partial "footer-part-copyright-text" . }}
+  </div>
+  {{ if .Site.Params.showBugo }}
+  <div class="container pt-0">
+    <div class="text-center">
+      <small class="made-with-bugo">
+        <a href="https://bugo.io" title="Crafted with Bugo" alt="Visit Bugo" tabindex="0"><img class=""
+            src="https://bit.ly/2VF39WV" width="20" height="auto" alt="" aria-hidden="true" />
+          Crafted with Bugo.</a>
+      </small>
+    </div>
+  </div>
+  {{ end }}
+</footer>

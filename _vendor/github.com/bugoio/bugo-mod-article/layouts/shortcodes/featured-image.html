@@ -1,0 +1,8 @@
+<figure class="featured-image">
+  <div class="responsive-image">
+    <img src="{{ index $.Page.Params.Images (.Get 0) }}" alt="{{ .Get 1 }}"/>
+  </div>
+  {{ if len .Inner }}
+    <figcaption>{{ .Inner }}</figcaption>
+  {{ end }}
+</figure>

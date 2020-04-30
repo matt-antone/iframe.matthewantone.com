@@ -2,6 +2,10 @@
 
 Blogging with Hugo is a set of Hugo modules for building websites. Bugo Site is the starter for all Bugo websites.
 
+[![button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/bugoio/bugo-site)
+
+
+
 ## Features
 
 * Responsive layouts based on modular scale

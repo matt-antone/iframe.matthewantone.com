@@ -1,0 +1,16 @@
+<h3 id="{{ .Title | urlize }}">{{ .Title }}</h3>
+<p class="m-none">
+  {{ .Params.address_1 }}{{ with .Params.address_2 }} {{ . }}{{ end }}<br/>
+  {{ .Params.city }}, {{ .Params.state }} {{ .Params.zip_code }}
+  <ul class="list-unstyled m-none">
+    {{ range $index, $phone := .Params.phones }}
+      <li>{{ $index | humanize | title }}: {{ $phone }}</li>
+    {{ end }}
+  </ul>
+</p>
+{{ with .Params.hours }}
+<h4>Hours of Operation</h4>
+<p>
+  {{ . }}
+</p>
+{{ end }}

@@ -1,0 +1,26 @@
+{{/**
+   * Directory Modal
+   * * Launched by directory-button partial
+   **/}}
+{{ $attorneys := slice }}
+{{ range sort .Params.staff }}
+  {{ $attorneys = $attorneys | append ($.Site.GetPage .) }}
+{{ end }}
+{{ if gt (len $attorneys) 0 }}
+<div id="modal-{{ .Title | urlize }}" class="modal">
+  <div class="modal-window">
+    <div class="modal-content">
+      <div class="dflex flex-wrap">
+        {{ range sort $attorneys "Params.last_name" "asc"}}
+          <div class="flex-33 py-0">
+              {{ partial "attorney-summary-tiny-contact" . }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+    <button class="modal-close text-primary" role="button" aria-label="Return to Content">
+      {{ partial "icon" (slice "times-circle" "fill-primary") }}
+    </button>
+  </div>
+</div>
+{{ end }}

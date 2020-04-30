@@ -1,0 +1,40 @@
+{{/**
+   * Default Single Page Layout
+	 *
+	 * The default single for the site.
+   * All pages and posts will default to this template.
+   *
+   * @version 1.0.0
+	 *
+   */}}
+
+{{ define "hero" }}
+  {{ partial "hero" . }}
+{{ end }}
+
+
+{{ define "main" }}
+<main id="main">
+  <h1>{{  partial "utilities/get-org-name" .  }}</h1>
+  <ul class="">
+    {{ range .Site.Pages }}
+    {{ if eq .Section "" }}
+    <li><a href="{{ .Permalink | relURL }}" title="{{.Title}}">{{ .Title }} {{ .Section }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+  <h2>Sections</h2>
+  {{ range .Site.Sections }}
+  <h3>{{ .Title }}</h3>
+  <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .Permalink | relURL }}" title="{{.Title}}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</main>
+{{ end }}
+
+{{ define "aside" }}
+  {{ partial "sidebar" . }}
+{{ end }}

@@ -1,0 +1,10 @@
+ul,ol {
+  @include ms-respond(margin-top,$list-margin);
+  @include ms-respond(margin-bottom,$list-margin);
+  @include ms-respond(padding-left,$list-padding);
+
+  li {
+    line-height: $list-line-height;
+    @include ms-respond(margin-bottom,$list-item-margin-bottom);
+  }
+}

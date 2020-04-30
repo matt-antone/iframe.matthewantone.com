@@ -1,0 +1,84 @@
+.recent-articles {
+  display: flex;
+  flex-wrap: wrap;
+  @include ms-respond(--marginX,$global-padding);
+  margin-left: calc( var(--marginX) * -1 );
+  margin-right: calc( var(--marginX) * -1 );
+  @include ms-respond(margin-bottom,$global-margin);
+
+  a {
+    flex: 0 0 $recent-xs-flex;
+
+    @include respond-to(sm){
+      flex-basis: $recent-sm-flex;      
+    }
+    @include respond-to(md){
+      flex-basis: $recent-md-flex;      
+    }
+    @include respond-to(lg){
+      flex-basis: $recent-lg-flex;      
+    }
+    @include respond-to(xl){
+      flex-basis: $recent-xl-flex;      
+    }
+    @include respond-to(xxl){
+      flex-basis: $recent-xxl-flex;      
+    }
+    @include respond-to(xxxl){
+      flex-basis: $recent-xxxl-flex;      
+    }
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: $recent-xs-areas;
+    @include ms-respond(grid-gap,$recent-xs-grid-gap);
+    @include ms-respond(margin-bottom,$recent-xs-grid-gap);
+    @include ms-respond(margin-left,$global-padding);
+    @include ms-respond(margin-right,$global-padding);
+  }
+}
+
+aside .recent-articles {
+  display: flex;
+  flex-wrap: wrap;
+  @include ms-respond(--marginX,$global-padding);
+  margin-left: calc( var(--marginX) * -1 );
+  margin-right: calc( var(--marginX) * -1 );
+  margin-bottom: $global-margin;
+
+  a {
+    flex: 0 0 $aside-summ-xs-flex;
+
+    @include respond-to(sm){
+      flex-basis: $aside-summ-sm-flex;      
+    }
+    @include respond-to(md){
+      flex-basis: $aside-summ-md-flex;      
+    }
+    @include respond-to(lg){
+      flex-basis: $aside-summ-lg-flex;      
+    }
+    @include respond-to(xl){
+      flex-basis: $aside-summ-xl-flex;      
+    }
+    @include respond-to(xxl){
+      flex-basis: $aside-summ-xxl-flex;      
+    }
+    @include respond-to(xxxl){
+      flex-basis: $aside-summ-xxxl-flex;      
+    }
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: $aside-summ-xs-areas;
+    @include ms-respond(grid-gap,$aside-summ-xs-grid-gap);
+    @include ms-respond(margin-bottom,$aside-summ-xs-grid-gap);
+    @include ms-respond(margin-left,$global-padding);
+    @include ms-respond(margin-right,$global-padding);
+  }
+}
+

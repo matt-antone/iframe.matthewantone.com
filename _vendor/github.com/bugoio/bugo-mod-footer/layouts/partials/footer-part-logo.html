@@ -1,0 +1,17 @@
+{{/**
+  BUGO FOOTER LOGO TEMPLATE
+  @params .
+  NOTE: logo should be stored in data
+  **/}}
+
+{{ if .Site.Data.organization.footer_logo }}
+ <img
+  class="footer-logo"
+  src="{{ .Site.Data.organization.footer_logo }}"
+  alt="{{ partial "utilities/get-org-name" . }}"
+  width="200"
+  height="auto"
+  />
+{{ else }}
+  {{ partial "utilities/get-org-name" . }}
+{{ end }}

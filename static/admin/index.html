@@ -4,37 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <link rel="stylesheet" type="text/css" href="/admin/assets/styles.css"> 
-  <script src="https://media-library.cloudinary.com/global/all.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"
-  />
-  <!-- Editor's Style -->
-  <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-  <script>
-    window.CMS_MANUAL_INIT = true;
-    window.MLstatus = 'idle';
-    window.ML = {}
-  </script>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-
-    // Bind to events
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.on('login', user => {
-      console.log('login', user)
-      window.user = user
-    });
-    netlifyIdentity.on('logout', () => console.log('Logged out'));
-    netlifyIdentity.on('error', err => console.error('Error', err));
-    netlifyIdentity.on('open', () => console.log('Widget opened'));
-    netlifyIdentity.on('close', () => console.log('Widget closed'));
-  </script>
-  <script src="/admin/assets/admin.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>

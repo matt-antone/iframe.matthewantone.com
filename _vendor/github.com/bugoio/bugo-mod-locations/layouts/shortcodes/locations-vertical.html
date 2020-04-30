@@ -1,0 +1,23 @@
+{{ $headless := .Site.GetPage "/locations" }}
+{{ $locations := $headless.Resources.Match "*.md" }}
+<div class="">
+  {{ range $locations }}
+    <div class="">
+      <h3 id="{{ .Title | urlize }}">{{ .Title }}</h3>
+      <p>
+        {{ .Params.address_1 }}{{ with .Params.address_1 }} {{ . }}{{ end }}<br/>
+        {{ .Params.city }}, {{ .Params.state }} {{ .Params.zip_code }}
+      </p>
+      <h4 class="h6">Phones</h4>
+      <ul class="list-unstyled">
+        {{ range $index, $phone := .Params.phones }}
+          <li>{{ $index | humanize | title }}: {{ $phone }}</li>
+        {{ end }}
+      </ul>
+      <h4 class="h6">Hours of Operation</h4>
+      <p>
+        {{ .Params.hours }}
+      </p>
+    </div>
+  {{ end }}
+</div>

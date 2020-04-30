@@ -132,13 +132,6 @@ button[disabled],
   .button-#{$name} {
     background-color: $color;
     color: white;
-    border: 1px soid transparent;
-  }
-
-  .button-outline-#{$name} {
-    background-color: transparent;
-    color: $color;
-    border: 1px solid $color;
   }
 }
 

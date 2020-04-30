@@ -15,7 +15,7 @@
         {{ partial "nav-dropdown" ( dict "currentPage" $currentPage "menuItem" $menuItem "location" $location "hasParent" false) }}
       {{ else }}
       <a class="nav-link {{ if .HasChildren }}dropdown-toggle{{ end }} $page {{ $menuItem.Name | urlize }}"
-        href="{{ .URL | absURL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
+        href="{{ .URL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
         target="new" {{ end }}
         tabindex="0"
         aria-label="{{ $menuItem.Name  | title }}"

@@ -106,7 +106,7 @@ Menubar.prototype.setFocusToItem = function (newItem) {
   newItem.domNode.tabIndex = 0;
 
   if (flag && newItem.popupMenu) {
-    // newItem.popupMenu.open();
+    newItem.popupMenu.open();
   }
 };
 
@@ -144,7 +144,6 @@ Menubar.prototype.setFocusToNextItem = function (currentItem) {
     newItem = this.menubarItems[ index + 1 ];
   }
 
-  console.log('menubar.setFocusToNextItem',currentItem,newItem);
   this.setFocusToItem(newItem);
 
 };
@@ -183,9 +182,9 @@ Menubar.prototype.getIndexFirstChars = function (startIndex, char) {
 };
 
 Menubar.prototype.closeAll = function () {
+  console.log('close all',this.menubarItems);
   for (var i = 0, len = this.menubarItems.length; i < len; i++) {
-    console.log(this.menubarItems[i].popupMenu.default);
-    if(this.menubarItems[i].popupMenu && !this.menubarItems[i].popupMenu.default){
+    if(this.menubarItems[i].popupMenu){
       this.menubarItems[i].popupMenu.close();
     }
   }

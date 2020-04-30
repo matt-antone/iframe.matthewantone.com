@@ -5,7 +5,6 @@
 aside.sidebar {
   grid-area: sidebar;
   display: block;
-  border-top: 1px solid transparent;
 
   > *:first-child {
     margin-top: 0 !important;

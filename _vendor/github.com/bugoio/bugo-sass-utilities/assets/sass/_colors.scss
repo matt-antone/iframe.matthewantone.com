@@ -51,21 +51,21 @@ $link-text-color-dark: $primary;
   }
 }
 
-// @each $fname, $fcolor in $theme-colors {
-//   @each $bgname, $bgcolor in $theme-colors {
-//     .#{$fname}-on-#{$bgname}{
-//       color: $fcolor;
-//       background-color: $bgcolor;
+@each $fname, $fcolor in $theme-colors {
+  @each $bgname, $bgcolor in $theme-colors {
+    .#{$fname}-on-#{$bgname}{
+      color: $fcolor;
+      background-color: $bgcolor;
 
-//       h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
-//         color: inherit !important;
-//         a {
-//           color: inherit !important;
-//         }
-//       }
-//     }
-//   }
-// }
+      h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+        color: inherit !important;
+        a {
+          color: inherit !important;
+        }
+      }
+    }
+  }
+}
 
 :root{
   @each $name, $color in $theme-colors {

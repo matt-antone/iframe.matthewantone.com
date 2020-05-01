@@ -10,5 +10,3 @@ require (
 	github.com/bugoio/bugo-mod-widgets v0.0.0-20191013190005-cfd39508e0da // indirect
 	github.com/bugoio/bugo-theme-origin v0.3.10 // indirect
 )
-
-replace github.com/bugoio/bugo-sass-utilities => /home/matt/Documents/Bugo/bugo-sass-utilities

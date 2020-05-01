@@ -1,7 +1,0 @@
-{{ $names := slice }}
-{{ range . }}
-  {{ $names = $names | append .Title }}
-{{ end }}
-{{ if index $names 0 }}
-  {{ return $names }}
-{{ end }}

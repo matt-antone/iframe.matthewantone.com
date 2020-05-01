@@ -1,8 +1,0 @@
-<div class="tags">
-  <span>Tags:</span> 
-  {{ with .Params.tags }}
-    {{ range . }}
-      <a class="tag-link" href="{{ "categories" | absURL }}/{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
-  {{ end }}
-</div>

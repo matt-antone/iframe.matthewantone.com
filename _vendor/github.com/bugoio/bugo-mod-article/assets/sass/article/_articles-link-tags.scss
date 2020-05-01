@@ -1,0 +1,47 @@
+.articles .article-summary-link   .tags {
+  grid-area: $articles-tags-area;
+
+  @if $articles-xs-hide-tags {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $articles-sm-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $articles-md-hide-tags {
+      display: none;
+    }
+  }
+  @include respond-to(lg){
+    @if $articles-lg-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $articles-xl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $articles-xxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $articles-xxxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

@@ -57,6 +57,8 @@ github.com/bugoio/bugo-sass-utilities v0.0.0-20191018023647-0458624bff72/go.mod 
 github.com/bugoio/bugo-sass-utilities v0.0.0-20191018040342-cc1ad6a94a0b/go.mod h1:0tVnrsnCG61j64fUv88di5gpYw5/3fgqdQB4iUOjook=
 github.com/bugoio/bugo-sass-utilities v0.0.4/go.mod h1:0tVnrsnCG61j64fUv88di5gpYw5/3fgqdQB4iUOjook=
 github.com/bugoio/bugo-sass-utilities v0.0.5/go.mod h1:0tVnrsnCG61j64fUv88di5gpYw5/3fgqdQB4iUOjook=
+github.com/bugoio/bugo-sass-utilities v0.0.7 h1:ZN2cVN/IE6WrAkLgbj9wwrnC/F8cyO8o9EN2ykdWzBw=
+github.com/bugoio/bugo-sass-utilities v0.0.7/go.mod h1:0tVnrsnCG61j64fUv88di5gpYw5/3fgqdQB4iUOjook=
 github.com/bugoio/bugo-theme-origin v0.3.1 h1:uD8A6NbiM4sxkI3rV0VW1BiOxLjSGkEgybRbPixSNY4=
 github.com/bugoio/bugo-theme-origin v0.3.1/go.mod h1:SRkhWl5/xe5N9PHd/XTxFHZKPdi1ujqR6oe+BDU8nMo=
 github.com/bugoio/bugo-theme-origin v0.3.8 h1:QLnDw5v5e8FArMcTspz2jiDxTpAuQzwGEnqUCFBu9AI=

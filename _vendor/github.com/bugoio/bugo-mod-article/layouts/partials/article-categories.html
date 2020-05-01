@@ -1,0 +1,8 @@
+<div class="categories">
+  <span>Categories:</span>
+  {{ with .Params.categories }}
+    {{ range . }}
+      <a class="" href="{{ "categories" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+</div>

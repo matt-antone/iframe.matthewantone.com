@@ -1,0 +1,53 @@
+/**
+ * ARTICLE SUMMARY - DEFAULT
+ **/
+
+ .article-summary {
+  @include space-element-x(margin, $summary-margin-left, $summary-margin-right);
+  @include space-element-y(margin, $summary-margin-top, $summary-margin-bottom);
+
+  header {
+    grid-area: head;
+
+    h2,h3,h4 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .thumbnail {
+    grid-area: thumb;
+    margin: 0;
+
+    img {
+      position: relative;
+    }
+  }
+
+  .summary {
+    grid-area: summ;
+    // @include ms-respond(margin-top, $summary-summary-margin-top);
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * ARTCILE SUMMARY - LARGE
+ **/
+
+.article-summary.article-summary-large {
+  display: flex;
+  flex-direction: row;
+  @include ms-respond(margin-bottom,$global-margin);
+  @include ms-respond(padding-bottom,$global-margin);
+
+  > * {
+    flex: 1 1 75%;
+
+    &:first-child {
+      flex-basis: 25%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{{ $posts := sort ( where $.Site.Pages "Section" "posts") "Date" "desc" }}
+{{ with $posts }}
+<div class="widget widget-recent-posts">
+  <h4 class="h5">Recent Posts</h4>
+  {{ range first 3 . }}
+  {{ partial "article-summary-link" . }}
+  {{ end }}
+</div>
+{{ end }}

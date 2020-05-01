@@ -1,0 +1,52 @@
+.articles .article-summary-link   time {
+  display: block;
+
+  grid-area: $articles-date-area;
+
+  @if $articles-xs-hide-date {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $articles-sm-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @debug hide-md $articles-md-hide-date;
+    @if $articles-md-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    @if $articles-lg-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $articles-xl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $articles-xxl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $articles-xxxl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

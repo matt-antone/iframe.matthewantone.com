@@ -1,0 +1,58 @@
+{{/**
+   *  Header Template
+	 *
+	 *  * The header for the site. It contains the main navigation.
+   *  * It is used on every page at the top.
+   *
+   *  @version 1.0.0
+	 *
+   */}}
+
+<!-- Tab Navgiation -->
+<a class="skip-link" aria-label="Go to Content" href="#main" tabindex="0">Go to Content</a>
+
+<!-- Site Header -->
+<header class="site-header" tabindex="-1">
+  <div class="container nav-container">
+    <!-- Logo -->
+    <div class="site-brand h1s">
+      <a href="/" title="Go to the home page" tabindex="0">
+        {{ if .Site.Params.headerLogo }}
+            {{ $imageParams := (dict "page" .Page "site" .Site "url" .Site.Params.headerLogo "transform" false ) }}
+            <img
+              class=""
+              src="{{ .Site.Params.headerLogo | safeHTMLAttr }}"
+              aria-hidden="true"
+              alt="{{  partial "utilities/get-org-name" .  }} Logo"
+            />
+        {{ else }}
+          {{  partial "utilities/get-org-name" .  }}
+        {{ end }}
+      </a>
+    </div>
+    <!-- Main Menu -->
+    <div class="nav-main">
+      {{ .Scratch.Set "location" "main" }}
+      {{ .Scratch.Set "menu" .Site.Menus.main }}
+      {{ partial "nav-horizontal" .}}
+    </div>
+    <!-- Search Container -->
+    <div class="search-container">
+      {{ partial "components/search-form" }}
+    </div>
+    <!-- Mobile Menu Buggon -->
+    <div class="mobile-button-container">
+      <button class="mobile-nav-button toggler" type="button" data-target-class="active" data-target="#mobile-nav" aria-controls="mobile-nav-container" aria-expanded="false" aria-label="Toggle navigation">
+        {{ partial "icon" (slice "bars") }}
+      </button>
+    </div>
+    <!-- Mobile Navigation -->
+    {{ if .Site.Menus.mobile }}
+      {{ .Scratch.Set "location" "mobile" }}
+      {{ .Scratch.Set "menu" .Site.Menus.mobile }}
+      <div id="mobile-nav" class="">
+        {{ partial "nav-vertical" . }}
+      </div>
+    {{ end }}
+  </div>
+</header>

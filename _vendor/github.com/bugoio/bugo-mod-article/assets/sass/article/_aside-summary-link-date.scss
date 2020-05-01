@@ -1,0 +1,55 @@
+aside .article-summary-link time {
+  display: block;
+
+  grid-area: $aside-summ-date-area;
+
+  @if $aside-summ-xs-hide-date {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $aside-summ-sm-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $aside-summ-md-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    @debug article-summary-link LG time $aside-summ-lg-hide-date;
+    @if $aside-summ-lg-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @debug article-summary-link XL time $aside-summ-xl-hide-date;
+    @if $aside-summ-xl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @debug article-summary-link XXL time $aside-summ-xxl-hide-date;
+    @if $aside-summ-xxl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @debug article-summary-link XXXL time $aside-summ-xxxl-hide-date;
+    @if $aside-summ-xxxl-hide-date {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

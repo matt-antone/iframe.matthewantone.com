@@ -1,0 +1,6 @@
+p {
+  @include space-element-x(margin, $paragraph-margin-left, $paragraph-margin-right);
+  @include space-element-y(margin, $paragraph-margin-top, $paragraph-margin-bottom);
+  @include space-element-x(padding, $paragraph-padding-left, $paragraph-padding-right);
+  @include space-element-y(padding, $paragraph-padding-top, $paragraph-padding-bottom);
+}

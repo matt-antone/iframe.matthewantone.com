@@ -1,0 +1,75 @@
+.articles .article-summary-link   header {
+  grid-area: $articles-header-area;
+  font-weight: $articles-xs-header-font-weight;
+  @include ms-respond(font-size,$articles-xs-header-font-size);
+
+  @if $articles-xs-header-line-clamp {
+    @include clamp($articles-xs-header-line-clamp);
+  }
+  
+
+  @if $articles-xs-hide-header {
+    display: none;
+  }
+
+  @include respond-to(sm){
+    font-weight: $articles-sm-header-font-weight;
+    @include ms-respond(font-size,$articles-sm-header-font-size);
+
+    @if $articles-sm-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    font-weight: $articles-md-header-font-weight;
+    @include ms-respond(font-size,$articles-md-header-font-size);
+  
+    @if $articles-md-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    font-weight: $articles-lg-header-font-weight;
+    @include ms-respond(font-size,$articles-lg-header-font-size);  
+
+    @if $articles-lg-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    font-weight: $articles-xl-header-font-weight;
+    @include ms-respond(font-size,$articles-xl-header-font-size);
+  
+    @if $articles-xl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    font-weight: $articles-xxl-header-font-weight;
+    @include ms-respond(font-size,$articles-xxl-header-font-size);
+
+    @if $articles-xxl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    font-weight: $articles-xxxl-header-font-weight;
+    @include ms-respond(font-size,$articles-xxxl-header-font-size);
+
+    @if $articles-xxxl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

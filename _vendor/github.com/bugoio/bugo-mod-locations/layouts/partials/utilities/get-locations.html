@@ -1,0 +1,2 @@
+{{ $headless := .Site.GetPage "/locations" }}
+{{ return $headless.Resources.Match "*.md" }}

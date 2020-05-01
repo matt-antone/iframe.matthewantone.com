@@ -1,0 +1,32 @@
+/**
+ * Bugo Header
+ **/
+
+
+// Header
+@import "header/header-vars";
+@import "header/header";
+
+// Branding
+@import "header-branding/header-branding-vars";
+@import "header-branding/header-branding";
+
+//  Nav Container
+@import "header-branding/header-branding-vars";
+@import "header-branding/header-branding";
+
+// Search Form
+@import "header-search-form/header-search-form-vars";
+@import "header-search-form/header-search-form";
+
+// Main Nav
+@import "main-nav/main-nav-vars";
+@import "main-nav/main-nav";
+
+// Mobile Nav
+@import "mobile-nav/mobile-nav-vars";
+@import "mobile-nav/mobile-nav";
+
+// Header Template Styles
+@import "header/header-default";
+@import "header/header-simple";

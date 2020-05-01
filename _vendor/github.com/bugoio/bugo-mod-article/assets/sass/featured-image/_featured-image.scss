@@ -1,0 +1,32 @@
+figure.featured-image {
+  margin-left: auto;
+  margin-right: auto;
+  @include ms-respond(--padding,$featured-image-padding);
+  @include ms-respond(--margin,$featured-image-margin);
+  margin-top: var(--margin);
+  margin-bottom: calc(var(--margin));
+
+  .responsive-image {
+    position: relative;
+    padding-bottom: $featured-image-ratio;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  figcaption {
+    width: 100%;
+    @include ms-respond(padding,0.5);
+  }
+}

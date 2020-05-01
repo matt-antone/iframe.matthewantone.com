@@ -1,0 +1,12 @@
+<div class="gallery">
+  {{ if .Params.images }}
+    {{ range .Params.images }}
+      <div class="gallery-item">
+        <img src="{{ . }}"/>
+      </div>
+    {{ end }}
+  {{ else }}
+      I got nuttin.
+  {{ end }}
+</div>
+{{ partial "photoswipe" . }}

@@ -1,0 +1,49 @@
+.article-summary-link .summary-text {
+  grid-area: summ;
+
+  @if $recent-xs-hide-summary {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $recent-sm-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $recent-md-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    @if $recent-lg-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $recent-xl-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $recent-xxl-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $recent-xxxl-hide-summary {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

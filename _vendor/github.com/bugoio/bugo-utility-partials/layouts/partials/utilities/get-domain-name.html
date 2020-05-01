@@ -1,0 +1,9 @@
+{{ $scratch := newScratch }}
+{{ $url := urls.Parse . }}
+{{ $host := split $url.Host "." }}
+{{ $scratch.Set "domain" (index $host 0) }}
+{{ if eq (len $host) 3 }}
+  {{ $scratch.Set "domain" (index $host 1) }}
+{{ end }}
+{{ return $scratch.Get "domain" }}
+

@@ -1,0 +1,125 @@
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$aside-summ-header-area:            head !default;
+$aside-summ-thumbnail-area:         thum !default;
+$aside-summ-date-area:              date !default;
+$aside-summ-categories-area:        cats !default;
+$aside-summ-tags-area:              tags !default;
+$aside-summ-summary-area:           summ !default;
+
+$aside-summ-xs-flex:                100% !default; 
+$aside-summ-xs-margin-bottom:       0 !default;
+$aside-summ-xs-header-font-size:    1 !default;
+$aside-summ-xs-header-font-weight:  700 !default;
+$aside-summ-xs-header-line-clamp:   3 !default; // false | int
+$aside-summ-xs-grid-gap:            0 !default; // false | int
+$aside-summ-xs-areas:               "thum thum head head head head" !default;
+$aside-summ-xs-hide-thumb:          false !default;
+$aside-summ-xs-hide-header:         false !default;
+$aside-summ-xs-hide-date:           true !default;
+$aside-summ-xs-hide-summary:        true !default;
+$aside-summ-xs-hide-categories:     true !default;
+$aside-summ-xs-hide-tags:           true !default;
+
+$aside-summ-sm-flex:                100% !default; 
+$aside-summ-sm-margin-bottom:       0 !default;
+$aside-summ-sm-header-font-size:    1 !default;
+$aside-summ-sm-header-font-weight:  700 !default;
+$aside-summ-sm-header-line-clamp:   false !default; // false | int
+$aside-summ-sm-grid-gap:            0 !default; // false | int
+$aside-summ-sm-areas:               "thum thum date date date date"
+                                    "thum thum head head head head" !default;
+$aside-summ-sm-hide-thumb:          false !default;
+$aside-summ-sm-hide-header:         false !default;
+$aside-summ-sm-hide-date:           false !default;
+$aside-summ-sm-hide-summary:        true !default;
+$aside-summ-sm-hide-categories:     true !default;
+$aside-summ-sm-hide-tags:           true !default;
+
+$aside-summ-md-flex:                100% !default;
+$aside-summ-md-margin-bottom:       0 !default;
+$aside-summ-md-header-font-size:    1 !default;
+$aside-summ-md-header-font-weight:  700 !default;
+$aside-summ-md-header-line-clamp:   false !default; // false | int
+$aside-summ-md-grid-gap:            1 !default; // false | int
+$aside-summ-md-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ" !default;
+$aside-summ-md-hide-thumb:          false !default;
+$aside-summ-md-hide-header:         false !default;
+$aside-summ-md-hide-date:           true !default;
+$aside-summ-md-hide-summary:        true !default;
+$aside-summ-md-hide-categories:     true !default;
+$aside-summ-md-hide-tags:           true !default;
+
+$aside-summ-lg-flex:                100% !default; 
+$aside-summ-lg-margin-bottom:       0 !default;  
+$aside-summ-lg-header-font-size:    1 !default;
+$aside-summ-lg-header-font-weight:  700 !default;
+$aside-summ-lg-header-line-clamp:   false !default; // false | int
+$aside-summ-lg-grid-gap:            0 !default; // false | int
+$aside-summ-lg-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ" !default;
+$aside-summ-lg-hide-thumb:          false !default;
+$aside-summ-lg-hide-header:         false !default;
+$aside-summ-lg-hide-date:           false !default;
+$aside-summ-lg-hide-summary:        false !default;
+$aside-summ-lg-hide-categories:     true !default;
+$aside-summ-lg-hide-tags:           true !default;
+
+$aside-summ-xl-flex:                100% !default; 
+$aside-summ-xl-margin-bottom:       0 !default;
+$aside-summ-xl-header-font-size:    1 !default;
+$aside-summ-xl-header-font-weight:  700 !default;
+$aside-summ-xl-header-line-clamp:   false !default; // false | int
+$aside-summ-xl-grid-gap:            0 !default; // false | int
+$aside-summ-xl-areas:               "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ" !default;
+$aside-summ-xl-hide-thumb:          false !default;
+$aside-summ-xl-hide-header:         false !default;
+$aside-summ-xl-hide-date:           true !default;
+$aside-summ-xl-hide-summary:        true !default;
+$aside-summ-xl-hide-categories:     false !default;
+$aside-summ-xl-hide-tags:           false !default;
+
+$aside-summ-xxl-flex:               100% !default; 
+$aside-summ-xxl-margin-bottom:       0 !default;
+$aside-summ-xxl-header-font-size:   1 !default;
+$aside-summ-xxl-header-font-weight: 700 !default;
+$aside-summ-xxl-header-line-clamp:  false !default; // false | int
+$aside-summ-xxl-grid-gap:           0 !default; // false | int
+$aside-summ-xxl-areas:              "thum thum thum thum thum thum"
+                                    "head head head head head head"
+                                    "date date date date date date"
+                                    "summ summ summ summ summ summ" !default;
+$aside-summ-xxl-hide-thumb:         false !default;
+$aside-summ-xxl-hide-header:        false !default;
+$aside-summ-xxl-hide-date:          true !default;
+$aside-summ-xxl-hide-summary:       true !default;
+$aside-summ-xxl-hide-categories:    true !default;
+$aside-summ-xxl-hide-tags:          true !default;
+
+$aside-summ-xxxl-flex:                100% !default; 
+$aside-summ-xxxl-margin-bottom:       0 !default;
+$aside-summ-xxxl-header-font-size:    1 !default;
+$aside-summ-xxxl-header-font-weight:  700 !default;
+$aside-summ-xxxl-header-line-clamp:   false !default; // false | int
+$aside-summ-xxxl-grid-gap:            0 !default; // false | int
+$aside-summ-xxxl-areas:               "thum thum thum thum thum thum"
+                                      "head head head head head head"
+                                      "date date date date date date"
+                                      "summ summ summ summ summ summ" !default;
+$aside-summ-xxxl-hide-thumb:          false !default;
+$aside-summ-xxxl-hide-header:         false !default;
+$aside-summ-xxxl-hide-date:           true !default;
+$aside-summ-xxxl-hide-summary:        true !default;
+$aside-summ-xxxl-hide-categories:     true !default;
+$aside-summ-xxxl-hide-tags:           true !default;

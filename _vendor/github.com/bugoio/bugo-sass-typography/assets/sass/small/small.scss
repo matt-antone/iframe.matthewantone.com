@@ -1,0 +1,5 @@
+small,
+.small {
+  @include ms-respond(font-size, $global-small);
+  line-height: $global-small-line-height;
+}

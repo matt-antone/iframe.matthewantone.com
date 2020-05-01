@@ -1,0 +1,21 @@
+/**
+ * BUGO LOCATIONS
+ **/
+@debug "Loading Bugo Locations SASS";
+
+@import "_bugo-locations-vars";
+
+.location-list-inline {
+  p {
+    margin-bottom: 0;
+  }
+
+  .h6 {
+    color: $white;
+  }
+}
+
+
+.modal-directory {
+  font-size: 90%;
+}

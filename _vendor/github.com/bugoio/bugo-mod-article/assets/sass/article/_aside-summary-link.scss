@@ -1,0 +1,67 @@
+aside .article-summary-link {
+  display: block;
+  text-decoration: none;
+  @include ms-respond(margin-bottom,$aside-summ-xs-margin-bottom);
+
+  @include respond-to(sm){
+    @include ms-respond(margin-bottom,$aside-summ-sm-margin-bottom);
+  }
+
+  @include respond-to(md){
+    @include ms-respond(margin-bottom,$aside-summ-md-margin-bottom);
+  }
+
+  @include respond-to(lg){
+    @include ms-respond(margin-bottom,$aside-summ-lg-margin-bottom);
+  }
+
+  @include respond-to(xl){
+    @include ms-respond(margin-bottom,$aside-summ-xl-margin-bottom);
+  }
+
+  @include respond-to(xxl){
+    @include ms-respond(margin-bottom,$aside-summ-xxl-margin-bottom);
+  }
+
+  @include respond-to(xxxl){
+    @include ms-respond(margin-bottom,$aside-summ-xxxl-margin-bottom);
+  }
+
+  article {
+    display: grid;
+    color: $global-font-color;
+    @include ms-respond(grid-gap,$aside-summ-xs-grid-gap);
+    margin-bottom: 0;
+    grid-template-areas: $aside-summ-xs-areas;
+  
+    @include respond-to(sm){
+      grid-template-areas: $aside-summ-sm-areas;
+      @include ms-respond(grid-gap,$aside-summ-sm-grid-gap);
+    }
+  
+    @include respond-to(md){
+      grid-template-areas: $aside-summ-md-areas;
+      @include ms-respond(grid-gap,$aside-summ-md-grid-gap);
+    }
+  
+    @include respond-to(lg){
+      grid-template-areas: $aside-summ-lg-areas;
+      @include ms-respond(grid-gap,$aside-summ-lg-grid-gap);
+    }
+  
+    @include respond-to(xl){
+      grid-template-areas: $aside-summ-xl-areas;
+      @include ms-respond(grid-gap,$aside-summ-xl-grid-gap);
+    }
+  
+    @include respond-to(xxl){
+      grid-template-areas: $aside-summ-xxl-areas;
+      @include ms-respond(grid-gap,$aside-summ-xxl-grid-gap);
+    }
+  
+    @include respond-to(xxxl){
+      grid-template-areas: $aside-summ-xxxl-areas;
+      @include ms-respond(grid-gap,$aside-summ-xxxl-grid-gap);
+    }
+  }
+}

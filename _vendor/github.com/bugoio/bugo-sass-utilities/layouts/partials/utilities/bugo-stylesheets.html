@@ -1,0 +1,22 @@
+{{ partial "utilities/bugo-sass-variables" . }}
+{{ $env := hugo.Environment }}
+{{ $scratch := newScratch }}
+<!-- Get bugo-utilities.scss first. It contains most of the vendors & global styles set by Hugo config Params. -->
+{{ $files := slice ( resources.Get "sass/_bugo-utilities.scss" ) }}
+<!-- Get all scss files not starting with "_". All the major files -->
+{{ $components := resources.Match "sass/[!_]*.scss" }}
+<!-- Add all components to the files array -->
+{{ range $components }}
+  {{ $files = $files | append . }}
+{{ end }}
+<!-- concatenate all the files togther -->
+{{ $scssConcat := $files | resources.Concat "sass/concat-scss.scss" }}
+<!-- process all files as Hugo templates then process to CSS -->
+{{ if eq $env "production" }}
+  {{ $scratch.Set "options" (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+{{ else }}
+  {{ $scratch.Set "options"  (dict "targetPath" "style.css" "outputStyle" "expanded" "enableSourceMap" true ) }}
+{{ end }}
+{{ $scssProcessed := $scssConcat | resources.ExecuteAsTemplate "components-processed.scss" . | resources.ToCSS ($scratch.Get "options")}}
+{{ return  $scssProcessed.Permalink }}
+

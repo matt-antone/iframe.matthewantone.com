@@ -1,0 +1,76 @@
+.article-summary-link   header {
+  grid-area: $recent-header-area;
+  font-weight: $recent-xs-header-font-weight;
+  @include ms-respond(font-size,$recent-xs-header-font-size);
+  color: $primary;
+
+  @if $recent-xs-header-line-clamp {
+    @include clamp($recent-xs-header-line-clamp);
+  }
+  
+
+  @if $recent-xs-hide-header {
+    display: none;
+  }
+
+  @include respond-to(sm){
+    font-weight: $recent-sm-header-font-weight;
+    @include ms-respond(font-size,$recent-sm-header-font-size);
+
+    @if $recent-sm-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    font-weight: $recent-md-header-font-weight;
+    @include ms-respond(font-size,$recent-md-header-font-size);
+  
+    @if $recent-md-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(lg){
+    font-weight: $recent-lg-header-font-weight;
+    @include ms-respond(font-size,$recent-lg-header-font-size);  
+
+    @if $recent-lg-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    font-weight: $recent-xl-header-font-weight;
+    @include ms-respond(font-size,$recent-xl-header-font-size);
+  
+    @if $recent-xl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    font-weight: $recent-xxl-header-font-weight;
+    @include ms-respond(font-size,$recent-xxl-header-font-size);
+
+    @if $recent-xxl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    font-weight: $recent-xxxl-header-font-weight;
+    @include ms-respond(font-size,$recent-xxxl-header-font-size);
+
+    @if $recent-xxxl-hide-header {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,465 @@
+@debug "Loading Bugo Sass Utilities";
+@import "vendors/mathsass/math";
+@import "vendors/modularscale/modularscale";
+
+@import "functions";
+@import "mixins";
+@import "helpers";
+@import "wcag";
+
+/**
+ *
+ * Hugo Commands
+ *
+ * This section can be evaluated by Hugo at build. Always provide a default.
+ * Hugo can only process the commands in this file. All imported files are ignored
+ * due to a system limitation.
+ **/
+
+ /* Breakpoints */
+$breakpoints: (
+    xs: {{ .Site.Params.breakpoints.xs.bp | default "0" }},
+    sm: {{ .Site.Params.breakpoints.sm.bp | default "400px" }},
+    md: {{ .Site.Params.breakpoints.md.bp | default "768px" }},
+    lg: {{ .Site.Params.breakpoints.lg.bp | default "992px" }},
+    xl: {{ .Site.Params.breakpoints.xl.bp | default "1200px" }},
+    xxl: {{ .Site.Params.breakpoints.xxl.bp | default "1400px" }},
+    xxxl: {{ .Site.Params.breakpoints.xxxl.bp | default "2200px" }}
+) !default;
+
+$container-max-widths: (
+    xs: {{ .Site.Params.breakpoints.xs.mw | default "none" }},
+    sm: {{ .Site.Params.breakpoints.sm.mw | default "576px" }},
+    md: {{ .Site.Params.breakpoints.md.mw | default "768px" }},
+    lg: {{ .Site.Params.breakpoints.lg.mw | default "992px" }},
+    xl: {{ .Site.Params.breakpoints.xl.mw | default "1200px" }},
+    xxl: {{ .Site.Params.breakpoints.xxl.mw | default "1400px" }},
+    xxxl: {{ .Site.Params.breakpoints.xxxl.mw | default "2200px" }}
+) !default;
+
+/**
+ *
+ * Modular Scale using the global breakpoints
+ *
+ * https://www.modularscale.com
+ * https://github.com/modularscale/modularscale-sass
+ *
+ **/
+
+$modularscale: (
+  {{ .Site.Params.breakpoints.xs.bp }}:(
+      base: {{ .Site.Params.breakpoints.xs.base }},
+      ratio:  {{ .Site.Params.breakpoints.xs.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.sm.bp }}:(
+      base: {{ .Site.Params.breakpoints.sm.base }},
+      ratio:  {{ .Site.Params.breakpoints.sm.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.md.bp }}:(
+      base: {{ .Site.Params.breakpoints.md.base }},
+      ratio:  {{ .Site.Params.breakpoints.md.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.lg.bp }}:(
+      base: {{ .Site.Params.breakpoints.lg.base }},
+      ratio:  {{ .Site.Params.breakpoints.lg.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.xl.bp }}:(
+      base: {{ .Site.Params.breakpoints.xl.base }},
+      ratio:  {{ .Site.Params.breakpoints.xl.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.xxl.bp }}:(
+      base: {{ .Site.Params.breakpoints.xxl.base }},
+      ratio:  {{ .Site.Params.breakpoints.xxl.ratio }}
+  ),
+  {{ .Site.Params.breakpoints.xxxl.bp }}:(
+      base: {{ .Site.Params.breakpoints.xxxl.base }},
+      ratio:  {{ .Site.Params.breakpoints.xxxl.ratio }}
+  ),
+ );
+
+$widths: 20,25,33,50,66,75,90,100;
+
+/**
+ * SPACING CLASSES
+ **/
+
+$spacing-ratios: (
+    0: 0,
+    1: 1,
+    2: 1.25,
+    3: 1.5,
+    4: 1.75,
+    5: 2,
+    6: 2.25
+) !default;
+
+.p-none{
+  padding: 0 !important;
+}
+
+.px-none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.py-none {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pt-none {
+  padding-top: 0 !important;
+}
+
+.pb-none {
+  padding-bottom: 0 !important;
+}
+
+.m-none{
+  margin: 0 !important;
+}
+
+.mx-none {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-none {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mt-none {
+  margin-top: 0 !important;
+}
+
+.mb-none {
+  margin-bottom: 0 !important;
+}
+
+.p-0 {
+  @include ms-respond(padding,0,$modularscale,true);
+}
+
+.pt-0 {
+  @include ms-respond(padding-top,0,$modularscale,true);
+}
+
+.pr-0 {
+  @include ms-respond(padding-right,0,$modularscale,true);
+}
+
+.pb-0 {
+  @include ms-respond(padding-bottom,0,$modularscale,true);
+}
+
+.pl-0 {
+  @include ms-respond(padding-left,0,$modularscale,true);
+}
+
+.px-0 {
+  @include ms-respond(padding-right,0,$modularscale,true);
+  @include ms-respond(padding-left,0,$modularscale,true);
+}
+
+.m-0 {
+  @include ms-respond(margin,0,$modularscale,true);
+}
+
+.mt-0 {
+  @include ms-respond(margin-top,0,$modularscale,true);
+}
+
+.mr-0 {
+  @include ms-respond(margin-right,0,$modularscale,true);
+}
+
+.mb-0 {
+  @include ms-respond(margin-bottom,0,$modularscale,true);
+}
+
+.ml-0 {
+  @include ms-respond(margin-left,0,$modularscale,true);
+}
+
+.mx-0 {
+  @include ms-respond(margin-right,0,$modularscale,true);
+  @include ms-respond(margin-left,0,$modularscale,true);
+}
+
+.my-0 {
+  @include ms-respond(margin-top,0,$modularscale,true);
+  @include ms-respond(margin-bottom,0,$modularscale,true);
+}
+
+  @for $i from 1 through 10 {
+   /** looping #{$i} **/
+  .p-#{$i} {
+    @include ms-respond(padding,$i,$modularscale,true);
+  }
+
+  .pt-#{$i} {
+    @include ms-respond(padding-top,$i,$modularscale,true);
+  }
+
+  .pr-#{$i} {
+    @include ms-respond(padding-right,$i,$modularscale,true);
+  }
+
+  .pb-#{$i} {
+    @include ms-respond(padding-bottom,$i,$modularscale,true);
+  }
+
+  .pl-#{$i} {
+    @include ms-respond(padding-left,$i,$modularscale,true);
+  }
+
+  .px-#{$i} {
+    @include ms-respond(padding-left,$i,$modularscale,true);
+    @include ms-respond(padding-right,$i,$modularscale,true);
+  }
+
+  .py-#{$i} {
+    @include ms-respond(padding-top,$i,$modularscale,true);
+    @include ms-respond(padding-bottom,$i,$modularscale,true);
+  }
+
+  .m-#{$i} {
+    @include ms-respond(margin,$i,$modularscale,true);
+  }
+
+  .mt-#{$i} {
+    @include ms-respond(margin-top,$i,$modularscale,true);
+  }
+
+  .mr-#{$i} {
+    @include ms-respond(margin-right,$i,$modularscale,true);
+  }
+
+  .mb-#{$i} {
+    @include ms-respond(margin-bottom,$i,$modularscale,true);
+  }
+
+  .ml-#{$i} {
+    @include ms-respond(margin-left,$i,$modularscale,true);
+  }
+
+  .mx-#{$i} {
+    @include ms-respond(margin-left,$i,$modularscale,true);
+    @include ms-respond(margin-right,$i,$modularscale,true);
+  }
+
+  .my-#{$i} {
+    @include ms-respond(margin-top,$i,$modularscale,true);
+    @include ms-respond(margin-bottom,$i,$modularscale,true);
+  }
+}
+
+/**
+ * BREAKPOINT DIPLAY HELPERS
+ **/
+
+ .dnone {
+    display: none !important;
+  }
+
+  .dblock {
+    display: block !important;
+  }
+
+  .dflex {
+    display: flex !important;
+  }
+
+  .dgrid {
+    display: grid !important;
+  }
+
+  .dinline {
+    display: inline !important;
+  }
+
+  .dinline-block {
+    display: inline-block !important;
+  }
+
+  @each $key, $bp in $breakpoints {
+   .#{$key}-dnone{
+       @include respond-to($key){
+           display: none !important;
+       }
+   }
+
+   .#{$key}-dblock{
+       @include respond-to($key){
+           display: block !important;
+       }
+   }
+
+   .#{$key}-dflex{
+       @include respond-to($key){
+           display: flex !important;
+       }
+   }
+
+   .#{$key}-dgrid{
+       @include respond-to($key){
+           display: grid !important;
+       }
+   }
+
+   .#{$key}-dinline{
+       @include respond-to($key){
+           display: inline !important;
+       }
+   }
+  }
+
+  /**
+   * BREAKPOINT FLEX HELPERS
+   **/
+
+   .flex-wrap {
+     flex-wrap: wrap !important;
+   }
+
+   .flex-nowrap {
+    flex-wrap: nowrap !important;
+   }
+
+   .space-between {
+     justify-content: space-between;
+   }
+
+   .justify-center {
+     justify-content: center;
+   }
+
+   .justify-start {
+     justify-content: flex-start;
+   }
+
+   .justify-end {
+     justify-content: flex-end;
+   }
+
+   .justify-between {
+     justify-content: space-between;
+   }
+
+   .align-top {
+     align-items: flex-start;
+   }
+
+   .align-center {
+     align-items: center;
+   }
+
+  /**
+   * BREAKPOINT WIDTH HELPERS
+   **/
+
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .w-auto {
+    width: auto !important;
+  }
+
+  @for $w from 1 through 100  {
+    .w-#{$w} {
+        width: $w + 0% !important;
+    }
+
+    @each $key, $bp in $breakpoints {
+      .w-#{$key}-#{$w} {
+        @include respond-to($key){
+            width: $w + 0% !important;
+        }
+      }
+    }
+  }
+
+  @for $w from 1 through 100  {
+    .flex-#{$w} {
+      flex: 0 0 $w + 0%;
+    }
+
+  }
+
+  @each $key, $bp in $breakpoints {
+    @include respond-to($key){ 
+      @for $w from 1 through 100  {
+        .flex-#{$key}-#{$w} {
+          flex: 0 0 $w + 0% !important;
+        }
+      }
+    }
+  }
+
+   /**
+   * BREAKPOINT MAX-WIDTH HELPERS
+   **/
+
+   @each $w in $widths {
+    .maxwidth-#{$w} {
+        max-width:  $w + 0% !important;
+    }
+    @each $key, $bp in $breakpoints {
+        .maxwidth-#{$key}-#{$w} {
+            @include respond-to($key){
+                max-width: $w + 0% !important;
+            }
+        }
+   }
+}
+
+
+
+
+
+/**
+ *
+ * Theme Color Variables
+ * Assigns global colors variables for use elsewhere.
+ *
+ **/
+
+$primary:       {{ .Site.Params.themeColors.primary | default "red" }};
+$secondary:     {{ .Site.Params.themeColors.secondary | default "#536F48" }};
+$accent1:      {{ .Site.Params.themeColors.accent1 | default "#FFDE2F" }};
+$accent2:      {{ .Site.Params.themeColors.accent2 | default "#5F336A" }};
+$light:         {{ .Site.Params.themeColors.light | default "#FFF5E7" }};
+$dark:          {{ .Site.Params.themeColors.dark | default "#5B5551" }};
+$white:         {{ .Site.Params.themeColors.white | default "#FFFCF6" }};
+$black:         {{ .Site.Params.themeColors.black | default "#252524" }};
+$success:       {{ .Site.Params.themeColors.success | default "#28a745" }};
+$info:          {{ .Site.Params.themeColors.info | default "#17a2b8" }};
+$warning:       {{ .Site.Params.themeColors.warning | default "#ffc107" }};
+$danger:        {{ .Site.Params.themeColors.danger | default "#dc3545" }};
+
+
+@import "colors";
+
+/**
+*
+* Generate theme color mixes
+* returns a class for use with block level eleemnts
+*
+**/
+
+{{ range $index, $mix := .Site.Data.styles.color_mixes }}
+  @include color-mixes( {{ $mix.name | anchorize }}, {{ $mix.text_color | anchorize }}, {{ $mix.background_color | anchorize }}, {{ $mix.heading_color | anchorize }} );
+{{ end }}
+
+@import "bugo-global-variables";
+@import "custom";

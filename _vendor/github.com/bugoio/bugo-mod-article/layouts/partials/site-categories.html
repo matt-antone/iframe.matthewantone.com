@@ -1,0 +1,12 @@
+<!-- Site Categories -->
+{{ $page := .Page }}
+<p class="h3">Cateogries</p>
+<nav class="category-list" aria-label="Category List">
+  <ul class="list-unstyled" role="tree">
+    {{ range .Site.Taxonomies.categories }}
+    <li role="none" class="{{if eq $page.Title .Page.Title }}current{{ end }}">
+      <a href="{{ .Page.Permalink }}" role="treeitem">{{ .Page.Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

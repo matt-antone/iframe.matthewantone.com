@@ -1,0 +1,12 @@
+{{ $headless := .Site.GetPage "/locations" }}
+{{ with $headless }}
+{{ $locations := .Resources.Match "*.md" }}
+<div class="columns">
+{{ range $locations }}
+{{ $location := . }}
+<div class="column flex-50">
+{{ partial "location-map-only" . }}
+</div>
+{{ end }}
+</div>
+{{ end }}

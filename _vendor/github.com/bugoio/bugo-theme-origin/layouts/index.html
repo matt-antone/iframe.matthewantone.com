@@ -1,0 +1,37 @@
+{{/**
+   * Index Template
+	 *
+	 * The default list for the site.
+   *
+   * @version 1.0.0
+	 *
+   */}}
+
+{{/* Hero */}}
+{{ define "hero" }}
+  {{ if .Params.videos }}
+    {{ partial "hero-video" . }}
+  {{ else if .Params.images}}
+    {{ partial "hero" . }}
+  {{ end }}
+{{ end }}
+
+{{/* Hero */}}
+{{ define "breadcrumbs" }}
+{{ if and (not .IsHome) (.Site.Params.show_breadcrumbs) }}
+<div class="breadcrumbs">
+  {{ partial "breadcrumbs" . }}
+</div>
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main" class="" tabindex="0" aria-label="{{ .Title }}">
+  <h1 class="sr-only">{{ .Title }}</h1>
+  {{ .Content }}  
+</main>
+{{ end }}
+
+{{ define "aside" }}
+  {{ partial "sidebar" . }}
+{{ end }}

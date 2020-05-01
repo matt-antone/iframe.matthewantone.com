@@ -1,0 +1,47 @@
+.article-summary-link   .tags {
+  grid-area: $recent-tags-area;
+
+  @if $recent-xs-hide-tags {
+    display: none;
+  }
+  @include respond-to(sm){
+    @if $recent-sm-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(md){
+    @if $recent-md-hide-tags {
+      display: none;
+    }
+  }
+  @include respond-to(lg){
+    @if $recent-lg-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xl){
+    @if $recent-xl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxl){
+    @if $recent-xxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+  @include respond-to(xxxl){
+    @if $recent-xxxl-hide-tags {
+      display: none;
+    } @else {
+      display: block;
+    }
+  }
+}

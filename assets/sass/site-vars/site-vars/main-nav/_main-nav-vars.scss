@@ -1,0 +1,42 @@
+/**
+ * Main Navigation
+ * TODO comments
+ **/
+
+// * Light Mode
+$main-menu-color         : $white;
+$main-menu-dropdown-bg   : $primary;
+$main-menu-dropdown-color: $white;
+
+// * Dark Mode
+$main-menu-color-dark         : $white;
+$main-menu-dropdown-bg-dark   : lighten($dark, 10%);
+$main-menu-dropdown-color-dark: $white;
+
+// * Fonts
+$main-menu-font:          1; // modular scale
+$main-menu-dropdown-font: 0; // modular scale
+
+
+$main-menu-margin:           0 -1rem 0 0;
+$main-menu-padding:          0;
+$main-menu-color:            $white;
+$main-menu-color-dark:       $white;
+
+$main-menu-link-margin:      0 0.5rem;
+$main-menu-link-padding:     0.25rem 0.5rem;
+
+$main-menu-dropdown-bg:          $global-menu-bg;
+$main-menu-dropdown-color:       $black;
+$main-menu-dropdown-bg-dark:     lighten( $dark, 10% );
+$main-menu-dropdown-color-dark:  $white;
+
+$main-menu-margin-x:   false; // false | modular scale ratio
+$main-menu-margin-y:   false; // false | modular scale ratio
+$main-menu-padding-x:  false; // false | modular scale ratio
+$main-menu-padding-y:  false; // false | modular scale ratio
+
+$main-menu-justify: flex-end;
+$main-menu-whitespace: normal;
+
+

@@ -134,7 +134,7 @@ function runCommand(cb,commands=false){
 function setupVariables(cb) {
   console.log('Creating new site variables.')
   src('public/site-vars/**/*.scss')
-  .pipe(replace(' !default',''))
+  .pipe(replace('',''))
   .pipe(replace(' ;',';'))
   .pipe(dest('assets/sass/site-vars'))
   return console.log('New site variables created.')

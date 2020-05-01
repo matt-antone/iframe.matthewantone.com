@@ -1,0 +1,8 @@
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+<a href="{{ .Get 0 }}" itemprop="contentUrl" data-size="600x400">
+<img src="{{ .Get 0 }}" itemprop="thumbnail" alt="Image description" />
+</a>
+{{ if len .Inner }}
+<figcaption itemprop="caption description">{{ .Inner }}</figcaption>
+{{ end }}
+</figure>

@@ -1,0 +1,34 @@
+blockquote {
+  color: $quote-color;
+  background: $quote-bg;
+  border-left: 10px solid $quote-accent;
+  quotes: "\201C""\201D""\2018""\2019";
+  @include space-element-x(margin, $blockquote-margin-left, $blockquote-margin-right);
+  @include space-element-y(margin, $blockquote-margin-top, $blockquote-margin-bottom);
+  @include space-element-x(padding, $blockquote-padding-left, $blockquote-padding-right);
+  @include space-element-y(padding, $blockquote-padding-top, $blockquote-padding-bottom);
+  @if $global-dark-mode {
+    @media (prefers-color-scheme: dark) {
+      color: $quote-color-dark;
+      background: $quote-bg;
+      border-left: 10px solid $quote-accent;
+    }
+  }
+}
+
+blockquote:before {
+  color: $quote-accent;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+
+  @media (codefers-color-scheme: dark) {
+    color: $quote-accent-dark;
+  }
+}
+
+blockquote p:first-of-type {
+  display: inline;
+}

@@ -1,0 +1,119 @@
+
+/**
+ * Bugo Recent Articles
+ **/
+
+$articles-header-area:            head !default;
+$articles-thumbnail-area:         thum !default;
+$articles-date-area:              date !default;
+$articles-categories-area:        cats !default;
+$articles-tags-area:              tags !default;
+$articles-summary-area:           summ !default;
+
+$articles-xs-flex:                100% !default;
+$articles-xs-margin-bottom:       0 !default; // false | int
+$articles-xs-header-font-size:    1 !default; // int
+$articles-xs-header-font-weight:  700 !default;
+$articles-xs-header-line-clamp:   3 !default; // false | int
+$articles-xs-grid-gap:            2 !default; // false | int
+$articles-xs-areas:               "thum thum head head head head" !default;
+$articles-xs-hide-thumb:          false !default;
+$articles-xs-hide-header:         false !default;
+$articles-xs-hide-date:           true !default;
+$articles-xs-hide-summary:        true !default;
+$articles-xs-hide-categories:     true !default;
+$articles-xs-hide-tags:           true !default;
+
+$articles-sm-flex:                100% !default; 
+$articles-sm-margin-bottom:       1 !default; // false | int
+$articles-sm-header-font-size:    1 !default;
+$articles-sm-header-font-weight:  700 !default;
+$articles-sm-header-line-clamp:   false !default; // false | int
+$articles-sm-grid-gap:            0 !default; // false | int
+$articles-sm-areas:               "thum thum date date date date"
+                                  "thum thum head head head head" !default;
+$articles-sm-hide-thumb:          false !default;
+$articles-sm-hide-header:         false !default;
+$articles-sm-hide-date:           false !default;
+$articles-sm-hide-summary:        true !default;
+$articles-sm-hide-categories:     true !default;
+$articles-sm-hide-tags:           true !default;
+
+$articles-md-flex:                100% !default;
+$articles-md-margin-bottom:       1 !default; // false | int
+$articles-md-header-font-size:    1 !default;
+$articles-md-header-font-weight:  700 !default;
+$articles-md-header-line-clamp:   false !default; // false | int
+$articles-md-grid-gap:            0 !default; // false | int
+$articles-md-areas:               "thum thum head head head head"
+                                  "thum thum summ summ summ summ" !default;
+$articles-md-hide-thumb:          false !default;
+$articles-md-hide-header:         false !default;
+$articles-md-hide-date:           true !default;
+$articles-md-hide-summary:        false !default;
+$articles-md-hide-categories:     true !default;
+$articles-md-hide-tags:           true !default;
+
+$articles-lg-flex:                100% !default; 
+$articles-lg-margin-bottom:       $global-margin !default; // false | int
+$articles-lg-header-font-size:    1 !default;
+$articles-lg-header-font-weight:  700 !default;
+$articles-lg-header-line-clamp:   false !default; // false | int
+$articles-lg-grid-gap:            0 !default; // false | int
+$articles-lg-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ" !default;
+$articles-lg-hide-thumb:          false !default;
+$articles-lg-hide-header:         false !default;
+$articles-lg-hide-date:           false !default;
+$articles-lg-hide-summary:        false !default;
+$articles-lg-hide-categories:     true !default;
+$articles-lg-hide-tags:           true !default;
+
+$articles-xl-flex:                100% !default; 
+$articles-xl-margin-bottom:       $global-margin !default; // false | int
+$articles-xl-header-font-size:    2 !default;
+$articles-xl-header-font-weight:  700 !default;
+$articles-xl-header-line-clamp:   false !default; // false | int
+$articles-xl-grid-gap:            0 !default; // false | int
+$articles-xl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ" !default;
+$articles-xl-hide-thumb:          false !default;
+$articles-xl-hide-header:         false !default;
+$articles-xl-hide-date:           false !default;
+$articles-xl-hide-summary:        false !default;
+$articles-xl-hide-categories:     true !default;
+$articles-xl-hide-tags:           true !default;
+
+$articles-xxl-flex:               100% !default; 
+$articles-xxl-margin-bottom:      $global-margin !default; // false | int
+$articles-xxl-header-font-size:   2 !default;
+$articles-xxl-header-font-weight: 700 !default;
+$articles-xxl-header-line-clamp:  false !default; // false | int
+$articles-xxl-grid-gap:           0 !default; // false | int
+$articles-xxl-areas:              "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ" !default;
+$articles-xxl-hide-thumb:         false !default;
+$articles-xxl-hide-header:        false !default;
+$articles-xxl-hide-date:          false !default;
+$articles-xxl-hide-summary:       false !default;
+$articles-xxl-hide-categories:    true !default;
+$articles-xxl-hide-tags:          true !default;
+
+$articles-xxxl-flex:                100% !default; 
+$articles-xxxl-margin-bottom:       $global-margin !default; // false | int
+$articles-xxxl-header-font-size:    2 !default;
+$articles-xxxl-header-font-weight:  700 !default;
+$articles-xxxl-header-line-clamp:   false !default; // false | int
+$articles-xxxl-grid-gap:            0 !default; // false | int
+$articles-xxxl-areas:               "thum thum head head head head"
+                                  "thum thum date date date date"
+                                  "thum thum summ summ summ summ" !default;
+$articles-xxxl-hide-thumb:          false !default;
+$articles-xxxl-hide-header:         false !default;
+$articles-xxxl-hide-date:           false !default;
+$articles-xxxl-hide-summary:        false !default;
+$articles-xxxl-hide-categories:     true !default;
+$articles-xxxl-hide-tags:           true !default;

@@ -1,0 +1,51 @@
+/**
+ * GLOBAL VARIABLES
+ **/
+ 
+// Spacing
+$global-margin:   4 !default; // false | modular scale ratio
+$global-padding:  2 !default; // false | modular scale ratio
+
+// Fonts
+$global-font-color:         $black !default;
+$global-font-color-dark:    $global-font-color !default;
+$global-font:               var(--font-family-global) !default; // grab the font family from the forestry output
+$global-font-size:          0 !default; // modular scale
+$global-line-height:        1.75 !default;
+
+// Small element
+$global-small:              $global-font-size - 1 !default;
+$global-small-line-height:  1.2 !default;
+
+
+// Links
+$global-link-weight:      normal !default;
+$global-link-color:       $primary !default;
+$global-link-color-dark:  $global-link-color !default;
+$global-link-focus:       lighten($global-link-color, 20%) !default;
+$global-link-color-dark:  $global-link-color !default;
+$global-link-focus-dark:  $global-link-focus !default;
+
+// Design Features
+$global-dark-mode:  false !default; // enables dark mode variables
+$global-radius:     false !default; // false | modular scale ratio
+$global-shadow:     1px 1px 2px transparentize($dark, 0.2) !default;
+
+// Icons
+$global-icon-size: 2 !default;
+$global-icon-size-sm: 1 !default;
+$global-icon-size-lg: 4 !default;
+
+
+// Backgrounds
+$global-bg-color:               $white !default;
+$global-bg-color-dark:          $black !default;
+// Todo: deprecate
+$global-background-color:       $global-bg-color !default;
+$global-background-color-dark:  $global-bg-color-dark !default;
+
+
+// Todo: need to deprecate. Do not use this group of variables.
+$global-menu-bg: $light !default;
+$global-menu-bg-dark: $global-menu-bg !default;
+ 

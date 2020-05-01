@@ -1,0 +1,34 @@
+{{/**
+   * Horizontal Menu Template
+   * Displays a Hugo menu horizontally
+   * @version 1.0.0
+   */}}
+
+{{ $currentPage := . }}
+{{ $location := .Scratch.Get "location" }}
+<nav class="nav-horizontal" role="navigation" aria-label="{{ $location }}">
+  <ul>
+    {{ $scratch := .Scratch }}
+    {{ range $index, $menuItem := .Scratch.Get "menu" }}
+      <li class="{{ if .HasChildren }}nested {{ end }}{{ if $currentPage.IsMenuCurrent $location . }}current{{ end }}{{ if $currentPage.HasMenuCurrent $location . }}current{{ end }}">
+      {{ if $menuItem.HasChildren }}
+        {{ partial "nav-dropdown" ( dict "currentPage" $currentPage "menuItem" $menuItem "location" $location "hasParent" false) }}
+      {{ else }}
+      <a class="nav-link {{ if .HasChildren }}dropdown-toggle{{ end }} $page {{ $menuItem.Name | urlize }}"
+        href="{{ .URL | absURL }}" {{ if or ( in .URL "http://" ) (in .URL "https://" )}}
+        target="new" {{ end }}
+        tabindex="0"
+        aria-label="{{ $menuItem.Name  | title }}"
+      >
+        {{ $menuItem.Pre }}
+        {{ $menuItem.Name | title }}
+        {{ $menuItem.Post }}
+        {{ if $menuItem.HasChildren }}
+        <i class='icon-chevron-down'></i>
+        {{ end }}
+      </a>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</nav>

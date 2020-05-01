@@ -1,0 +1,17 @@
+<article
+  class="article-summary article-summary-small {{ if .Params.images }} has-thumbnail {{end}}"
+  tabindex="0"
+>
+  <header>
+    <time>{{ .Date.Format "January _2, 2006" }}</time>
+    <h3 class="h3">
+      <a
+        href="{{ .Page.Permalink | relURL }}"
+        >{{ .Page.Title }}</a
+      >
+    </h3>
+  </header>
+  <div class="summary">
+    {{ .Summary }}
+  </div>
+</article>

@@ -1,0 +1,31 @@
+/**
+ * Bugo Tables
+ **/
+
+table {
+  @include ms-respond(margin-top,$list-margin);
+  @include ms-respond(margin-bottom,$list-margin);
+  border: 1px solid $dark;
+  padding: 0;
+  border-collapse: collapse;
+
+  tr {
+    padding: 0;
+  }
+
+  td,th {
+    border-bottom: 1px solid $dark;
+    @include ms-respond(padding,0);
+    border-left: 1px solid $dark;
+  }
+
+  thead {
+    padding: 0;
+    background-color: $light;
+    color: $dark;
+  }
+
+  tbody {
+    padding: 0;
+  }
+}

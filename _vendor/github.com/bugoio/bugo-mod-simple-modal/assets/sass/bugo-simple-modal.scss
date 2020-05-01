@@ -1,0 +1,55 @@
+/**
+ * BUGO SIMPLE MODAL
+ **/
+
+
+@import "bugo-simple-modal-vars";
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparentize($black,.5);
+
+  &.open {
+    display: block;
+  }
+
+  .modal-window {
+    padding: 0;
+    width: 80%;
+    height: auto;
+    max-height: 80vh;
+    background-color: $white;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-50%);
+    @include set-padding(0,0,0,0);
+  }
+
+  .modal-content {
+    width: 100%;
+    max-height: calc(80vh - 32px);
+    overflow-y: scroll;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 !important;
+    transform: translateX(50%) translateY(-50%);
+    @include ms-respond(width,2);
+    @include ms-respond(height,2);
+    border-radius: 50%;
+    background-color: $white;
+
+    svg,img {
+      max-width: 100%;
+    }
+  }
+}

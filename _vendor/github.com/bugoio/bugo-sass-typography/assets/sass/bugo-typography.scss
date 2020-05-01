@@ -1,0 +1,58 @@
+/**
+ * BUGO TYPOGRAPHY
+ * Add typography based on modular scale
+ * * modular scale is relative to the base font size
+ * * Modlular scale value is indexed from 0, so +/- values are accepted
+ * * +/-N returns calc();
+ * * False returns 0;
+ **/
+
+// Headings
+@import "headings/headings-vars";
+@import "headings/headings";
+
+// Paragraphs
+@import "paragraph/paragraph-vars.scss";
+@import "paragraph/paragraph";
+
+// Small Element
+@import "small/small";
+
+// Anchor Element
+@import "anchor/anchor";
+
+// Code Element
+@import "code/code-vars";
+@import "code/code";
+
+@debug "Loading Bugo Typography Module SASS";
+@import "custom-variables";
+
+// Blockquote
+@import "blockquote/blockquote-vars.scss";
+@import "blockquote/blockquote";
+
+// Lists <ol>,<ul>
+@import "list/list-vars.scss";
+@import "list/list";
+
+// Table
+@import "table/table-vars.scss";
+@import "table/table";
+
+// Helpers
+.nowrap {
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+// font weight helper .fw-100 to .fw-900
+@for $i from 1 through 9 {
+  .fw-#{$i} {
+    font-weight: #{$i}00;
+  }
+}

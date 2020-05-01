@@ -1,0 +1,62 @@
+/**
+ *  BUGO SITE HEADER SIMPLE
+ **/
+
+.site-header-simple {
+  background-color: $header-bg;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include set-padding(0, false, 0, false);
+
+  }
+
+  .nav-main {
+    justify-self: flex-end;
+    position: static;
+
+    .nav-link {
+      @include ms-respond(font-size,0);
+      color: $header-link;
+    }
+
+    .nested {
+      position: static;
+    }
+
+    .dropdown-menu {
+      top: calc(100% - 1rem);
+      // left: 0;
+      // right: 0;
+      width: 100vw;
+
+      &:before {
+        display: none;
+      }
+
+      ul {
+        display: flex !important;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        @include ms-respond(max-height,6.5);
+
+        li {
+          flex: 1 1 33%;
+        }
+      }
+    }
+  }
+
+  /**
+   * todo: need to make global
+   **/
+  .mobile-button-container {
+    @include respond_to(md){
+      display: none;
+    }
+  }
+}

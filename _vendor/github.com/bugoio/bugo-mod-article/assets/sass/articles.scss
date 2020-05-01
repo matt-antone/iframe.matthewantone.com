@@ -1,0 +1,54 @@
+/**
+ * BUGO ARTICLE
+ **/
+
+ // Variables
+@import "article/article-vars";
+@import "article/article-summary-vars";
+@import "article/articles-vars";
+@import "article/recent-article-vars";
+@import "article/aside-summary-link-vars";
+
+// Article
+@import "article/article";
+@import "article/article-summary";
+
+// Article List
+@import "article/articles";
+
+// Article Links
+@import "article/articles-link-thumb";
+@import "article/articles-link-header";
+@import "article/articles-link-tags";
+@import "article/articles-link-categories";
+@import "article/articles-link-date";
+@import "article/articles-link-text";
+@import "article/recent-articles";
+
+// Summary Links
+@import "article/summary-link";
+@import "article/summary-link-thumb";
+@import "article/summary-link-header";
+@import "article/summary-link-tags";
+@import "article/summary-link-categories";
+@import "article/summary-link-date";
+@import "article/summary-link-text";
+
+// Sidebar Summary Links
+@import "article/aside-summary-link";
+@import "article/aside-summary-link-thumb";
+@import "article/aside-summary-link-header";
+@import "article/aside-summary-link-tags";
+@import "article/aside-summary-link-categories";
+@import "article/aside-summary-link-date";
+@import "article/aside-summary-link-text";
+
+// Featured Images
+@import "featured-image/featured-image-vars";
+@import "featured-image/featured-image";
+
+// Gallery
+@import "gallery/gallery";
+
+
+@debug "Loading Bugo Article Module Updated SASS";  

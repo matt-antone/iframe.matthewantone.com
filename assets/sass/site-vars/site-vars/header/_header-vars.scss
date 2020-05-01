@@ -1,0 +1,97 @@
+
+/**
+ * Site Header
+ * * Part of the body element's css grid
+ * * Edit positioning in /variables/elements/_body.scss
+ * TODO prefix each $header to $site-header, so we can modify the header HTML element separately
+ **/
+
+
+// * Fonts
+
+$header-link-weight                        : normal;
+
+
+// * Light Mode
+
+$header-color                              : $light;
+$header-bg                                 : transparent;
+$header-link                               : $global-link-color;
+$header-text-color                         : $light;
+$header-link-color                         : $light;
+$header-link-focus                         : $global-link-focus;
+
+
+// * Dark Mode
+
+$header-color-dark                         : $light;
+$header-bg-dark                            : transparent;
+$header-link-dark                          : $global-link-color-dark;
+$header-bg-dark                            : $dark;
+$header-text-color-dark                    : $light;
+$header-link-color-dark                    : $light;
+$header-link-focus-dark                    : $global-link-focus;
+
+// Dimensions
+$header-width                              : 100%;
+$header-height                             : auto;
+
+$header-margin-x                           : false; // false | modular scale ratio
+$header-margin-y                           : false; // false | modular scale ratio
+$header-padding-x                          : false; // false | modular scale ratio
+$header-padding-y                          : false; // false | modular scale ratio
+
+// Positioning
+$header-position                           : absolute;
+$header-top                                : 0;
+$header-right                              : 0;
+$header-bottom                             : auto;
+$header-left                               : 0;
+$header-z                                  : 2000;
+
+
+/**
+ * Header Navigation Container
+ * * wrapper around all navigation4
+ **/
+
+
+// * Light Mode
+
+$header-nav-container-bg                   : $header-bg;
+
+
+// * Dark Mode
+
+$header-nav-container-bg-dark              : $header-bg-dark;
+
+// * CSS Grid
+$header-nav-container-bg                   : $header-bg;
+$header-nav-container-bg-dark              : $header-bg-dark;
+
+$header-nav-container-margin-x             : auto; // false | modular scale ratio
+$header-nav-container-margin-y             : false; // false | modular scale ratio
+$header-nav-container-padding-x            : false; // false | modular scale ratio
+$header-nav-container-padding-y            : 1; // false | modular scale ratio
+
+$header-nav-container-column-gap           : false; // false | modular scale ratio
+$header-nav-container-row-gap              : 2;  // false | modular scale ratio
+
+$header-nav-container-xs-template-areas    :
+  "brand brand brand ... ... ... ... ... ... mbutton mbutton mbutton";
+$header-nav-container-sm-template-areas    : $header-nav-container-xs-template-areas;
+$header-nav-container-md-template-areas    :
+  "brand brand search search search search search search search search search search"
+  "brand brand nmain nmain nmain nmain nmain nmain nmain nmain nmain nmain";
+$header-nav-container-lg-template-areas    : $header-nav-container-md-template-areas;
+$header-nav-container-xl-template-areas    : $header-nav-container-md-template-areas;
+$header-nav-container-xxl-template-areas   : $header-nav-container-md-template-areas;
+$header-nav-container-xxxl-template-areas  : $header-nav-container-md-template-areas;
+
+$header-nav-container-xs-template-columns  : repeat( 12, 1fr );
+$header-nav-container-sm-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-md-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-lg-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-xl-template-columns  : $header-nav-container-xs-template-columns;
+$header-nav-container-xxl-template-columns : $header-nav-container-xs-template-columns;
+$header-nav-container-xxxl-template-columns: $header-nav-container-xs-template-columns;

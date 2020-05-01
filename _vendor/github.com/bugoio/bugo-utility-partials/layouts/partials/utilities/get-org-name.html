@@ -1,7 +1,0 @@
-{{ $name := slice }}
-{{ if .Site.Params.altTitle }}
-  {{ $name = $name | append .Site.Params.altTitle }}
-{{ else }}
-  {{ $name = $name | append .Site.Title  }}
-{{ end }}
-{{ return index $name 0 }}

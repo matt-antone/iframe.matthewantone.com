@@ -9,5 +9,5 @@ require (
 	github.com/bugoio/bugo-mod-netlify-contact-form v0.0.0-20191018025751-260ebd8909b8 // indirect
 	github.com/bugoio/bugo-mod-search v0.1.0 // indirect
 	github.com/bugoio/bugo-mod-widgets v0.0.0-20191013190005-cfd39508e0da // indirect
-	github.com/bugoio/bugo-theme-origin v0.3.8 // indirect
+	github.com/bugoio/bugo-theme-origin v0.3.9 // indirect
 )

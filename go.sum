@@ -58,6 +58,8 @@ github.com/bugoio/bugo-theme-origin v0.3.1 h1:uD8A6NbiM4sxkI3rV0VW1BiOxLjSGkEgyb
 github.com/bugoio/bugo-theme-origin v0.3.1/go.mod h1:SRkhWl5/xe5N9PHd/XTxFHZKPdi1ujqR6oe+BDU8nMo=
 github.com/bugoio/bugo-theme-origin v0.3.8 h1:QLnDw5v5e8FArMcTspz2jiDxTpAuQzwGEnqUCFBu9AI=
 github.com/bugoio/bugo-theme-origin v0.3.8/go.mod h1:bbwNbJyXt75Com45Bv7rtmncQTXlA1xxlbClUC51Prg=
+github.com/bugoio/bugo-theme-origin v0.3.9 h1:eTmAHnB6kzBX6r8+Vr86jcXS4iPKAVPK2usBwQweozA=
+github.com/bugoio/bugo-theme-origin v0.3.9/go.mod h1:bbwNbJyXt75Com45Bv7rtmncQTXlA1xxlbClUC51Prg=
 github.com/bugoio/bugo-utility-partials v0.0.0-20191006182439-afd3341a34af/go.mod h1:OccrlAsKckY0EA92p6xaHIcUyWD23IiFOSaQ1gecX5w=
 github.com/bugoio/bugo-utility-partials v0.0.0-20191018040528-9891ed8bae5a/go.mod h1:OccrlAsKckY0EA92p6xaHIcUyWD23IiFOSaQ1gecX5w=
 github.com/bugoio/bugo-utility-partials v0.0.2/go.mod h1:OccrlAsKckY0EA92p6xaHIcUyWD23IiFOSaQ1gecX5w=

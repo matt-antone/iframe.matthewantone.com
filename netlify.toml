@@ -2,6 +2,8 @@
   command = "hugo -d public"
   functions = "functions" # netlify dev uses this to know where to scaffold and serve your functions
   publish = "public"
+  environment = { HUGO_VERSION = "0.69.1", HUGO_ENV = 'production', NODE_ENV = "production" }
+
 [dev]
   command = "hugo server -w -p 1313 -d public --baseUrl=localhost:8888 --appendPort=false" # Command to start your dev server
   port = 8888 # Port that the dev server will be accessible on
@@ -9,4 +11,3 @@
   publish = "public" # If you use a _redirect file, provide the path to your static content folder
   framework = "hugo" # or "#static" to force a static server
   autoLaunch = false # a Boolean value that determines if Netlify Dev launches the local server address in your browser
-[staging]
